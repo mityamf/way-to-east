@@ -1,30 +1,42 @@
+include ../components/choose-country
+include ../components/switcher
+
 mixin header(headerMod, currentPage)
   -
     var headerLinks = [
       {
         href: "#",
-        text: "Страница 1"
+        text: "Особенности гостеприимства в Корее"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Особенности гостеприимства в Японии"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Отели Кореи"
+      },
+      {
+        href: "#",
+        text: "Отели Японии"
       },
     ]
 
   header(class=(headerMod) ? "header header--" + headerMod : "header")
-    .header__wrapper
+    .header__wrapper.container.container--header
       if(currentPage === "main")
-        a.header__logo Логотип
+        a.header__logo
+          +icon("logo-header", 128, 68)
       else
-        a.header__logo(href="main.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+        a.header__logo(href="main.html", aria-label="Переход на главную")
+          +icon("logo-header", 128, 68)
+      nav.header__nav.main-nav
+        button.main-nav__open-menu.btn-reset(type="button", aria-label="Открыть мобильное меню", aria-pressed="false")
+          +icon("icon-burger", 30, 14)
+        button.main-nav__close-menu.btn-reset(type="button", aria-label="Закрыть мобильное меню", aria-pressed="false")
+          +icon("icon-close", 24, 24)
         .main-nav__wrapper
+          +choose-country("main-nav")
           ul.main-nav__list
             each link, index in headerLinks
               if(index === currentPage)
@@ -33,3 +45,4 @@ mixin header(headerMod, currentPage)
               else
                 li
                   a.main-nav__link(href=link.href)=link.text
+      +switcher("header")
