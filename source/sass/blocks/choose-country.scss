@@ -1,0 +1,44 @@
+.choose-country {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.choose-country__text {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 22px;
+  text-align: center;
+  color: $color-default-white;
+}
+
+.choose-country__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.choose-country__list li {
+  margin-top: 18px;
+  margin-right: 54px;
+
+  @include viewport--sm {
+    margin-top: 16px;
+    margin-right: 25px;
+  }
+}
+
+.choose-country__list li:last-child {
+  margin-right: 0;
+}
+
+.choose-country__name {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  color: $color-default-white;
+}

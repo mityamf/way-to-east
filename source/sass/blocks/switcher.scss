@@ -1,0 +1,41 @@
+.switcher {
+  display: flex;
+  align-items: center;
+
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.switcher__link {
+  display: block;
+  margin: 0 5px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  color: $color-default-white;
+}
+
+.switcher__toggle {
+  position: relative;
+  width: 49px;
+  height: 25px;
+  border: 2px solid $color-default-white;
+  border-radius: 30px;
+}
+
+.switcher__ball {
+  position: absolute;
+  top: 50%;
+  width: 19px;
+  height: 19px;
+  background-color: $color-default-white;
+  border-radius: 50%;
+}
+
+.switcher__ball--center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
