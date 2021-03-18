@@ -30,7 +30,14 @@ block main
       max-width: 300px;
       height: auto;
       display: block;
-      margin-bottom: 40px;
+    }
+
+    .main-index--logo {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #7772c9;
     }
 
     @media (max-width: 768px) {
@@ -59,13 +66,34 @@ block main
         src: "main.html"
       },
       {
-        name: "Название страницы (состояние страницы, если отдельное) — ссылка на страницу",
-        src: "#"
+        name: "Корея — korea.html",
+        src: "korea.html"
+      },
+      {
+        name: "Япония — japan.html",
+        src: "japan.html"
+      },
+      {
+        name: "Отель — hotel.html",
+        src: "hotel.html"
+      },
+      {
+        name: "Особенности Кореи — korea-details.html",
+        src: "korea-details.html"
+      },
+      {
+        name: "Особенности Японии — japan-details.html",
+        src: "japan-details.html"
+      },
+      {
+        name: "Блог — blog.html",
+        src: "blog.html"
       },
     ]
 
   main.container.main-index
-    img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
+    .main-index--logo
+      img(src="../../img/svg/logo.svg" width="128" height="68" alt="Логотип проекта")
     h1 Список страниц и компонентов
     ol
       each page in pages
