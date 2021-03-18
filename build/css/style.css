@@ -926,11 +926,32 @@ button.swiper-pagination-bullet {
   backface-visibility: hidden; }
 
 @font-face {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-family: "";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff"); }
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff"); }
 
 *,
 *::before,
@@ -954,7 +975,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "", "Arial", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   color: #000000;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -1310,7 +1331,9 @@ button,
 .main-nav__link {
   display: block;
   padding: 12px 10px 6px 0;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 20px;
+  font-weight: 500;
   line-height: 23px;
   color: #ffffff; }
 
@@ -1336,8 +1359,9 @@ button,
   text-align: center; }
 
 .choose-country__text {
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 17px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 22px;
   text-align: center;
   color: #ffffff; }
@@ -1368,8 +1392,9 @@ button,
 
 .choose-country__name {
   display: block;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #ffffff; }
@@ -1388,8 +1413,9 @@ button,
 .switcher__link {
   display: block;
   margin: 0 5px;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 15px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 20px;
   text-align: center;
   color: #ffffff; }

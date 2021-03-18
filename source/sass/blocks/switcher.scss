@@ -10,8 +10,9 @@
 .switcher__link {
   display: block;
   margin: 0 5px;
+  font-family: $font-family-inter;
   font-size: 15px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 20px;
   text-align: center;
   color: $color-default-white;

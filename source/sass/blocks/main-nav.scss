@@ -40,7 +40,9 @@
 .main-nav__link {
   display: block;
   padding: 12px 10px 6px 0;
+  font-family: $font-family-inter;
   font-size: 20px;
+  font-weight: 500;
   line-height: 23px;
   color: $color-default-white;
 }

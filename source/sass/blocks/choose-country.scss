@@ -4,8 +4,9 @@
 }
 
 .choose-country__text {
+  font-family: $font-family-inter;
   font-size: 17px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 22px;
   text-align: center;
   color: $color-default-white;
@@ -36,8 +37,9 @@
 
 .choose-country__name {
   display: block;
+  font-family: $font-family-inter;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: $color-default-white;
