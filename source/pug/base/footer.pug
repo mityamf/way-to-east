@@ -1,2 +1,9 @@
 mixin footer(footerMod)
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
+    .footer__travel
+      img.footer__travel-logo(src="img/content/logo-travelMedia.svg")
+      a.footer__travel-link
+        +icon("icon-mail", 20, 14)
+        | Написать в Travel Media
+    .footer__countries
+
