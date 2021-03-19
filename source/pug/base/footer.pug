@@ -1,9 +1,21 @@
 mixin footer(footerMod)
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
-    .footer__travel
-      img.footer__travel-logo(src="img/content/logo-travelMedia.svg")
-      a.footer__travel-link
-        +icon("icon-mail", 20, 14)
-        | Написать в Travel Media
-    .footer__countries
+    .container
+      .footer__wrapper
+        .footer__travel
+          .footer__travel-logo
+            +icon("logo-travelMedia", 133, 58)
+          a.footer__travel-link(href="#")
+            +icon("icon-mail", 20, 14)
+            span Написать в Travel Media
+        .footer__countries
+          .footer__countries-wrapper
+            .footer__countries-logo.footer__countries-logo--korea
+              +icon("logo-korea", 91, 60)
+            .footer__countries-logo.footer__countries-logo--japan
+              +icon("logo-japan", 151, 60)
+          .footer__countries-copyright
+            +icon("icon-official", 15, 15)
+            span Project of tourism authorities
+
 

@@ -1202,9 +1202,93 @@ button,
     padding: 56px 0 29px; } }
 
 .footer {
-  min-height: 100px;
-  padding: 0 60px;
-  background-color: #c7c7c7; }
+  background-color: #d5d0cc; }
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 90px;
+  padding-bottom: 98px;
+  border-top: 1px solid #beb8b4; }
+  @media (max-width: 767px) {
+    .footer__wrapper {
+      padding-top: 30px;
+      padding-bottom: 40px; } }
+
+.footer__travel-link,
+.footer__countries-copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 400px; }
+
+.footer__countries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto; }
+  @media (max-width: 767px) {
+    .footer__countries {
+      margin-right: auto;
+      width: 100%; } }
+
+.footer__countries-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px; }
+  @media (max-width: 767px) {
+    .footer__countries-wrapper {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+
+.footer__countries-logo--japan {
+  margin-left: 71px; }
+  @media (max-width: 767px) {
+    .footer__countries-logo--japan {
+      margin-left: auto; } }
+
+.footer__travel-logo {
+  margin-bottom: 15px; }
+
+.footer__travel-link span,
+.footer__countries-copyright span {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #6f6f6f; }
+
+.footer__travel-link span {
+  margin-left: 4px; }
+
+.footer__countries-copyright span {
+  margin-left: 6px; }
+
+.footer__travel-link {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out; }
+  .footer__travel-link:hover, .footer__travel-link:focus {
+    opacity: 0.8;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out; }
+
+@media (max-width: 767px) {
+  .footer__travel {
+    display: none; }
+  .footer .container {
+    padding: 0 38px; }
+  .footer__countries-copyright {
+    margin: 0 auto; } }
 
 .modal {
   position: fixed;
