@@ -1,36 +1,54 @@
 .header {
   display: flex;
   align-items: center;
-  min-height: 100px;
-  padding: 0 40px;
 
-  background-color: $color-blue;
+  background-color: #7772c9;
 
   &__wrapper {
+    position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
+    padding: 19px 50px;
 
-  a,
-  p {
-    color: $color-white;
-  }
+    @include viewport--md {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
 
-  ul {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
-
-    list-style: none;
-
-    li {
-      margin-right: 20px;
+    @include viewport--sm {
+      flex-direction: column;
+      padding: 33px 0 29px;
     }
   }
+}
 
-  .main-nav__toggle {
-    display: none;
+.header__logo {
+  display: block;
+  margin-right: 10px;
+
+  @include viewport--sm {
+    margin: 0 auto 14px;
+  }
+}
+
+.header__nav {
+  margin: 0 10px;
+}
+
+.header__switcher {
+  margin-left: 10px;
+}
+
+.header--mobile {
+  position: fixed;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+}
+
+.header--mobile .header__wrapper {
+  @include viewport--sm {
+    padding: 56px 0 29px;
   }
 }

@@ -1,0 +1,12 @@
+mixin choose-country(parent)
+  div(class = parent + "__choose choose-country")
+    span.choose-country__text Выберете страну:
+    ul.choose-country__list
+      li
+        a.choose-country__link(href="korea.html")
+          +icon("korea-circle", 57, 57)
+          span.choose-country__name Корея
+      li
+        a.choose-country__link(href="japan.html")
+          +icon("japan-circle", 57, 57)
+          span.choose-country__name Япония
