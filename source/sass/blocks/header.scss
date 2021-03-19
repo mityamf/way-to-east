@@ -1,5 +1,4 @@
 .header {
-  position: fixed;
   display: flex;
   align-items: center;
   z-index: 2;
@@ -8,7 +7,7 @@
   &__wrapper {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 19px 50px;
 
@@ -41,11 +40,13 @@
 }
 
 .header__logo {
+  position: fixed;
+  left: 50px;
   display: block;
   margin-top: 6px;
-  margin-right: 10px;
 
   @include viewport--sm {
+    position: static;
     margin: 0 auto;
   }
 }
@@ -55,7 +56,8 @@
 }
 
 .header__switcher {
-  margin-left: 10px;
+  position: fixed;
+  right: 50px;
 }
 
 .header--mobile {

@@ -1,7 +1,9 @@
 extends ../base/layout
 
+include ../components/main-country-details
+
 block data
-  include ../data/placeholder
+  include ../data/main-country-details
 
 block variables
   - var title = "Цветущий путь на Восток — Главная"
@@ -18,6 +20,13 @@ block main
       +picture("bg", "main-background-desktop", "main-background-mobile", "png", "1920", "1343", "Закат на фоне гор")
     .container
       .main__content
+        h1 Цветущий путь на Восток.
+        p.main__content-subtitle Подробности о лучших отелях и особенностях двух стран.
+        section.main__countries.countries-details
+          ul
+            each item in mainCountryDetails
+              li
+                +main-country-details("countries-details", item)
 
 //- block modals
 //-   +modal("modal--feedback")

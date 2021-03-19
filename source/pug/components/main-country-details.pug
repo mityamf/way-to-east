@@ -1,0 +1,9 @@
+mixin main-country-details(parent, country)
+  a(href= country.href, class = parent + "__preview preview-details")
+    +picture("content/main", country.imageDesktop, country.imageMobile, country.imageFormat, country.imageWidth, country.imageHeight, country.imageAlt)
+    +icon(country.svgName, country.svgWidth, country.svgHeight)
+    h2.preview-details__title= "Особенности гостеприимства в " + country.title
+    each item in country.description
+      p= item
+    p и ещё много интересных фактов…
+    span.preview-details__more Подробнее

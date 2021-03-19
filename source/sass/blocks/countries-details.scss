@@ -1,0 +1,31 @@
+.countries-details {
+  border-radius: 10px;
+  background-color: $color-default-white;
+}
+
+.countries-details ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.countries-details li {
+  position: relative;
+  width: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7.5%;
+    width: 1px;
+    height: 85%;
+    background-color: $color-bon-jour;
+  }
+
+  &:last-child::after {
+    width: 0;
+  }
+}
