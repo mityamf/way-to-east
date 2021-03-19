@@ -1,0 +1,25 @@
+main {
+  background-color: $color-swirl;
+}
+
+.main__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main__background img {
+  width: 100%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 89.2%, 50% 100%, 0% 89.2%);
+  object-fit: cover;
+  background-color: $color-east-side;
+}
+
+.main__content {
+  position: relative;
+  z-index: 10;
+  margin-top: var(--headerHeight);
+  height: 2000px;
+  background-color: pink;
+}

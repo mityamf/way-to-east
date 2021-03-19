@@ -13,8 +13,11 @@ block variables
   - var currentPage = "main" //- для остальных страниц пишем либо пустую строку, либо индекс
 
 block main
-  main
+  main.main
+    .main__background
+      +picture("bg", "main-background-desktop", "main-background-mobile", "png", "1920", "1343", "Закат на фоне гор")
     .container
+      .main__content
 
 //- block modals
 //-   +modal("modal--feedback")
