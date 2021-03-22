@@ -8,7 +8,7 @@
   padding-bottom: 98px;
   border-top: 1px solid #beb8b4;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     padding-top: 30px;
     padding-bottom: 40px;
   }
@@ -26,7 +26,7 @@
   flex-direction: column;
   margin-left: auto;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     margin-right: auto;
     width: 100%;
   }
@@ -36,7 +36,7 @@
   display: flex;
   margin-bottom: 15px;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     justify-content: space-between;
   }
 }
@@ -44,7 +44,7 @@
 .footer__countries-logo--japan {
   margin-left: 71px;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     margin-left: auto;
   }
 }
@@ -71,16 +71,16 @@
 }
 
 .footer__travel-link {
-  transition: 0.3s ease-out;
+  transition: opacity $default-transition-settings;
 
   &:hover,
   &:focus {
     opacity: 0.8;
-    transition: 0.3s ease-out;
+    transition: opacity $default-transition-settings;
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .footer__travel {
     display: none;
   }

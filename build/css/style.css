@@ -1275,12 +1275,12 @@ button,
   margin-left: 6px; }
 
 .footer__travel-link {
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out; }
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
   .footer__travel-link:hover, .footer__travel-link:focus {
     opacity: 0.8;
-    -webkit-transition: 0.3s ease-out;
-    transition: 0.3s ease-out; }
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
 
 @media (max-width: 767px) {
   .footer__travel {
@@ -1523,6 +1523,267 @@ button,
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+
+.content-wrapper {
+  position: relative;
+  width: 83%;
+  margin: 30px auto 0;
+  padding-bottom: 90px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden; }
+  @media (max-width: 767px) {
+    .content-wrapper {
+      width: 100%;
+      padding-bottom: 15px; } }
+
+.culture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-bottom: 31px; }
+  @media (max-width: 767px) {
+    .culture {
+      margin-bottom: 10px; } }
+
+@media (max-width: 767px) {
+  .culture--japan.culture {
+    margin-bottom: 8px; } }
+
+.culture__image {
+  margin-bottom: 50px; }
+  .culture__image img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  @media (max-width: 767px) {
+    .culture__image {
+      height: 273px;
+      margin-bottom: 32px; } }
+
+.culture h2 {
+  margin: 0 0 20px 0;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 500;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: center;
+  color: #313131; }
+  @media (max-width: 767px) {
+    .culture h2 {
+      margin-bottom: 12px;
+      font-size: 22px;
+      line-height: 26px; } }
+
+.culture__text p {
+  margin: 0 0 20px 0;
+  padding: 0 120px 0 110px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: left;
+  color: #313131; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .culture__text p {
+      padding: 0 70px 0 60px; } }
+  @media (max-width: 767px) {
+    .culture__text p {
+      font-size: 15px;
+      line-height: 19px;
+      padding: 0 20px; } }
+
+.culture--japan .culture__text p {
+  padding: 0 110px; }
+  @media (max-width: 767px) {
+    .culture--japan .culture__text p {
+      padding: 0 20px;
+      margin: 0 0 19px 0; } }
+
+.shopping {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 110px;
+  margin-bottom: 28px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .shopping {
+      padding: 0 70px; } }
+  @media (max-width: 767px) {
+    .shopping {
+      padding: 0;
+      margin-bottom: 9px; } }
+
+.shopping h2 {
+  margin: 0 0 20px 0;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 500;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: center;
+  color: #313131; }
+  @media (max-width: 767px) {
+    .shopping h2 {
+      font-size: 22px;
+      line-height: 26px; } }
+
+.shopping p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: left;
+  color: #313131; }
+  @media (max-width: 767px) {
+    .shopping p {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 15px;
+      line-height: 19px; } }
+
+.shopping__image {
+  margin-bottom: 20px; }
+  .shopping__image img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  @media (max-width: 767px) {
+    .shopping__image {
+      height: 241px; } }
+
+.cuisine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 110px;
+  margin-bottom: 12px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .cuisine {
+      padding: 0 70px; } }
+  @media (max-width: 767px) {
+    .cuisine {
+      padding: 0;
+      margin-bottom: 9px; } }
+
+.cuisine--japan.cuisine {
+  margin-bottom: 31px; }
+  .cuisine--japan.cuisine p {
+    padding-right: 0; }
+    @media (max-width: 767px) {
+      .cuisine--japan.cuisine p {
+        padding-right: 22px; } }
+
+.cuisine h2 {
+  margin: 0 0 20px 0;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 500;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: center;
+  color: #313131; }
+  @media (max-width: 767px) {
+    .cuisine h2 {
+      padding: 0 20px;
+      font-size: 22px;
+      line-height: 26px; } }
+
+.cuisine p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: left;
+  color: #313131; }
+  @media (max-width: 767px) {
+    .cuisine p {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 15px;
+      line-height: 19px; } }
+
+.cuisine__image {
+  margin-bottom: 20px; }
+  .cuisine__image img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  @media (max-width: 767px) {
+    .cuisine__image {
+      height: 241px; } }
+
+.hotels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 110px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hotels {
+      padding: 0 70px; } }
+  @media (max-width: 767px) {
+    .hotels {
+      padding: 0; } }
+
+.hotels h2 {
+  margin: 0 0 20px 0;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 500;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: center;
+  color: #313131; }
+  @media (max-width: 767px) {
+    .hotels h2 {
+      font-size: 22px;
+      line-height: 26px; } }
+
+.hotels p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  text-align: left;
+  color: #313131; }
+  @media (max-width: 767px) {
+    .hotels p {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 15px;
+      line-height: 19px; } }
+
+.hotels__image {
+  margin-bottom: 20px; }
+  .hotels__image img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  @media (max-width: 767px) {
+    .hotels__image {
+      height: 241px; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

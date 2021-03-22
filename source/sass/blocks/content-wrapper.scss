@@ -1,0 +1,14 @@
+.content-wrapper {
+  position: relative;
+  width: 83%;
+  margin: 30px auto 0;
+  padding-bottom: 90px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media(max-width: 767px) {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+}
