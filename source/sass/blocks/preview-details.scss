@@ -1,17 +1,17 @@
 .preview-details {
   display: block;
   width: 100%;
-  padding: 32px 60px 20px;
+  padding: 32px 40px 19px;
   text-align: center;
   color: $color-night-rider;
 }
 
 .preview-details img {
-  margin: 0 auto;
+  margin: 0 auto 14px;
 }
 
 .preview-details__title {
-  margin: 0;
+  margin: 12px 0 20px;
   font-family: $font-family-inter;
   font-size: 26px;
   font-weight: 700;
@@ -20,7 +20,7 @@
 
 .preview-details p {
   max-width: 420px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   font-family: $font-family-inter;
   font-size: 17px;
   font-weight: 400;
@@ -28,7 +28,6 @@
   text-align: left;
 }
 
-.preview-details__more {
-  color: $color-cerulean-blue;
-  text-align: right;
+.preview-details p:last-of-type {
+  margin-bottom: 13px;
 }

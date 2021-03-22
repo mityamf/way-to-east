@@ -19,7 +19,7 @@ main {
 .main__content {
   position: relative;
   z-index: 10;
-  height: 2000px;
+  padding-top: 28px;
 }
 
 .main__content h1,
@@ -31,4 +31,16 @@ main {
   line-height: 39px;
   text-align: center;
   color: $color-default-white;
+}
+
+.main__content-subtitle {
+  margin-bottom: 30px;
+}
+
+.main__countries {
+  margin-bottom: 20px;
+}
+
+.main__hotels {
+  margin-bottom: 20px;
 }

@@ -6,4 +6,4 @@ mixin main-country-details(parent, country)
     each item in country.description
       p= item
     p и ещё много интересных фактов…
-    span.preview-details__more Подробнее
+    +link-more()
