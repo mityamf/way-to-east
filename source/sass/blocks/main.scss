@@ -1,0 +1,51 @@
+main {
+  background-color: $color-swirl;
+}
+
+.main__content {
+  position: relative;
+  z-index: 10;
+  padding-top: 28px;
+
+  @include viewport--sm {
+    padding-top: 0;
+  }
+}
+
+.main__content h1,
+.main__content-subtitle {
+  margin: 0;
+  font-family: $font-family-inter;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: center;
+  color: $color-default-white;
+
+  @include viewport--sm {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.main__content h1 {
+  @include viewport--sm {
+    margin-top: -3px;
+  }
+}
+
+.main__content-subtitle {
+  margin-bottom: 30px;
+}
+
+.main__countries {
+  margin-bottom: 20px;
+
+  @include viewport--sm {
+    margin-bottom: 0;
+  }
+}
+
+.main__hotels {
+  margin-bottom: 20px;
+}

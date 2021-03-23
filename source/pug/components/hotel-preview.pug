@@ -1,0 +1,34 @@
+mixin hotel-preview(parent, hotel)
+  a(href=hotel.href, class = parent + "__hotel-preview hotel-preview")
+    .hotel-preview__slider
+      .swiper-container
+        .swiper-wrapper
+          each item in hotel.pictures
+            .swiper-slide
+              +picture("content/main", item.desktopName, item.mobileName, "png", "646", "352", item.alt)
+      .swiper-button-next
+        +icon("slider-arrow", 11, 18)
+      .swiper-button-prev
+        +icon("slider-arrow", 11, 18)
+    .hotel-preview__mini-flag
+      if (hotel.korea)
+        +icon("korea-flag-hotel", 34, 22)
+      if (hotel.japan)
+        +icon("japan-flag-hotel", 34, 22)
+    .hotel-preview__text
+      .hotel-preview__top
+        h2.hotel-preview__name= hotel.name
+        .hotel-preview__location
+          if (hotel.korea)
+            span.hotel-preview__country= "Корея, "
+          if (hotel.japan)
+            span.hotel-preview__country= "Япония, "
+          span.hotel-preview__city= hotel.city
+        p= hotel.description
+      .hotel-preview__bottom
+        .hotel-preview__rating
+          - var n = 1;
+            while n < hotel.stars + 1
+              +icon("star", 15, 15)
+              span= n++
+        +link-details()

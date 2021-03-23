@@ -1,0 +1,27 @@
+.hotels ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 20px);
+  margin: 0 0 -20px;
+  padding: 0;
+  list-style: none;
+
+  @include viewport--sm {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.hotels li {
+  position: relative;
+  width: calc(50% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @include viewport--sm {
+    width: 100%;
+    margin-right: 0;
+  }
+}
