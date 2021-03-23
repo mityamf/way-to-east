@@ -2,24 +2,14 @@ main {
   background-color: $color-swirl;
 }
 
-.main__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.main__background img {
-  width: 100%;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 89.2%, 50% 100%, 0% 89.2%);
-  object-fit: cover;
-  background-color: $color-east-side;
-}
-
 .main__content {
   position: relative;
   z-index: 10;
   padding-top: 28px;
+
+  @include viewport--sm {
+    padding-top: 0;
+  }
 }
 
 .main__content h1,
@@ -31,6 +21,17 @@ main {
   line-height: 39px;
   text-align: center;
   color: $color-default-white;
+
+  @include viewport--sm {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.main__content h1 {
+  @include viewport--sm {
+    margin-top: -3px;
+  }
 }
 
 .main__content-subtitle {
@@ -39,6 +40,10 @@ main {
 
 .main__countries {
   margin-bottom: 20px;
+
+  @include viewport--sm {
+    margin-bottom: 0;
+  }
 }
 
 .main__hotels {

@@ -2,7 +2,7 @@ extends ../base/layout
 
 include ../components/main-country-details
 include ../components/hotel-preview
-include ../components/link-more
+include ../components/link-details
 
 block data
   include ../data/main-country-details
@@ -19,8 +19,6 @@ block variables
 
 block main
   main.main
-    .main__background
-      +picture("bg", "main-background-desktop", "main-background-mobile", "png", "1920", "1343", "Закат на фоне гор")
     .container
       .main__content
         h1 Цветущий путь на Восток.

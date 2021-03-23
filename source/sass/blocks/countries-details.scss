@@ -36,6 +36,7 @@
   border-radius: 10px 0 0 10px;
 
   @include viewport--sm {
+    padding-right: 0;
     border-radius: 10px;
   }
 }
@@ -45,6 +46,7 @@
   border-radius: 0 10px 10px 0;
 
   @include viewport--sm {
+    padding-left: 0;
     border-radius: 10px;
   }
 }
