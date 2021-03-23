@@ -1,11 +1,11 @@
 .container {
   width: 100%;
-  max-width: 1412px;
+  max-width: 1692px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 190px;
 
   @include viewport--md {
-    padding: 0 30px;
+    padding: 0 40px;
   }
 
   @include viewport--sm {

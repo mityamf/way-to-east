@@ -1,6 +1,11 @@
 .choose-country {
   margin: 0 10px;
+  padding-left: 4px;
   text-align: center;
+
+  @include viewport--md {
+    padding-left: 0;
+  }
 }
 
 .choose-country__text {
@@ -19,15 +24,22 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include viewport--md {
+    padding-left: 4px;
+  }
 }
 
 .choose-country__list li {
-  margin-top: 18px;
-  margin-right: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 16px;
+  margin-right: 50px;
 
-  @include viewport--sm {
+  @include viewport--md {
     margin-top: 16px;
-    margin-right: 25px;
+    margin-right: 26px;
   }
 }
 
@@ -40,7 +52,7 @@
   font-family: $font-family-inter;
   font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 21px;
   text-align: center;
   color: $color-default-white;
 }

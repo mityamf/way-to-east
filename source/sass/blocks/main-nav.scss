@@ -8,7 +8,7 @@
 }
 
 .main-nav__open-menu {
-  @include viewport--sm {
+  @include viewport--md {
     display: block;
   }
 }
@@ -17,7 +17,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include viewport--sm {
+  @include viewport--md {
     display: none;
   }
 }
@@ -25,7 +25,7 @@
 .main-nav__list {
   display: none;
   list-style: none;
-  margin: 8px 0 0;
+  margin: 10px 0 0;
   padding: 0 11px;
 }
 
@@ -39,22 +39,22 @@
 
 .main-nav__link {
   display: block;
-  padding: 12px 10px 6px 0;
+  padding: 10px 20px 10px 0;
   font-family: $font-family-inter;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 23px;
   color: $color-default-white;
 }
 
 .header--mobile .main-nav__open-menu {
-  @include viewport--sm {
+  @include viewport--md {
     display: none;
   }
 }
 
 .header--mobile .main-nav__close-menu {
-  @include viewport--sm {
+  @include viewport--md {
     display: block;
     top: 50px;
     left: 25px;
@@ -64,7 +64,7 @@
 
 .header--mobile .main-nav__wrapper,
 .header--mobile .main-nav__list {
-  @include viewport--sm {
+  @include viewport--md {
     display: block;
   }
 }

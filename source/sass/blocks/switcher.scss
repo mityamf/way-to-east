@@ -9,7 +9,7 @@
 
 .switcher__link {
   display: block;
-  margin: 0 5px;
+  margin: 0;
   font-family: $font-family-inter;
   font-size: 15px;
   font-weight: 400;
@@ -22,6 +22,7 @@
   position: relative;
   width: 49px;
   height: 25px;
+  margin: 0 5px;
   border: 2px solid $color-default-white;
   border-radius: 30px;
 }

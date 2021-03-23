@@ -1,7 +1,12 @@
 extends ../base/layout
 
+include ../components/main-country-details
+include ../components/hotel-preview
+include ../components/link-details
+
 block data
-  include ../data/placeholder
+  include ../data/main-country-details
+  include ../data/main-hotels
 
 block variables
   - var title = "Цветущий путь на Восток — Главная"
@@ -13,8 +18,27 @@ block variables
   - var currentPage = "main" //- для остальных страниц пишем либо пустую строку, либо индекс
 
 block main
-  main
+  main.main
     .container
+      .main__content
+        h1 Цветущий путь на Восток.
+        p.main__content-subtitle Подробности о лучших отелях и особенностях двух стран.
+        section.main__countries.countries-details
+          ul
+            each item in mainCountryDetails
+              li
+                +main-country-details("countries-details", item)
+        section.main__hotels.hotels
+          ul
+            each item in mainHotels1
+              li
+                +hotel-preview("hotels", item)
+        section.main__comments
+        section.main__hotels.hotels
+          ul
+            each item in mainHotels2
+              li
+                +hotel-preview("hotels", item)
 
 //- block modals
 //-   +modal("modal--feedback")

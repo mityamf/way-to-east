@@ -1,0 +1,52 @@
+.countries-details ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.countries-details li {
+  position: relative;
+  width: 50%;
+  background-color: $color-default-white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7.5%;
+    width: 1px;
+    height: 85%;
+    background-color: $color-bon-jour;
+  }
+
+  &:last-child::after {
+    width: 0;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.countries-details li:nth-child(2n-1) {
+  padding-right: 10px;
+  border-radius: 10px 0 0 10px;
+
+  @include viewport--sm {
+    padding-right: 0;
+    border-radius: 10px;
+  }
+}
+
+.countries-details li:nth-child(2n) {
+  padding-left: 10px;
+  border-radius: 0 10px 10px 0;
+
+  @include viewport--sm {
+    padding-left: 0;
+    border-radius: 10px;
+  }
+}
