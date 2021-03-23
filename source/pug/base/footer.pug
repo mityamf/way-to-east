@@ -1,13 +1,10 @@
+include ../components/travel-media
+
 mixin footer(footerMod)
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
     .container
       .footer__wrapper
-        .footer__travel
-          .footer__travel-logo
-            +icon("logo-travelMedia", 133, 58)
-          a.footer__travel-link(href="#")
-            +icon("icon-mail", 20, 14)
-            span Написать в Travel Media
+        +travel-media("gray")
         .footer__countries
           .footer__countries-wrapper
             .footer__countries-logo.footer__countries-logo--korea

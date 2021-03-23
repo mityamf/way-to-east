@@ -14,7 +14,6 @@
   }
 }
 
-.footer__travel-link,
 .footer__countries-copyright {
   display: flex;
   align-items: center;
@@ -49,11 +48,6 @@
   }
 }
 
-.footer__travel-logo {
-  margin-bottom: 15px;
-}
-
-.footer__travel-link span,
 .footer__countries-copyright span {
   font-size: 15px;
   line-height: 20px;
@@ -62,29 +56,11 @@
   color: #6f6f6f;
 }
 
-.footer__travel-link span {
-  margin-left: 4px;
-}
-
 .footer__countries-copyright span {
   margin-left: 6px;
 }
 
-.footer__travel-link {
-  transition: opacity $default-transition-settings;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-    transition: opacity $default-transition-settings;
-  }
-}
-
 @media (max-width: 767px) {
-  .footer__travel {
-    display: none;
-  }
-
   .footer .container {
     padding: 0 38px;
   }

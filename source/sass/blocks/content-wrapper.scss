@@ -1,7 +1,8 @@
 .content-wrapper {
   position: relative;
+  z-index: 10;
   width: 83%;
-  margin: 30px auto 0;
+  margin: 30px auto 50px;
   padding-bottom: 90px;
   background-color: #ffffff;
   border-radius: 10px;
