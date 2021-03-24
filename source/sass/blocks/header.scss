@@ -69,8 +69,13 @@
   }
 }
 
+.header .travel-media {
+  display: none;
+}
+
 .header--mobile {
   position: fixed;
+  overflow-y: auto;
   z-index: 20;
   align-items: flex-start;
   width: 100%;
@@ -79,12 +84,20 @@
 
 .header--mobile .header__wrapper {
   @include viewport--md {
-    padding: 56px 0 29px;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    padding: 56px 0 200px;
   }
 }
 
+.header--mobile .header__background {
+  height: 100%;
+  background-color: $color-night-rider;
+}
+
 .header--mobile .header__background img {
-  height: 100vh;
+  height: 100%;
   clip-path: none;
 }
 
@@ -96,4 +109,10 @@
 
 .header--mobile .header__switcher {
   display: none;
+}
+
+.header--mobile .travel-media {
+  display: flex;
+  position: absolute;
+  bottom: 88px;
 }
