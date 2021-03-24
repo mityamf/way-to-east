@@ -3,10 +3,12 @@ extends ../base/layout
 include ../components/main-country-details
 include ../components/hotel-preview
 include ../components/link-details
+include ../components/comment
 
 block data
   include ../data/main-country-details
   include ../data/main-hotels
+  include ../data/main-comments
 
 block variables
   - var title = "Цветущий путь на Восток — Главная"
@@ -33,7 +35,14 @@ block main
             each item in mainHotels1
               li
                 +hotel-preview("hotels", item)
-        section.main__comments
+        section.main__comments.comments
+          h2 Комментарии представителей туроператоров
+          .swiper-container
+            .swiper-wrapper
+              each item in mainComments
+                .swiper-slide
+                  +comment(item)
+            .swiper-pagination
         section.main__hotels.hotels
           ul
             each item in mainHotels2
