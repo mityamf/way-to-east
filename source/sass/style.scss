@@ -23,6 +23,12 @@
 @import "blocks/main-nav";
 @import "blocks/choose-country.scss";
 @import "blocks/switcher.scss";
+@import "blocks/content-wrapper.scss";
+@import "blocks/culture.scss";
+@import "blocks/shopping.scss";
+@import "blocks/cuisine.scss";
+@import "blocks/hotel-details.scss";
+@import "blocks/blog.scss";
 @import "blocks/main.scss";
 @import "blocks/countries-details.scss";
 @import "blocks/preview-details.scss";
@@ -31,6 +37,7 @@
 @import "blocks/link-details.scss";
 @import "blocks/comments.scss";
 @import "blocks/tour-comment.scss";
+@import "blocks/travel-media.scss";
 
 // используйте это для отключения ховеров на тач устройствах
 // ! но не используйте это для текстовых полей ( input, textarea )

@@ -1,0 +1,41 @@
+.travel-media--gray {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.travel-media--white {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.travel-media--white .travel-media__link span {
+  color: #ffffff;
+}
+
+.travel-media__logo {
+  margin-bottom: 15px;
+}
+
+.travel-media__link {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  transition: opacity $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transition: opacity $default-transition-settings;
+  }
+
+  & span {
+    margin-left: 4px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: $font-family-inter;
+    color: #6f6f6f;
+    }
+}
