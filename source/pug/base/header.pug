@@ -1,5 +1,6 @@
 include ../components/choose-country
 include ../components/switcher
+include ../components/travel-media
 
 mixin header(headerMod, currentPage)
   -
@@ -19,7 +20,7 @@ mixin header(headerMod, currentPage)
       {
         href: "#",
         text: "Отели Японии"
-      },
+      }
     ]
 
   header(class=(headerMod) ? "header header--" + headerMod : "header")
@@ -48,3 +49,4 @@ mixin header(headerMod, currentPage)
                 li
                   a.main-nav__link(href=link.href)=link.text
       +switcher("header")
+      +travel-media("white")
