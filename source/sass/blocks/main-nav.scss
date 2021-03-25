@@ -68,3 +68,9 @@
     display: block;
   }
 }
+
+.header--mobile .main-nav__list {
+  @include viewport--md {
+    margin-bottom: 160px;
+  }
+}

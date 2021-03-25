@@ -1,38 +1,222 @@
 .comments {
   position: relative;
-  padding: 24px 41px 30px;
+  padding: 20px 45px 30px;
   border-radius: 10px;
   background-color: $color-default-white;
+
+  @include viewport--sm {
+    margin-top: 55px;
+    padding: 50px 18px 19px;
+  }
 }
 
 .comments h2 {
+  margin: 0 0 32px;
   font-family: $font-family-inter;
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
   color: $color-night-rider;
-}
-
-.comments .swiper-wrapper {
-  flex-wrap: wrap;
-  width: calc(100% + 28px);
-  margin-bottom: -20px;
 
   @include viewport--sm {
-    flex-wrap: nowrap;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    margin: 0;
+    font-family: $font-family-inter;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-dim-gray;
+    text-align: center;
   }
 }
 
-.comments .swiper-slide {
-  position: static;
-  width: calc(20% - 28px);
-  margin-right: 28px;
-  margin-bottom: 20px;
+.comments__slider .gallery-thumbs {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 41px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-cinnabar;
+
+    @include viewport--sm {
+      display: none;
+    }
+  }
+}
+
+.comments__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 222px;
+  padding-bottom: 54px;
+  margin-bottom: 10px;
 
   @include viewport--sm {
-    position: relative;
-    width: 100%;
-    margin-right: 0;
+    max-width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
+}
+
+.comments__avatar img {
+  position: relative;
+  z-index: -1;
+  min-height: 131px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @include viewport--sm {
+    width: 159px;
+    min-height: 159px;
+  }
+}
+
+.comments__title {
+  margin: 16px 0 5px;
+  font-family: $font-family-inter;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: $color-night-rider;
+
+  @include viewport--sm {
+    margin-top: 19px;
+  }
+}
+
+.comments__subtitle {
+  font-family: $font-family-inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: $color-night-rider;
+
+  @include viewport--sm {
+    max-width: 60%;
+  }
+}
+
+.comments__bottom {
+  text-align: center;
+}
+
+.comments__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+
+  @include viewport--sm {
+    flex-direction: column;
+    margin-top: -8px;
+    margin-bottom: -2px;
+  }
+}
+
+.comments__text svg {
+  margin: 0 20px;
+  min-width: 20px;
+
+  @include viewport--sm {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  &:last-child {
+    transform: rotate(180deg);
+
+    @include viewport--sm {
+      margin: 0;
+      align-self: flex-end;
+    }
+  }
+}
+
+.comments__text p {
+  max-width: 89%;
+  margin: 0;
+  font-family: $font-family-inter;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: $color-night-rider;
+  -webkit-line-clamp: 4; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include viewport--sm {
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    -webkit-line-clamp: 9;
+  }
+}
+
+.comments__button {
+  margin: 0 auto;
+}
+
+.comments__top.swiper-slide-thumb-active .comments__avatar {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px $color-cinnabar;
+
+  @include viewport--sm {
+    box-shadow: none;
+  }
+}
+
+.comments__top.swiper-slide-thumb-active::after,
+.comments__top.swiper-slide-thumb-active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-width: 31px 31px 0 31px;
+  border-color: $color-cinnabar transparent transparent transparent;
+  border-style: solid;
+
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.comments__top.swiper-slide-thumb-active::before {
+  z-index: 2;
+  bottom: 3px;
+  border-color: $color-default-white transparent transparent transparent;
+}
+
+.comments .swiper-pagination {
+  width: 100%;
+  bottom: -30px;
+  padding-right: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-default-white;
 }

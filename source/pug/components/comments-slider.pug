@@ -1,0 +1,22 @@
+mixin comments-slider(data)
+  .comments__slider
+    .swiper-container.gallery-thumbs
+      .swiper-wrapper
+        each item in data
+          .swiper-slide.comments__top
+            .comments__avatar
+              +img("content/main", item.imgName, "png", "131", "131", item.imgAlt)
+            h3.comments__title= item.name
+            span.comments__subtitle= item.profession
+    .swiper-container.gallery-top
+      .swiper-wrapper
+        each item in data
+          .swiper-slide.comments__bottom
+            .comments__text
+              +icon("quotes", 20, 39)
+              p= item.text
+              +icon("quotes", 20, 39)
+            a(href= item.href).comments__button.button= "подробнее"
+    .swiper-pagination
+
+

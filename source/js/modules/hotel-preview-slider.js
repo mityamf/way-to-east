@@ -9,6 +9,7 @@ const hotelPreviewSlider = () => {
     const createSliders = () => {
       hotelsSliders.forEach((n) => {
         const slider = new Swiper(n.querySelector('.swiper-container'), {
+          loop: true,
           navigation: {
             nextEl: n.querySelector('.swiper-button-next'),
             prevEl: n.querySelector('.swiper-button-prev'),

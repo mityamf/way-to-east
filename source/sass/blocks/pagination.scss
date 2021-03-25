@@ -1,0 +1,42 @@
+.pagination {
+  text-align: center;
+}
+
+.pagination__button {
+  margin-bottom: 40px;
+}
+
+.pagination__numbers {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.pagination__number {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pagination__link {
+  padding: 5px;
+  font-family: $font-family-inter;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $color-cerulean-blue;
+  cursor: pointer;
+}
+
+.pagination__number--active .pagination__link {
+  color: $color-dim-gray;
+  cursor: default;
+}

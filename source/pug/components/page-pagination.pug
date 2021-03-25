@@ -1,0 +1,13 @@
+mixin page-pagination(activePage, quantity)
+  +button("pagination", "показать ещё")
+  ol.pagination__numbers
+    - var n = 1;
+        - for (var index = 1; index <= quantity; index++)
+          if (index === activePage)
+            li.pagination__number.pagination__number--active
+              a(href="#" aria-label=("Текущая страница " + index)).pagination__link= index
+          else
+            li.pagination__number
+              a(href="#" aria-label=("Переход на страницу " + index)).pagination__link= index
+
+

@@ -1,3 +1,5 @@
+include ../components/hotel-rating
+
 mixin hotel-preview(parent, hotel)
   a(href=hotel.href, class = parent + "__hotel-preview hotel-preview")
     .hotel-preview__slider
@@ -26,9 +28,5 @@ mixin hotel-preview(parent, hotel)
           span.hotel-preview__city= hotel.city
         p= hotel.description
       .hotel-preview__bottom
-        .hotel-preview__rating
-          - var n = 1;
-            while n < hotel.stars + 1
-              +icon("star", 15, 15)
-              span= n++
+        +hotel-rating("hotel-preview", hotel.stars)
         +link-details()

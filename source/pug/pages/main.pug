@@ -3,7 +3,9 @@ extends ../base/layout
 include ../components/main-country-details
 include ../components/hotel-preview
 include ../components/link-details
-include ../components/comment
+include ../components/comments-slider
+include ../components/button
+include ../components/page-pagination
 
 block data
   include ../data/main-country-details
@@ -37,17 +39,14 @@ block main
                 +hotel-preview("hotels", item)
         section.main__comments.comments
           h2 Комментарии представителей туроператоров
-          .swiper-container
-            .swiper-wrapper
-              each item in mainComments
-                .swiper-slide
-                  +comment(item)
-            .swiper-pagination
+          +comments-slider(mainComments)
         section.main__hotels.hotels
           ul
             each item in mainHotels2
               li
                 +hotel-preview("hotels", item)
+        .main__pagination.pagination
+          +page-pagination(1, 7)
 
 //- block modals
 //-   +modal("modal--feedback")
