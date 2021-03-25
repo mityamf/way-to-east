@@ -6,7 +6,6 @@
   padding-bottom: 85px;
   background-color: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
 
   &--blog {
     padding-bottom: 65px;
@@ -15,10 +14,27 @@
   @include viewport--sm {
     width: 100%;
     padding-bottom: 15px;
+    overflow: hidden;
 
     &--blog {
       padding-bottom: 3px;
     }
+  }
+}
+
+.article__image img {
+  border-radius: 10px 10px 0 0;
+}
+
+.article__icon {
+  position: absolute;
+  top: -2px;
+  right: -45px;
+  width: 24px;
+  height: 24px;
+
+  @include viewport--sm {
+    display: none;
   }
 }
 
@@ -42,10 +58,10 @@
 
 .article__text img {
   @include viewport--sm {
-    position: relative;
-    left: -21px;
-    margin-top: 16px;
-    max-width: 115%;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 20px;
+    max-width: calc(100% + 40px)
   }
 }
 
@@ -97,7 +113,7 @@
 
 .article__author-name,
 .article__author-specialty {
-  margin-bottom: 5px;
+  margin-bottom: 13px;
   display: block;
   font-weight: 400;
   font-family: $font-family-inter;

@@ -1573,16 +1573,29 @@ button,
   margin: 0 auto 50px;
   padding-bottom: 85px;
   background-color: #ffffff;
-  border-radius: 10px;
-  overflow: hidden; }
+  border-radius: 10px; }
   .article--blog {
     padding-bottom: 65px; }
   @media (max-width: 767px) {
     .article {
       width: 100%;
-      padding-bottom: 15px; }
+      padding-bottom: 15px;
+      overflow: hidden; }
       .article--blog {
         padding-bottom: 3px; } }
+
+.article__image img {
+  border-radius: 10px 10px 0 0; }
+
+.article__icon {
+  position: absolute;
+  top: -2px;
+  right: -45px;
+  width: 24px;
+  height: 24px; }
+  @media (max-width: 767px) {
+    .article__icon {
+      display: none; } }
 
 .article__text {
   margin-top: 50px;
@@ -1601,10 +1614,10 @@ button,
 
 @media (max-width: 767px) {
   .article__text img {
-    position: relative;
-    left: -21px;
-    margin-top: 16px;
-    max-width: 115%; } }
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 20px;
+    max-width: calc(100% + 40px); } }
 
 .article h2 {
   margin: 50px 0 20px 0;
@@ -1645,7 +1658,7 @@ button,
 
 .article__author-name,
 .article__author-specialty {
-  margin-bottom: 5px;
+  margin-bottom: 13px;
   display: block;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
