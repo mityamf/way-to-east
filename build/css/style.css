@@ -1566,315 +1566,101 @@ button,
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
-.content-wrapper {
+.article {
   position: relative;
   z-index: 10;
   width: 83%;
-  margin: 30px auto 50px;
-  padding-bottom: 90px;
+  margin: 0 auto 50px;
+  padding-bottom: 85px;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden; }
+  .article--blog {
+    padding-bottom: 65px; }
   @media (max-width: 767px) {
-    .content-wrapper {
+    .article {
       width: 100%;
-      padding-bottom: 15px; } }
+      padding-bottom: 15px; }
+      .article--blog {
+        padding-bottom: 3px; } }
 
-.culture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  margin-bottom: 31px; }
+.article__text {
+  margin-top: 50px;
+  padding: 0 110px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131; }
   @media (max-width: 767px) {
-    .culture {
-      margin-bottom: 10px; } }
+    .article__text {
+      padding: 0 20px;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 19px; } }
 
 @media (max-width: 767px) {
-  .culture--japan.culture {
-    margin-bottom: 8px; } }
+  .article__text img {
+    position: relative;
+    left: -21px;
+    margin-top: 16px;
+    max-width: 115%; } }
 
-.culture__image {
-  margin-bottom: 50px; }
-  .culture__image img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
-  @media (max-width: 767px) {
-    .culture__image {
-      height: 273px;
-      margin-bottom: 32px; } }
-
-.culture h2 {
-  margin: 0 0 20px 0;
+.article h2 {
+  margin: 50px 0 20px 0;
   font-size: 26px;
   line-height: 31px;
   font-weight: 500;
   font-family: "Inter", "Arial", sans-serif;
-  text-align: center;
-  color: #313131; }
+  color: #313131;
+  text-align: center; }
   @media (max-width: 767px) {
-    .culture h2 {
-      margin-bottom: 12px;
+    .article h2 {
+      margin: 30px 0 5px 0;
       font-size: 22px;
       line-height: 26px; } }
 
-.culture__text p {
-  margin: 0 0 20px 0;
-  padding: 0 120px 0 110px;
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: "Inter", "Arial", sans-serif;
-  text-align: left;
-  color: #313131; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .culture__text p {
-      padding: 0 70px 0 60px; } }
-  @media (max-width: 767px) {
-    .culture__text p {
-      font-size: 15px;
-      line-height: 19px;
-      padding: 0 20px; } }
-
-.culture--japan .culture__text p {
-  padding: 0 110px; }
-  @media (max-width: 767px) {
-    .culture--japan .culture__text p {
-      padding: 0 20px;
-      margin: 0 0 19px 0; } }
-
-.shopping {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0 110px;
-  margin-bottom: 28px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .shopping {
-      padding: 0 70px; } }
-  @media (max-width: 767px) {
-    .shopping {
-      padding: 0;
-      margin-bottom: 9px; } }
-
-.shopping h2 {
-  margin: 0 0 20px 0;
-  font-size: 26px;
-  line-height: 31px;
-  font-weight: 500;
-  font-family: "Inter", "Arial", sans-serif;
-  text-align: center;
-  color: #313131; }
-  @media (max-width: 767px) {
-    .shopping h2 {
-      font-size: 22px;
-      line-height: 26px; } }
-
-.shopping p {
-  margin: 0;
-  margin-bottom: 20px;
-  padding-right: 10px;
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: "Inter", "Arial", sans-serif;
-  text-align: left;
-  color: #313131; }
-  @media (max-width: 767px) {
-    .shopping p {
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 15px;
-      line-height: 19px; } }
-
-.shopping__image {
+.article img {
   margin-bottom: 20px; }
-  .shopping__image img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
+
+.article p {
+  margin: 20px 0; }
   @media (max-width: 767px) {
-    .shopping__image {
-      height: 241px; } }
+    .article p {
+      margin: 13px 0 20px 0; } }
 
-.cuisine {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0 110px;
-  margin-bottom: 12px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .cuisine {
-      padding: 0 70px; } }
+.article__author {
+  margin-top: -140px; }
   @media (max-width: 767px) {
-    .cuisine {
-      padding: 0;
-      margin-bottom: 9px; } }
+    .article__author {
+      margin-top: -100px; } }
 
-.cuisine--japan.cuisine {
-  margin-bottom: 31px; }
-  .cuisine--japan.cuisine p {
-    padding-right: 0; }
-    @media (max-width: 767px) {
-      .cuisine--japan.cuisine p {
-        padding-right: 22px; } }
-
-.cuisine h2 {
-  margin: 0 0 20px 0;
-  font-size: 26px;
-  line-height: 31px;
-  font-weight: 500;
-  font-family: "Inter", "Arial", sans-serif;
-  text-align: center;
-  color: #313131; }
-  @media (max-width: 767px) {
-    .cuisine h2 {
-      padding: 0 20px;
-      font-size: 22px;
-      line-height: 26px; } }
-
-.cuisine p {
-  margin: 0;
-  margin-bottom: 20px;
-  padding-right: 10px;
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: "Inter", "Arial", sans-serif;
-  text-align: left;
-  color: #313131; }
-  @media (max-width: 767px) {
-    .cuisine p {
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 15px;
-      line-height: 19px; } }
-
-.cuisine__image {
-  margin-bottom: 20px; }
-  .cuisine__image img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
-  @media (max-width: 767px) {
-    .cuisine__image {
-      height: 241px; } }
-
-.hotel-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0 110px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .hotel-details {
-      padding: 0 70px; } }
-  @media (max-width: 767px) {
-    .hotel-details {
-      padding: 0; } }
-
-.hotel-details h2 {
-  margin: 0 0 20px 0;
-  font-size: 26px;
-  line-height: 31px;
-  font-weight: 500;
-  font-family: "Inter", "Arial", sans-serif;
-  text-align: center;
-  color: #313131; }
-  @media (max-width: 767px) {
-    .hotel-details h2 {
-      font-size: 22px;
-      line-height: 26px; } }
-
-.hotel-details p {
-  margin: 0;
-  margin-bottom: 20px;
-  padding-right: 10px;
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: "Inter", "Arial", sans-serif;
-  text-align: left;
-  color: #313131; }
-  @media (max-width: 767px) {
-    .hotel-details p {
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 15px;
-      line-height: 19px; } }
-
-.hotel-details__image {
-  margin-bottom: 20px; }
-  .hotel-details__image img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
-  @media (max-width: 767px) {
-    .hotel-details__image {
-      height: 241px; } }
-
-.blog__author {
-  width: 50%;
-  margin: -118px auto 0; }
-
-.blog__author-name {
+.article__author-name {
   font-size: 17px;
   line-height: 20px; }
 
-.blog__author-specialty {
+.article__author-specialty {
   font-size: 15px;
   line-height: 19px; }
 
-.blog__author-name,
-.blog__author-specialty {
-  margin-top: 18px;
+.article__author-name,
+.article__author-specialty {
+  margin-bottom: 5px;
   display: block;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131;
   text-align: center; }
 
-.blog__author-image img {
+.article__author-image {
+  width: 50%;
   margin: 0 auto; }
-
-.blog__content {
-  padding: 0 110px;
-  margin-top: 50px; }
+  .article__author-image img {
+    margin-left: auto;
+    margin-right: auto; }
   @media (max-width: 767px) {
-    .blog__content {
-      padding: 0 20px; } }
-
-.blog__content h2 {
-  margin: 0 0 17px 0;
-  font-size: 26px;
-  line-height: 31px;
-  font-weight: 500;
-  font-family: "Inter", "Arial", sans-serif;
-  color: #313131;
-  text-align: center; }
-
-.blog__content p {
-  margin: 0 0 20px 0;
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: "Inter", "Arial", sans-serif;
-  color: #313131; }
+    .article__author-image {
+      width: 48%; } }
 
 main {
   background-color: #d5d0cc; }
