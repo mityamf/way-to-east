@@ -1,5 +1,7 @@
 mixin article(content)
   article(class = (content.isBlog=="true") ? "article article--blog" : "article")
+    .article__icon
+      +icon("icon-cross", 23, 23)
     if (content.isBlog== "true")
       .article__image
         +picture("content/blog", "blog" + "-image-desktop", "blog" + "-image-mobile", "jpg", "1090", "490", "Фото японского пейзажа")
