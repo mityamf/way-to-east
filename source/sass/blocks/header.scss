@@ -10,11 +10,13 @@
     justify-content: center;
     align-items: center;
     padding: 19px 50px;
+    min-height: 162px;
 
     @include viewport--md {
       flex-direction: column;
       padding-left: 15px;
       padding-right: 15px;
+      min-height: 136px;
     }
 
     @include viewport--sm {
@@ -117,3 +119,16 @@
   position: absolute;
   bottom: 88px;
 }
+
+.header--inner .header__nav {
+  display: none;
+
+  @include viewport--md {
+    display: block;
+  }
+}
+
+.header--inner .header__switcher {
+  display: none;
+}
+

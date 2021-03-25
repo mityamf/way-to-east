@@ -1165,7 +1165,8 @@ button,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 19px 50px; }
+    padding: 19px 50px;
+    min-height: 162px; }
     @media (max-width: 1023px) {
       .header__wrapper {
         -webkit-box-orient: vertical;
@@ -1173,7 +1174,8 @@ button,
             -ms-flex-direction: column;
                 flex-direction: column;
         padding-left: 15px;
-        padding-right: 15px; } }
+        padding-right: 15px;
+        min-height: 136px; } }
     @media (max-width: 767px) {
       .header__wrapper {
         padding: 33px 0 29px; } }
@@ -1263,6 +1265,15 @@ button,
   display: flex;
   position: absolute;
   bottom: 88px; }
+
+.header--inner .header__nav {
+  display: none; }
+  @media (max-width: 1023px) {
+    .header--inner .header__nav {
+      display: block; } }
+
+.header--inner .header__switcher {
+  display: none; }
 
 .footer {
   background-color: #d5d0cc; }
