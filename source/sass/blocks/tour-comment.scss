@@ -1,0 +1,77 @@
+.comment__top img {
+  border-radius: 50%;
+  object-fit: cover;
+
+  @include viewport--sm {
+    width: 159px;
+    height: auto;
+  }
+}
+
+.comment__title {
+  font-family: $font-family-inter;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: $color-night-rider;
+}
+
+.comment__subtitle {
+  font-family: $font-family-inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: $color-night-rider;
+}
+
+.comment__text {
+  position: absolute;
+  bottom: 45px;
+  width: calc(100% - 28px);
+  height: 116px;
+
+  @include viewport--sm {
+    position: static;
+    height: auto;
+  }
+}
+
+.comment__text p {
+  font-family: $font-family-inter;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: $color-night-rider;
+  -webkit-line-clamp: 4; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include viewport--sm {
+    -webkit-line-clamp: 9;
+  }
+}
+
+.comment .comment__text {
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+  }
+}
+
+.comment--active {
+  padding-bottom: 126px;
+
+  @include viewport--sm {
+    padding-bottom: 0;
+  }
+}
+
+.comment--active .comment__text {
+  display: block;
+}

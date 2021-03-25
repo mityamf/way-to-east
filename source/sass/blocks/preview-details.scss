@@ -11,17 +11,20 @@
 }
 
 .preview-details img {
+  min-height: 242px;
   margin: 0 auto 14px;
+  border-radius: 50%;
   object-fit: cover;
 
   @include viewport--md {
     width: 200px;
+    min-height: 200px;
     height: auto;
   }
 
   @include viewport--sm {
     width: 159px;
-    height: auto;
+    min-height: 159px;
   }
 }
 
