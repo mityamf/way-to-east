@@ -29,7 +29,7 @@
 }
 
 .preview-details__title {
-  margin: 12px 0 20px;
+  margin: 12px 0 19px;
   font-family: $font-family-inter;
   font-size: 26px;
   font-weight: 700;
@@ -43,9 +43,9 @@
   }
 }
 
-.preview-details p {
+.preview-details__text {
   max-width: 420px;
-  margin: 0 auto 15px;
+  margin: 0 auto 14px;
   font-family: $font-family-inter;
   font-size: 17px;
   font-weight: 400;
@@ -54,16 +54,16 @@
 
   @include viewport--sm {
     max-width: 550px;
-    margin-bottom: 7px;
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 18px;
   }
 }
 
-.preview-details p:last-of-type {
-  margin-bottom: 13px;
+.preview-details p {
+  margin: 15px 0 0;
 
   @include viewport--sm {
-    margin-bottom: 20px;
+    margin-top: 7px;
   }
 }

@@ -1,5 +1,8 @@
 extends ../base/layout
 
+include ../components/hotel-rating
+include ../components/button
+
 block data
 
 block variables
@@ -14,6 +17,8 @@ block variables
 block main
   style.
     main > .container {
+      position: relative;
+      z-index: 2;
       padding-top: 30px;
       padding-bottom: 30px;
     }
@@ -64,3 +69,6 @@ block main
         p Класс компонента \ модификаторы
         p(style="color: red;") При необходимости, подсказки \ предупреждение \ важная информация
         div Компонент
+
+        +hotel-rating("parentClass", 5)
+        +button("класс родительского блока", "текст кнопки")

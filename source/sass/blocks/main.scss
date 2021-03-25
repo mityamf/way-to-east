@@ -52,4 +52,18 @@ main {
 
 .main__comments {
   margin-bottom: 20px;
+
+  @include viewport--sm {
+    margin-bottom: 44px;
+  }
+}
+
+.main__pagination {
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @include viewport--sm {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 }

@@ -103,14 +103,14 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 19px;
-  -webkit-line-clamp: 3; /* Число отображаемых строк */
-  display: -webkit-box; /* Включаем флексбоксы */
-  -webkit-box-orient: vertical; /* Вертикальная ориентация */
   overflow: hidden;
-  text-overflow: ellipsis;
 
   @include viewport--sm {
     max-height: 57px;
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    text-overflow: ellipsis;
   }
 }
 
