@@ -217,16 +217,20 @@
               </svg>
             </button>
             <div class="main-nav__wrapper">
-              <div class="main-nav__choose-country choose-country"><span class="choose-country__text">Выберете страну:</span>
+              <div class="main-nav__choose-country choose-country choose-country--none"><span class="choose-country__text">Выберете страну:</span>
                 <ul class="choose-country__list">
                   <li><a class="choose-country__link" href="korea.html">
-                      <svg width="57" height="57" aria-hidden="true">
-                        <use xlink:href="#korea-circle"></use>
-                      </svg><span class="choose-country__name">Корея</span></a></li>
+                      <div class="choose-country__svg">
+                        <svg width="57" height="57" aria-hidden="true">
+                          <use xlink:href="#korea-circle"></use>
+                        </svg>
+                      </div><span class="choose-country__name">Корея</span></a></li>
                   <li><a class="choose-country__link" href="japan.html">
-                      <svg width="57" height="57" aria-hidden="true">
-                        <use xlink:href="#japan-circle"></use>
-                      </svg><span class="choose-country__name">Япония</span></a></li>
+                      <div class="choose-country__svg">
+                        <svg width="57" height="57" aria-hidden="true">
+                          <use xlink:href="#japan-circle"></use>
+                        </svg>
+                      </div><span class="choose-country__name">Япония</span></a></li>
                 </ul>
               </div>
               <ul class="main-nav__list">
@@ -237,11 +241,6 @@
               </ul>
             </div>
           </nav>
-          <div class="header__switcher switcher"><a class="switcher__link" href="korea.html">KOR</a>
-            <div class="switcher__toggle">
-              <div class="switcher__ball switcher__ball--center"></div>
-            </div><a class="switcher__link" href="japan.html">JAP</a>
-          </div>
           <div class="travel-media travel-media--white">
             <div class="travel-media__logo">
               <svg width="133" height="58" aria-hidden="true">
@@ -292,8 +291,8 @@
               </ul>
             </section>
             <section class="main__hotels hotels">
-              <ul>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+              <ul class="hotels__wrapper">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -353,7 +352,7 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -455,7 +454,7 @@
                         <svg width="20" height="39" aria-hidden="true">
                           <use xlink:href="#quotes"></use>
                         </svg>
-                      </div><a class="comments__button button" href="#">подробнее</a>
+                      </div><a class="comments__button button" href="blog.html">подробнее</a>
                     </div>
                     <div class="swiper-slide comments__bottom">
                       <div class="comments__text">
@@ -466,7 +465,7 @@
                         <svg width="20" height="39" aria-hidden="true">
                           <use xlink:href="#quotes"></use>
                         </svg>
-                      </div><a class="comments__button button" href="#">подробнее</a>
+                      </div><a class="comments__button button" href="blog.html">подробнее</a>
                     </div>
                     <div class="swiper-slide comments__bottom">
                       <div class="comments__text">
@@ -477,7 +476,7 @@
                         <svg width="20" height="39" aria-hidden="true">
                           <use xlink:href="#quotes"></use>
                         </svg>
-                      </div><a class="comments__button button" href="#">подробнее</a>
+                      </div><a class="comments__button button" href="blog.html">подробнее</a>
                     </div>
                     <div class="swiper-slide comments__bottom">
                       <div class="comments__text">
@@ -488,7 +487,7 @@
                         <svg width="20" height="39" aria-hidden="true">
                           <use xlink:href="#quotes"></use>
                         </svg>
-                      </div><a class="comments__button button" href="#">подробнее</a>
+                      </div><a class="comments__button button" href="blog.html">подробнее</a>
                     </div>
                     <div class="swiper-slide comments__bottom">
                       <div class="comments__text">
@@ -499,7 +498,7 @@
                         <svg width="20" height="39" aria-hidden="true">
                           <use xlink:href="#quotes"></use>
                         </svg>
-                      </div><a class="comments__button button" href="#">подробнее</a>
+                      </div><a class="comments__button button" href="blog.html">подробнее</a>
                     </div>
                   </div>
                 </div>
@@ -507,14 +506,14 @@
               </div>
             </section>
             <section class="main__hotels hotels">
-              <ul>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+              <ul class="hotels__wrapper">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-lotte-1-mobile@1x.png 1x, img/content/main/hotel-lotte-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-lotte-1-desktop@1x.png" srcset="img/content/main/hotel-lotte-1-desktop@2x.png 2x" width="646" height="352" alt="Серое здание"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-lotte-1-mobile@1x.png 1x, img/content/main/hotel-lotte-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-lotte-1-desktop@1x.png" srcset="img/content/main/hotel-lotte-1-desktop@2x.png 2x" width="646" height="352" alt="Высокое стеклянное здание вечером"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
@@ -568,7 +567,7 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -628,7 +627,7 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -688,7 +687,7 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -748,7 +747,7 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -808,13 +807,13 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-shangrila-1-mobile@1x.png 1x, img/content/main/hotel-shangrila-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-shangrila-1-desktop@1x.png" srcset="img/content/main/hotel-shangrila-1-desktop@2x.png 2x" width="646" height="352" alt="Женщина в кимано на лестнице"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-shangrila-1-mobile@1x.png 1x, img/content/main/hotel-shangrila-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-shangrila-1-desktop@1x.png" srcset="img/content/main/hotel-shangrila-1-desktop@2x.png 2x" width="646" height="352" alt="Женщина в кимоно на лестнице"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
@@ -868,7 +867,7 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -928,7 +927,7 @@
                       </div>
                     </div></a>
                 </li>
-                <li><a class="hotels__hotel-preview hotel-preview" href="#">
+                <li class="hotels__item"><a class="hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
                       <div class="swiper-container">
                         <div class="swiper-wrapper">

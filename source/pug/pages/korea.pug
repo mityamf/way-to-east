@@ -1,0 +1,48 @@
+extends ../base/layout
+
+include ../components/main-country-details
+include ../components/hotel-preview
+include ../components/link-details
+include ../components/button
+include ../components/page-pagination
+include ../components/filter-cities
+
+block data
+  include ../data/korea-hotels
+  include ../data/korea-country-details
+  include ../data/cities
+
+block variables
+  - var title = "Цветущий путь на Восток — Главная"
+  - var wrapperMod = ""
+  - var hasHeader = true
+  - var headerMod = "korea"
+  - var hasFooter = true
+  - var footerMod = ""
+  - var currentPage = "" //- для остальных страниц пишем либо пустую строку, либо индекс
+
+block main
+  main.country-page
+    .container
+      .country-page__content
+        h1 Корея
+        +filter-cities("country-page", koreaCities)
+        section.country-page__hotels.hotels
+          .hotels__wrapper
+            each item in koreaHotels1
+              .hotels__item
+                +hotel-preview("hotels", item)
+            .country-page__countries.countries-details
+              each item in koreaCountryDetails
+                +main-country-details("countries-details", item)
+            each item in koreaHotels2
+              .hotels__item
+                +hotel-preview("hotels", item)
+        .country-page__pagination.pagination
+          +page-pagination(1, 7)
+
+//- block modals
+//-   +modal("modal--feedback")
+//-     +modal-feedback()
+//-   +modal("modal--success modal--no-scale modal--fit-content")
+//-     +modal-success()

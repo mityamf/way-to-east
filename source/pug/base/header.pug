@@ -39,7 +39,12 @@ mixin header(headerMod, currentPage)
         button.main-nav__close-menu.btn-reset(type="button", aria-label="Закрыть мобильное меню", aria-pressed="false")
           +icon("icon-close", 24, 24)
         .main-nav__wrapper
-          +choose-country("main-nav")
+          if(headerMod === "")
+            +choose-country("main-nav", "none")
+          if(headerMod === "korea")
+            +choose-country("main-nav", "korea")
+          if(headerMod === "japan")
+            +choose-country("main-nav", "japan")
           ul.main-nav__list
             each link, index in headerLinks
               if(index === currentPage)
@@ -48,5 +53,10 @@ mixin header(headerMod, currentPage)
               else
                 li
                   a.main-nav__link(href=link.href)=link.text
-      +switcher("header")
+      if(headerMod === "main")
+        +switcher("header", "center")
+      if(headerMod === "korea")
+        +switcher("header", "left")
+      if(headerMod === "japan")
+        +switcher("header", "right")
       +travel-media("white")

@@ -1,59 +1,92 @@
 const createComments = () => {
-  const comments = document.querySelector('.comments');
 
-  if (!comments) {
+  const commentsSlider = document.querySelector('.comments__slider');
+
+  if (!commentsSlider) {
     return;
   }
 
-  let createSlider = () => {
-    const galleryThumbs = new Swiper('.comments .gallery-thumbs', {
-      spaceBetween: 28,
-      slidesPerView: 'auto',
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        320: {
-          spaceBetween: 0,
-          slidesPerView: 1,
-        },
-        768: {
-          spaceBetween: 28,
-          slidesPerView: 'auto',
-        },
+  const commentThumbsProperties = {
+    spaceBetween: 28,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      320: {
+        spaceBetween: 0,
+        slidesPerView: 1,
       },
-    });
-    const galleryTop = new Swiper('.comments .gallery-top', {
+      768: {
+        spaceBetween: 28,
+        slidesPerView: 'auto',
+      },
+    },
+  };
+  const commentsThumbsContainer = document.querySelector('.comments .gallery-thumbs');
+  const commentsTopContainer = document.querySelector('.comments .gallery-top');
+
+  const createCommentsSwiper = (thumbsContainer, topContainer) => {
+    let galleryThumbs = new window.Swiper(thumbsContainer, commentThumbsProperties);
+
+    let galleryTop = new window.Swiper(topContainer, {
       spaceBetween: 0,
-      navigation: {
-        nextEl: '.comments .swiper-button-next',
-        prevEl: '.comments .swiper-button-prev',
+      observer: true,
+      pagination: {
+        el: '.comments .swiper-pagination',
+        clickable: true,
       },
       thumbs: {
         swiper: galleryThumbs,
       },
-      breakpoints: {
-        320: {
-          pagination: {
-            el: '.comments .swiper-pagination',
-          },
+    });
+/*
+    galleryThumbs.on('slideChange', function () {
+      if (window.innerWidth < 768) {
+        console.log('slide changed');
+        const visibleSlide = commentsSlider.querySelector('.swiper-slide-visible');
+        console.log(visibleSlide);
+        //visibleSlide.classList.add('swiper-slide-thumb-active');
+      }
+    });
+*/
+    window.addEventListener('resize', function () {
+      galleryThumbs.destroy();
+      galleryThumbs = new window.Swiper(thumbsContainer, commentThumbsProperties);
+      galleryTop.destroy();
+      galleryTop = new window.Swiper(topContainer, {
+        spaceBetween: 0,
+        observer: true,
+        pagination: {
+          el: '.comments .swiper-pagination',
+          clickable: true,
         },
-        768: {
-          navigation: {
-            nextEl: '.comments .swiper-button-next',
-            prevEl: '.comments .swiper-button-prev',
-          },
-          thumbs: {
-            swiper: galleryThumbs,
-          },
+        thumbs: {
+          swiper: galleryThumbs,
         },
-      },
+      });
     });
   };
 
-  window.addEventListener('resize', createSlider);
+  createCommentsSwiper(commentsThumbsContainer, commentsTopContainer);
 
-  createSlider();
 };
 
 export {createComments};
+/*
+galleryThumbs.addEventListener('slideChange', function () {
+  if (window.innerWidth < 768) {
+    const commentsAvatars = commentsSlider.querySelectorAll('.comments__top');
+    const commentsTexts = commentsSlider.querySelectorAll('.comments__bottom');
+
+    const visibleSlide = commentsSlider.querySelector('.swiper-slide-visible');
+    visibleSlide.classList.add('swiper-slide-active');
+
+    console.log(commentsAvatars);
+    console.log(commentsTexts);
+    console.log(visibleSlide);
+  }
+});
+
+*/
+
