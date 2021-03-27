@@ -1276,15 +1276,25 @@ button,
   display: none; }
 
 .footer {
+  margin-top: -1px;
   background-color: #d5d0cc; }
 
 .footer__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 90px;
-  padding-bottom: 98px;
-  border-top: 1px solid #beb8b4; }
+  padding-bottom: 98px; }
+  .footer__wrapper::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #beb8b4; }
   @media (max-width: 767px) {
     .footer__wrapper {
       padding-top: 30px;
@@ -1606,17 +1616,20 @@ button,
   position: relative;
   z-index: 10;
   width: 83%;
-  margin: 0 auto 50px;
+  margin: 0 auto 31px;
   padding-bottom: 85px;
   background-color: #ffffff;
   border-radius: 10px; }
   .article--blog {
     padding-bottom: 65px; }
+  .article--japan-details {
+    padding-bottom: 67px; }
   @media (max-width: 767px) {
     .article {
       width: 100%;
       padding-bottom: 15px;
-      overflow: hidden; }
+      overflow: hidden;
+      margin-bottom: 15px; }
       .article--blog {
         padding-bottom: 3px; } }
 
@@ -1659,7 +1672,7 @@ button,
   margin: 50px 0 20px 0;
   font-size: 26px;
   line-height: 31px;
-  font-weight: 500;
+  font-weight: 700;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131;
   text-align: center; }
@@ -1670,7 +1683,7 @@ button,
       line-height: 26px; } }
 
 .article img {
-  margin-bottom: 20px; }
+  margin-bottom: 18px; }
 
 .article p {
   margin: 20px 0; }
@@ -1679,10 +1692,10 @@ button,
       margin: 13px 0 20px 0; } }
 
 .article__author {
-  margin-top: -140px; }
+  margin-top: -137px; }
   @media (max-width: 767px) {
     .article__author {
-      margin-top: -100px; } }
+      margin-top: -97px; } }
 
 .article__author-name {
   font-size: 17px;
@@ -1694,12 +1707,16 @@ button,
 
 .article__author-name,
 .article__author-specialty {
-  margin-bottom: 13px;
+  margin-bottom: 18px;
   display: block;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131;
   text-align: center; }
+  @media (max-width: 1023px) {
+    .article__author-name,
+    .article__author-specialty {
+      margin-bottom: 6px; } }
 
 .article__author-image {
   width: 50%;
@@ -2290,13 +2307,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 400px;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; }
-  .travel-media__link:hover, .travel-media__link:focus {
-    opacity: 0.8;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
+  max-width: 400px; }
   .travel-media__link span {
     margin-left: 4px;
     font-size: 15px;
@@ -2304,6 +2315,44 @@ main {
     font-weight: 400;
     font-family: "Inter", "Arial", sans-serif;
     color: #6f6f6f; }
+
+.page-content {
+  position: relative;
+  margin-top: -120px;
+  margin-bottom: 51px;
+  z-index: 10; }
+  @media (max-width: 1023px) {
+    .page-content {
+      margin-top: -17px; } }
+
+.page-content h1 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: 700;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #ffffff;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .page-content h1 {
+      font-size: 24px;
+      line-height: 29px; } }
+
+.page-content__title {
+  margin: 20px 0;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #6f6f6f;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .page-content__title {
+      margin: 18px 0;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500; } }
 
 .button {
   display: inline-block;
@@ -2362,6 +2411,46 @@ main {
 .pagination__number--active .pagination__link {
   color: #6f6f6f;
   cursor: default; }
+
+.inner-hotels {
+  margin-top: 23px; }
+  .inner-hotels--blog {
+    margin-top: 0; }
+
+.inner-hotels__button {
+  display: block;
+  margin: 50px auto 0; }
+  @media (max-width: 1023px) {
+    .inner-hotels__button {
+      margin-top: 30px; } }
+
+.link-back {
+  position: fixed;
+  top: 71px;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 1023px) {
+    .link-back {
+      position: absolute;
+      top: -82px;
+      right: 21px; } }
+
+.link-back span {
+  margin-left: 5px;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase; }
+  @media (max-width: 1023px) {
+    .link-back span {
+      text-transform: initial; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
