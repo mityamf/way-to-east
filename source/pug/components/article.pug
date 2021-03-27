@@ -1,5 +1,5 @@
 mixin article(content)
-  article(class = (content.isBlog=="true") ? "article article--blog" : "article")
+  article(class = "article article--" + content.pageClass)
     .article__icon
       +icon("icon-cross", 23, 23)
     if (content.isBlog== "true")

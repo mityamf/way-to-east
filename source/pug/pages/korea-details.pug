@@ -1,15 +1,20 @@
 extends ../base/layout
 
 include ../components/article
+include ../components/link-details
+include ../components/hotel-preview
+include ../components/button
+include ../components/link-back
 
 block data
   include ../data/article-content
+  include ../data/inner-hotels
 
 block variables
   - var title = "Особенности гостеприимства в Корее"
   - var wrapperMod = ""
   - var hasHeader = true
-  - var headerMod = ""
+  - var headerMod = "inner"
   - var hasFooter = true
   - var footerMod = ""
   - var currentPage = ""
@@ -17,7 +22,16 @@ block variables
 block main
   main
     .page-content
+      +link-back("Назад")
       .container
           h1 Особенности гостеприимства в Корее
           +article(koreaDetails)
+          h2.page-content__title Вас может заинтересовать
+          section.hotels.inner-hotels
+            ul
+              li
+                +hotel-preview("inner", signielSeoul)
+              li
+                +hotel-preview("inner", continentalSeoul)
+            +button("inner-hotels", "Показать ещё")
 

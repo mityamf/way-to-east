@@ -1,0 +1,28 @@
+.link-back {
+  position: fixed;
+  top: 71px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+
+  @include viewport--md {
+    position: absolute;
+    top: -82px;
+    right: 21px;
+  }
+}
+
+
+.link-back span {
+  margin-left: 5px;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 700;
+  font-family: $font-family-inter;
+  color: $color-default-white;
+  text-transform: uppercase;
+
+  @include viewport--md {
+    text-transform: initial;
+  }
+}

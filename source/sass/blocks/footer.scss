@@ -1,6 +1,6 @@
 .footer {
   margin-top: -1px;
-  background-color: #d5d0cc;
+  background-color: $color-swirl;
 }
 
 .footer__wrapper {
@@ -17,7 +17,7 @@
   content: "";
   width: 100%;
   height: 1px;
-  background-color: #beb8b4;
+  background-color: $color-pale-slate;
 }
 
   @media (max-width: 767px) {
@@ -65,7 +65,7 @@
   line-height: 20px;
   font-weight: 400;
   font-family: $font-family-inter;
-  color: #6f6f6f;
+  color: $color-dim-gray;
 }
 
 .footer__countries-copyright span {
