@@ -128,7 +128,16 @@
   }
 }
 
-.header--inner .header__switcher {
+.header--inner .header__switcher,
+.header--mobile.header--korea .header__switcher {
   display: none;
 }
 
+.header--korea .header__switcher {
+  @include viewport--sm {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+  }
+}

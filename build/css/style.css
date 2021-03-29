@@ -1272,8 +1272,18 @@ button,
     .header--inner .header__nav {
       display: block; } }
 
-.header--inner .header__switcher {
+.header--inner .header__switcher,
+.header--mobile.header--korea .header__switcher {
   display: none; }
+
+@media (max-width: 767px) {
+  .header--korea .header__switcher {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: -20px; } }
 
 .footer {
   margin-top: -1px;
@@ -1570,6 +1580,40 @@ button,
   text-align: center;
   color: #ffffff; }
 
+.choose-country__svg {
+  margin-bottom: 5px;
+  width: 57px;
+  height: 57px;
+  line-height: 0; }
+
+.choose-country__svg svg {
+  position: relative;
+  z-index: -1; }
+
+.choose-country__link:hover, .choose-country__link:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease; }
+
+.choose-country__link--active {
+  position: relative; }
+  .choose-country__link--active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    background-color: #ffffff; }
+
+.choose-country__link--active .choose-country__svg {
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 0 3px #1c54d1;
+          box-shadow: inset 0 0 0 3px #1c54d1; }
+
 .switcher {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1611,6 +1655,16 @@ button,
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+
+.switcher__ball--left {
+  left: 11px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.switcher__ball--right {
+  right: 2px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
 
 .article {
   position: relative;
@@ -1731,12 +1785,14 @@ button,
 main {
   background-color: #d5d0cc; }
 
-.main__content {
+.main__content,
+.country-page__content {
   position: relative;
   z-index: 10;
   padding-top: 28px; }
   @media (max-width: 767px) {
-    .main__content {
+    .main__content,
+    .country-page__content {
       padding-top: 0; } }
 
 .main__content h1,
@@ -1889,7 +1945,7 @@ main {
     .preview-details p {
       margin-top: 7px; } }
 
-.hotels ul {
+.hotels__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1900,11 +1956,11 @@ main {
   padding: 0;
   list-style: none; }
   @media (max-width: 767px) {
-    .hotels ul {
+    .hotels__wrapper {
       width: 100%;
       margin-bottom: 0; } }
 
-.hotels li {
+.hotels__item {
   position: relative;
   width: calc(50% - 20px);
   margin-right: 20px;
@@ -1912,7 +1968,7 @@ main {
   border-radius: 10px;
   overflow: hidden; }
   @media (max-width: 767px) {
-    .hotels li {
+    .hotels__item {
       width: 100%;
       margin-right: 0; } }
 
@@ -1942,6 +1998,13 @@ main {
   @media (max-width: 767px) {
     .hotel-preview__slider img {
       height: 228px; } }
+
+.hotel-preview__slider .swiper-button-next,
+.hotel-preview__slider .swiper-button-prev {
+  top: 52%;
+  line-height: 0;
+  padding: 5px 0;
+  height: auto; }
 
 .hotel-preview__slider .swiper-button-next::after,
 .hotel-preview__slider .swiper-button-prev::after {
@@ -2122,7 +2185,8 @@ main {
           align-items: center;
   max-width: 222px;
   padding-bottom: 54px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  cursor: pointer; }
   @media (max-width: 767px) {
     .comments__top {
       max-width: 100%;
@@ -2263,9 +2327,13 @@ main {
   border-color: #ffffff transparent transparent transparent; }
 
 .comments .swiper-pagination {
-  width: 100%;
-  bottom: -30px;
-  padding-right: 10px; }
+  display: none; }
+  @media (max-width: 767px) {
+    .comments .swiper-pagination {
+      display: block;
+      width: 100%;
+      bottom: -30px;
+      padding-right: 10px; } }
 
 .swiper-pagination-bullet {
   width: 10px;
@@ -2411,6 +2479,107 @@ main {
 .pagination__number--active .pagination__link {
   color: #6f6f6f;
   cursor: default; }
+
+.country-page__content {
+  position: relative;
+  z-index: 10;
+  padding-top: 28px; }
+  @media (max-width: 767px) {
+    .country-page__content {
+      padding-top: 0;
+      margin-top: -13px; } }
+
+.country-page h1 {
+  margin: 0 0 20px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  text-align: center;
+  color: #ffffff; }
+  @media (max-width: 767px) {
+    .country-page h1 {
+      text-align: left; } }
+
+.country-page__filter-cities {
+  margin: 0 auto 15px; }
+  @media (max-width: 767px) {
+    .country-page__filter-cities {
+      margin-bottom: 30px; } }
+
+.country-page__countries {
+  position: fixed;
+  top: 78px;
+  right: 20px; }
+  @media (max-width: 1023px) {
+    .country-page__countries {
+      position: absolute;
+      top: -50px;
+      right: 0; } }
+  @media (max-width: 767px) {
+    .country-page__countries {
+      position: static;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 20px; } }
+
+.country-page__countries svg,
+.country-page__countries .preview-details__title,
+.country-page__countries .preview-details__text,
+.country-page__countries .link-details {
+  display: none; }
+  @media (max-width: 767px) {
+    .country-page__countries svg,
+    .country-page__countries .preview-details__title,
+    .country-page__countries .preview-details__text,
+    .country-page__countries .link-details {
+      display: block; } }
+
+@media (max-width: 767px) {
+  .country-page__countries svg {
+    display: inline-block; } }
+
+.country-page__countries img {
+  width: 91px;
+  min-height: 91px; }
+  @media (max-width: 767px) {
+    .country-page__countries img {
+      width: 159px;
+      min-height: 159px; } }
+
+.country-page__hotels {
+  margin-bottom: 46px; }
+  @media (max-width: 767px) {
+    .country-page__hotels {
+      margin-bottom: 30px; } }
+
+.country-page__pagination {
+  margin-bottom: 48px; }
+  @media (max-width: 767px) {
+    .country-page__pagination {
+      margin-bottom: 10px; } }
+
+.filter-cities {
+  display: block;
+  max-width: 312px;
+  width: 100%;
+  padding: 9px 16px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 10px; }
+  @media (max-width: 767px) {
+    .filter-cities {
+      max-width: 350px; } }
+
+.filter-cities option {
+  color: #000000; }
 
 .inner-hotels {
   margin-top: 23px; }

@@ -1,12 +1,37 @@
-mixin choose-country(parent)
-  div(class = parent + "__choose-country choose-country")
+mixin choose-country(parent, country)
+  div(class = parent + "__choose-country choose-country choose-country--" + country)
     span.choose-country__text Выберете страну:
     ul.choose-country__list
-      li
-        a.choose-country__link(href="korea.html")
-          +icon("korea-circle", 57, 57)
-          span.choose-country__name Корея
-      li
-        a.choose-country__link(href="japan.html")
-          +icon("japan-circle", 57, 57)
-          span.choose-country__name Япония
+      if (country === "none")
+        li
+          a.choose-country__link(href="korea.html")
+            .choose-country__svg
+              +icon("korea-circle", 57, 57)
+            span.choose-country__name Корея
+        li
+          a.choose-country__link(href="japan.html")
+            .choose-country__svg
+              +icon("japan-circle", 57, 57)
+            span.choose-country__name Япония
+      if (country === "korea")
+        li
+          a.choose-country__link.choose-country__link--active
+            .choose-country__svg
+              +icon("korea-circle", 57, 57)
+            span.choose-country__name Корея
+        li
+          a.choose-country__link(href="japan.html")
+            .choose-country__svg
+              +icon("japan-circle", 57, 57)
+            span.choose-country__name Япония
+      if (country === "japan")
+        li
+          a.choose-country__link(href="korea.html")
+            .choose-country__svg
+              +icon("korea-circle", 57, 57)
+            span.choose-country__name Корея
+        li
+          a.choose-country__link.choose-country__link--active
+            .choose-country__svg
+              +icon("japan-circle", 57, 57)
+            span.choose-country__name Япония

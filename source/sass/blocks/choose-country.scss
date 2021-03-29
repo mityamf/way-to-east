@@ -56,3 +56,45 @@
   text-align: center;
   color: $color-default-white;
 }
+
+.choose-country__svg {
+  margin-bottom: 5px;
+  width: 57px;
+  height: 57px;
+  line-height: 0;
+}
+
+.choose-country__svg svg {
+  position: relative;
+  z-index: -1;
+}
+
+.choose-country__link {
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    transition: $default-transition-settings;
+  }
+}
+
+.choose-country__link--active {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    background-color: $color-default-white;
+  }
+}
+
+
+.choose-country__link--active .choose-country__svg {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px $color-cerulean-blue;
+}
+

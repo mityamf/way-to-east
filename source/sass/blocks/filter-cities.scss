@@ -1,0 +1,23 @@
+.filter-cities {
+  display: block;
+  max-width: 312px;
+  width: 100%;
+  padding: 9px 16px;
+  font-family: $font-family-inter;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: $color-default-white;
+  background-color: transparent;
+  border: 2px solid $color-default-white;
+  border-radius: 10px;
+
+  @include viewport--sm {
+    max-width: 350px;
+  }
+}
+
+.filter-cities option {
+  color: $color-default-black;
+}

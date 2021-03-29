@@ -41,3 +41,13 @@
   transform: translate(-50%, -50%);
 }
 
+.switcher__ball--left {
+  left: 11px;
+  transform: translate(-50%, -50%);
+}
+
+.switcher__ball--right {
+  right: 2px;
+  transform: translate(0, -50%);
+}
+
