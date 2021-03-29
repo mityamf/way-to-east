@@ -2354,11 +2354,6 @@ main {
       line-height: 24px;
       font-weight: 500; } }
 
-.page-content--hotel h2 {
-  padding-left: 100px;
-  color: #6f6f6f;
-  text-align: left; }
-
 .button {
   display: inline-block;
   min-width: 202px;
@@ -2587,6 +2582,13 @@ main {
   .hotel-card__link:first-child {
     margin-right: 15px; }
 
+.participant-form {
+  width: 83%;
+  margin: 0 auto; }
+
+.participant-form h2 {
+  text-align: left; }
+
 .participant-form form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2597,14 +2599,97 @@ main {
           flex-direction: column; }
 
 .participant-form__wrapper {
-  width: 83%;
-  margin: 0 auto;
   padding: 30px 200px;
   background-color: #ffffff;
   border-radius: 10px; }
 
 .participant-form form input {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  height: 40px; }
+  .participant-form form input::-webkit-input-placeholder {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #313131; }
+  .participant-form form input::-moz-placeholder {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #313131; }
+  .participant-form form input:-ms-input-placeholder {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #313131; }
+  .participant-form form input::-ms-input-placeholder {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #313131; }
+  .participant-form form input::placeholder {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #313131; }
+
+.participant-form form input,
+.participant-form form textarea {
+  padding: 10px 15px;
+  background-color: #ebebeb;
+  border: none;
+  border-radius: 10px; }
+
+.participant-form form label {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #6f6f6f; }
+
+.participant-form form textarea::-webkit-input-placeholder {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131; }
+
+.participant-form form textarea::-moz-placeholder {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131; }
+
+.participant-form form textarea:-ms-input-placeholder {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131; }
+
+.participant-form form textarea::-ms-input-placeholder {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131; }
+
+.participant-form form textarea::placeholder {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131; }
+
+.participant-form__button.button {
+  width: 200px;
+  margin: 0 auto;
+  background-color: #1c54d1; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
