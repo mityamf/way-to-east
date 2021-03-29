@@ -1,0 +1,29 @@
+extends ../base/layout
+
+include ../components/link-back
+include ../components/hotel-card
+include ../components/participant-form
+
+block data
+  include ../data/hotel-card-details
+
+block variables
+  - var title = "Signiel Seoul"
+  - var wrapperMod = ""
+  - var hasHeader = true
+  - var headerMod = "inner"
+  - var hasFooter = true
+  - var footerMod = ""
+  - var currentPage = ""
+
+block main
+  main
+    .page-content.page-content--hotel
+      +link-back("Назад", "к списку")
+      .container
+        +hotel-card(signielSeoul)
+        section.participant-form
+          h2 Написать участнику:
+          +participant-form()
+
+

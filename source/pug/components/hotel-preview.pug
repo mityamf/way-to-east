@@ -22,7 +22,10 @@ mixin hotel-preview(parent, hotel)
         +icon("japan-flag-hotel", 34, 22)
     .hotel-preview__text
       .hotel-preview__top
-        h2.hotel-preview__name= hotel.name
+        if(parent== "hotels")
+          h2.hotel-preview__name= hotel.name
+        if(parent== "inner-hotels")
+          h3.hotel-preview__name= hotel.name
         .hotel-preview__location
           if (hotel.korea)
             span.hotel-preview__country= "Корея, "
@@ -31,5 +34,5 @@ mixin hotel-preview(parent, hotel)
           span.hotel-preview__city= hotel.city
         p= hotel.description
       .hotel-preview__bottom
-        +hotel-rating("hotel-preview", hotel.stars)
+        +hotel-rating("hotel-preview", hotel.stars, "yellow")
         +link-details()
