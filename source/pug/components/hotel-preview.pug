@@ -7,7 +7,7 @@ mixin hotel-preview(parent, hotel)
         .swiper-wrapper
           each item in hotel.pictures
             .swiper-slide
-              +picture("content", item.desktopName, item.mobileName, "png", "646", "352", item.alt)
+              +picture("content", item.desktopName, item.mobileName, "jpg", "646", "352", item.alt)
       .swiper-button-next
         +icon("slider-arrow", 11, 18)
       .swiper-button-prev

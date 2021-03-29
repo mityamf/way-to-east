@@ -32,6 +32,10 @@ const createComments = () => {
     let galleryTop = new window.Swiper(topContainer, {
       spaceBetween: 0,
       observer: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
       pagination: {
         el: '.comments .swiper-pagination',
         clickable: true,
@@ -40,16 +44,7 @@ const createComments = () => {
         swiper: galleryThumbs,
       },
     });
-/*
-    galleryThumbs.on('slideChange', function () {
-      if (window.innerWidth < 768) {
-        console.log('slide changed');
-        const visibleSlide = commentsSlider.querySelector('.swiper-slide-visible');
-        console.log(visibleSlide);
-        //visibleSlide.classList.add('swiper-slide-thumb-active');
-      }
-    });
-*/
+
     window.addEventListener('resize', function () {
       galleryThumbs.destroy();
       galleryThumbs = new window.Swiper(thumbsContainer, commentThumbsProperties);
@@ -57,6 +52,10 @@ const createComments = () => {
       galleryTop = new window.Swiper(topContainer, {
         spaceBetween: 0,
         observer: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
         pagination: {
           el: '.comments .swiper-pagination',
           clickable: true,
