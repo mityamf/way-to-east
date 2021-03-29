@@ -2339,7 +2339,7 @@ main {
       font-size: 24px;
       line-height: 29px; } }
 
-.page-content__title {
+.page-content h2 {
   margin: 20px 0;
   font-size: 26px;
   line-height: 31px;
@@ -2348,11 +2348,16 @@ main {
   color: #6f6f6f;
   text-align: center; }
   @media (max-width: 1023px) {
-    .page-content__title {
+    .page-content h2 {
       margin: 18px 0;
       font-size: 18px;
       line-height: 24px;
       font-weight: 500; } }
+
+.page-content--hotel h2 {
+  padding-left: 100px;
+  color: #6f6f6f;
+  text-align: left; }
 
 .button {
   display: inline-block;
@@ -2414,8 +2419,9 @@ main {
 
 .inner-hotels {
   margin-top: 23px; }
-  .inner-hotels--blog {
-    margin-top: 0; }
+  @media (max-width: 1023px) {
+    .inner-hotels--blog {
+      margin-top: 0; } }
 
 .inner-hotels__button {
   display: block;
@@ -2451,6 +2457,154 @@ main {
   @media (max-width: 1023px) {
     .link-back span {
       text-transform: initial; } }
+
+@media (max-width: 1439px) {
+  .link-back span:last-child {
+    display: none; } }
+
+.hotel-card__hotel-rating {
+  display: block;
+  width: 95px;
+  margin: 0 auto; }
+
+.hotel-card__subtitle {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #ffffff;
+  text-align: center; }
+
+.hotel-card__content {
+  position: relative;
+  z-index: 10;
+  width: 83%;
+  margin: 0 auto 31px;
+  padding-bottom: 85px;
+  background-color: #ffffff;
+  border-radius: 10px; }
+  @media (max-width: 767px) {
+    .hotel-card__content {
+      width: 100%;
+      padding-bottom: 15px;
+      overflow: hidden;
+      margin-bottom: 15px; } }
+
+.hotel-card__image img {
+  border-radius: 10px 10px 0 0; }
+
+.hotel-card__description {
+  padding: 0 100px; }
+
+.hotel-card__gallery ul {
+  margin: 30px auto;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.hotel-card__gallery li {
+  margin-right: 10px; }
+
+.hotel-card__gallery li:last-child {
+  position: relative;
+  margin-right: 0;
+  overflow-y: hidden; }
+
+.hotel-card__gallery-link {
+  display: block; }
+  .hotel-card__gallery-link span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 25%;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none; }
+
+.hotel-card__logo {
+  display: block;
+  width: 150px;
+  margin: 30px auto; }
+
+.hotel-card__description h2 {
+  margin: 20px 0;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131;
+  text-align: center; }
+
+.hotel-card__description p {
+  margin: 20px 0;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #313131; }
+
+.hotel-card__links {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 90px; }
+  .hotel-card__links::after {
+    position: absolute;
+    content: "";
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #beb8b4; }
+
+.hotel-card__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .hotel-card__link span {
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    font-family: "Inter", "Arial", sans-serif;
+    color: #6f6f6f; }
+  .hotel-card__link:first-child {
+    margin-right: 15px; }
+
+.participant-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.participant-form__wrapper {
+  width: 83%;
+  margin: 0 auto;
+  padding: 30px 200px;
+  background-color: #ffffff;
+  border-radius: 10px; }
+
+.participant-form form input {
+  margin-bottom: 15px; }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

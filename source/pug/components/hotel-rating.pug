@@ -1,6 +1,6 @@
-mixin hotel-rating(parent, stars)
+mixin hotel-rating(parent, stars, color)
   div(class = parent + "__hotel-rating hotel-rating")
     - var n = 1;
       while n < stars + 1
-        +icon("star", 15, 15)
+        +icon("star-" + color, 15, 15)
         span= n++

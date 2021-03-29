@@ -22,16 +22,16 @@ block variables
 block main
   main
     .page-content
-      +link-back("Назад")
+      +link-back("Назад", "")
       .container
           h1 Особенности гостеприимства в Корее
           +article(koreaDetails)
-          h2.page-content__title Вас может заинтересовать
+          h2 Вас может заинтересовать
           section.hotels.inner-hotels
             ul
               li
-                +hotel-preview("inner", signielSeoul)
+                +hotel-preview("inner-hotels", signielSeoul)
               li
-                +hotel-preview("inner", continentalSeoul)
+                +hotel-preview("inner-hotels", continentalSeoul)
             +button("inner-hotels", "Показать ещё")
 

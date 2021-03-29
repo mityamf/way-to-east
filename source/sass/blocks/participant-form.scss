@@ -1,0 +1,16 @@
+.participant-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.participant-form__wrapper {
+  width: 83%;
+  margin: 0 auto;
+  padding: 30px 200px;
+  background-color: $color-default-white;
+  border-radius: 10px;
+}
+
+.participant-form form input {
+  margin-bottom: 15px;
+}

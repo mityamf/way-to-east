@@ -22,15 +22,15 @@ block variables
 block main
   main
     .page-content
-      +link-back("Назад")
+      +link-back("Назад", "")
       .container
         h1 Особенности гостеприимства в Японии
         +article(japanDetails)
-        h2.page-content__title Вас может заинтересовать
+        h2 Вас может заинтересовать
         section.hotels.inner-hotels
           ul
             li
-              +hotel-preview("inner", peninsulaTokio)
+              +hotel-preview("inner-hotels", peninsulaTokio)
             li
-              +hotel-preview("inner", hotelOkuraCobe)
+              +hotel-preview("inner-hotels", hotelOkuraCobe)
           +button("inner-hotels", "Показать ещё")
