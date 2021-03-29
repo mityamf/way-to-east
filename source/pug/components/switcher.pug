@@ -6,7 +6,7 @@ mixin switcher(parent, position)
       a.switcher__link(href="korea.html") KOR
     .switcher__toggle
       div(class = "switcher__ball switcher__ball--" + position)
-    if (position === "right")
-      a.switcher__link JAP
-    else
-      a.switcher__link(href="japan.html") JAP
+      if (position === "right")
+        a.switcher__link JAP
+      else
+        a.switcher__link(href="japan.html") JAP
