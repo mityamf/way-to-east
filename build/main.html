@@ -13,6 +13,8 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
     <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -198,9 +200,9 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <header class="header">
+      <header class="header header--main">
         <div class="header__wrapper container container--header">
-          <div class="header__background"><img src="img/bg/main-background.png" srcset="img/bg/main-background@2x.png 2x" width="1920" height="1343" alt="Закат на фоне гор"/>
+          <div class="header__background"><img src="img/bg/main-background.jpg" srcset="img/bg/main-background@2x.jpg 2x" width="1920" height="1343" alt="Закат на фоне гор"/>
           </div><a class="header__logo">
             <svg width="128" height="68" aria-hidden="true">
               <use xlink:href="#logo-header"></use>
@@ -241,6 +243,11 @@
               </ul>
             </div>
           </nav>
+          <div class="header__switcher switcher"><a class="switcher__link" href="korea.html">KOR</a>
+            <div class="switcher__toggle">
+              <div class="switcher__ball switcher__ball--center"></div>
+            </div><a class="switcher__link" href="japan.html">JAP</a>
+          </div>
           <div class="travel-media travel-media--white">
             <div class="travel-media__logo">
               <svg width="133" height="58" aria-hidden="true">
@@ -262,7 +269,7 @@
               <ul>
                 <li><a class="countries-details__preview preview-details" href="korea-details.html">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/content/main/korea-details-mobile@1x.png 1x, img/content/main/korea-details-mobile@2x.png 2x"/><img src="img/content/main/korea-details-desktop@1x.png" srcset="img/content/main/korea-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне гор"/>
+                      <source media="(max-width: 767px)" srcset="img/content/main/korea-details-mobile@1x.png 1x, img/content/main/korea-details-mobile@2x.png 2x"/><img src="img/content/main/korea-details-desktop@1x.png" srcset="img/content/main/korea-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне гор" loading="lazy"/>
                     </picture>
                     <svg width="46" height="36" aria-hidden="true">
                       <use xlink:href="#korea-flag"></use>
@@ -276,7 +283,7 @@
                 </li>
                 <li><a class="countries-details__preview preview-details" href="japan-details.html">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/content/main/japan-details-mobile@1x.png 1x, img/content/main/japan-details-mobile@2x.png 2x"/><img src="img/content/main/japan-details-desktop@1x.png" srcset="img/content/main/japan-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне воды"/>
+                      <source media="(max-width: 767px)" srcset="img/content/main/japan-details-mobile@1x.png 1x, img/content/main/japan-details-mobile@2x.png 2x"/><img src="img/content/main/japan-details-desktop@1x.png" srcset="img/content/main/japan-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне воды" loading="lazy"/>
                     </picture>
                     <svg width="30" height="36" aria-hidden="true">
                       <use xlink:href="#japan-flag"></use>
@@ -298,12 +305,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-signiel-1-mobile@1x.png 1x, img/content/main/hotel-signiel-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-signiel-1-desktop@1x.png" srcset="img/content/main/hotel-signiel-1-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-signiel-1-mobile@1x.png 1x, img/content/main/hotel-signiel-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-signiel-1-desktop@1x.png" srcset="img/content/main/hotel-signiel-1-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-signiel-2-mobile@1x.png 1x, img/content/main/hotel-signiel-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-signiel-2-desktop@1x.png" srcset="img/content/main/hotel-signiel-2-desktop@2x.png 2x" width="646" height="352" alt="Темно-красное лобби"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-signiel-2-mobile@1x.png 1x, img/content/main/hotel-signiel-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-signiel-2-desktop@1x.png" srcset="img/content/main/hotel-signiel-2-desktop@2x.png 2x" width="646" height="352" alt="Темно-красное лобби" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -358,12 +365,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-1-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-1-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-1-desktop@2x.png 2x" width="646" height="352" alt="Темно-красное лобби"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-1-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-1-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-1-desktop@2x.png 2x" width="646" height="352" alt="Темно-красное лобби" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -513,12 +520,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-lotte-1-mobile@1x.png 1x, img/content/main/hotel-lotte-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-lotte-1-desktop@1x.png" srcset="img/content/main/hotel-lotte-1-desktop@2x.png 2x" width="646" height="352" alt="Высокое стеклянное здание вечером"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-lotte-1-mobile@1x.png 1x, img/content/main/hotel-lotte-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-lotte-1-desktop@1x.png" srcset="img/content/main/hotel-lotte-1-desktop@2x.png 2x" width="646" height="352" alt="Высокое стеклянное здание вечером" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -573,12 +580,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-sheraton-1-mobile@1x.png 1x, img/content/main/hotel-sheraton-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-sheraton-1-desktop@1x.png" srcset="img/content/main/hotel-sheraton-1-desktop@2x.png 2x" width="646" height="352" alt="Белое здание с зеленой территорией и бассейном"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-sheraton-1-mobile@1x.png 1x, img/content/main/hotel-sheraton-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-sheraton-1-desktop@1x.png" srcset="img/content/main/hotel-sheraton-1-desktop@2x.png 2x" width="646" height="352" alt="Белое здание с зеленой территорией и бассейном" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -633,12 +640,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-westin-1-mobile@1x.png 1x, img/content/main/hotel-westin-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-westin-1-desktop@1x.png" srcset="img/content/main/hotel-westin-1-desktop@2x.png 2x" width="646" height="352" alt="Изогнутое полукругом здание бежевого цвета"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-westin-1-mobile@1x.png 1x, img/content/main/hotel-westin-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-westin-1-desktop@1x.png" srcset="img/content/main/hotel-westin-1-desktop@2x.png 2x" width="646" height="352" alt="Изогнутое полукругом здание бежевого цвета" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -693,12 +700,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-ana-1-mobile@1x.png 1x, img/content/main/hotel-ana-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-ana-1-desktop@1x.png" srcset="img/content/main/hotel-ana-1-desktop@2x.png 2x" width="646" height="352" alt="Белое здание и залив"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-ana-1-mobile@1x.png 1x, img/content/main/hotel-ana-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-ana-1-desktop@1x.png" srcset="img/content/main/hotel-ana-1-desktop@2x.png 2x" width="646" height="352" alt="Белое здание и залив" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -753,12 +760,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-andaz-1-mobile@1x.png 1x, img/content/main/hotel-andaz-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-andaz-1-desktop@1x.png" srcset="img/content/main/hotel-andaz-1-desktop@2x.png 2x" width="646" height="352" alt="Стеклянное здание"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-andaz-1-mobile@1x.png 1x, img/content/main/hotel-andaz-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-andaz-1-desktop@1x.png" srcset="img/content/main/hotel-andaz-1-desktop@2x.png 2x" width="646" height="352" alt="Стеклянное здание" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -813,12 +820,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-shangrila-1-mobile@1x.png 1x, img/content/main/hotel-shangrila-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-shangrila-1-desktop@1x.png" srcset="img/content/main/hotel-shangrila-1-desktop@2x.png 2x" width="646" height="352" alt="Женщина в кимоно на лестнице"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-shangrila-1-mobile@1x.png 1x, img/content/main/hotel-shangrila-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-shangrila-1-desktop@1x.png" srcset="img/content/main/hotel-shangrila-1-desktop@2x.png 2x" width="646" height="352" alt="Женщина в кимоно на лестнице" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -873,12 +880,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-continental-1-mobile@1x.png 1x, img/content/main/hotel-continental-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-continental-1-desktop@1x.png" srcset="img/content/main/hotel-continental-1-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-continental-1-mobile@1x.png 1x, img/content/main/hotel-continental-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-continental-1-desktop@1x.png" srcset="img/content/main/hotel-continental-1-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -933,12 +940,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-peninsula-1-mobile@1x.png 1x, img/content/main/hotel-peninsula-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-peninsula-1-desktop@1x.png" srcset="img/content/main/hotel-peninsula-1-desktop@2x.png 2x" width="646" height="352" alt="Пара в белых одеждах на фоне золотой стены"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-peninsula-1-mobile@1x.png 1x, img/content/main/hotel-peninsula-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-peninsula-1-desktop@1x.png" srcset="img/content/main/hotel-peninsula-1-desktop@2x.png 2x" width="646" height="352" alt="Пара в белых одеждах на фоне золотой стены" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>

@@ -58,6 +58,7 @@
   max-width: 222px;
   padding-bottom: 54px;
   margin-bottom: 10px;
+  cursor: pointer;
 
   @include viewport--sm {
     max-width: 100%;

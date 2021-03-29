@@ -26,7 +26,7 @@ mixin header(headerMod, currentPage)
   header(class=(headerMod) ? "header header--" + headerMod : "header")
     .header__wrapper.container.container--header
       .header__background
-        +img("bg", "main-background", "png", "1920", "1343", "Закат на фоне гор")
+        +img("bg", "main-background", "jpg", "1920", "1343", "Закат на фоне гор")
       if(currentPage === "main")
         a.header__logo
           +icon("logo-header", 128, 68)
@@ -39,7 +39,7 @@ mixin header(headerMod, currentPage)
         button.main-nav__close-menu.btn-reset(type="button", aria-label="Закрыть мобильное меню", aria-pressed="false")
           +icon("icon-close", 24, 24)
         .main-nav__wrapper
-          if(headerMod === "")
+          if(headerMod === "main")
             +choose-country("main-nav", "none")
           if(headerMod === "korea")
             +choose-country("main-nav", "korea")

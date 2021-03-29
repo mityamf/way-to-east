@@ -24,6 +24,14 @@
   }
 }
 
+.hotel-preview__slider .swiper-button-next,
+.hotel-preview__slider .swiper-button-prev {
+  top: 52%;
+  line-height: 0;
+  padding: 5px 0;
+  height: auto;
+}
+
 .hotel-preview__slider .swiper-button-next::after,
 .hotel-preview__slider .swiper-button-prev::after {
   content: " ";

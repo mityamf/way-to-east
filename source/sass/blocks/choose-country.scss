@@ -69,6 +69,14 @@
   z-index: -1;
 }
 
+.choose-country__link {
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    transition: $default-transition-settings;
+  }
+}
+
 .choose-country__link--active {
   position: relative;
 

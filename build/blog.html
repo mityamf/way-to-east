@@ -13,6 +13,8 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
     <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -200,7 +202,7 @@
     <div class="wrapper">
       <header class="header header--inner">
         <div class="header__wrapper container container--header">
-          <div class="header__background"><img src="img/bg/main-background.png" srcset="img/bg/main-background@2x.png 2x" width="1920" height="1343" alt="Закат на фоне гор"/>
+          <div class="header__background"><img src="img/bg/main-background.jpg" srcset="img/bg/main-background@2x.jpg 2x" width="1920" height="1343" alt="Закат на фоне гор"/>
           </div><a class="header__logo" href="main.html" aria-label="Переход на главную">
             <svg width="128" height="68" aria-hidden="true">
               <use xlink:href="#logo-header"></use>
@@ -217,22 +219,6 @@
               </svg>
             </button>
             <div class="main-nav__wrapper">
-              <div class="main-nav__choose-country choose-country choose-country--none"><span class="choose-country__text">Выберете страну:</span>
-                <ul class="choose-country__list">
-                  <li><a class="choose-country__link" href="korea.html">
-                      <div class="choose-country__svg">
-                        <svg width="57" height="57" aria-hidden="true">
-                          <use xlink:href="#korea-circle"></use>
-                        </svg>
-                      </div><span class="choose-country__name">Корея</span></a></li>
-                  <li><a class="choose-country__link" href="japan.html">
-                      <div class="choose-country__svg">
-                        <svg width="57" height="57" aria-hidden="true">
-                          <use xlink:href="#japan-circle"></use>
-                        </svg>
-                      </div><span class="choose-country__name">Япония</span></a></li>
-                </ul>
-              </div>
               <ul class="main-nav__list">
                 <li><a class="main-nav__link" href="#">Особенности гостеприимства в Корее</a></li>
                 <li><a class="main-nav__link" href="#">Особенности гостеприимства в Японии</a></li>
@@ -268,13 +254,13 @@
               </div>
               <div class="article__image">
                 <picture>
-                  <source media="(max-width: 767px)" srcset="img/content/blog/blog-image-mobile@1x.jpg 1x, img/content/blog/blog-image-mobile@2x.jpg 2x"/><img src="img/content/blog/blog-image-desktop@1x.jpg" srcset="img/content/blog/blog-image-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото японского пейзажа"/>
+                  <source media="(max-width: 767px)" srcset="img/content/blog/blog-image-mobile@1x.jpg 1x, img/content/blog/blog-image-mobile@2x.jpg 2x"/><img src="img/content/blog/blog-image-desktop@1x.jpg" srcset="img/content/blog/blog-image-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото японского пейзажа" loading="lazy"/>
                 </picture>
               </div>
               <div class="article__author">
                 <div class="article__author-image">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/content/blog/blog-userpick-mobile@1x.png 1x, img/content/blog/blog-userpick-mobile@2x.png 2x"/><img src="img/content/blog/blog-userpick-desktop@1x.png" srcset="img/content/blog/blog-userpick-desktop@2x.png 2x" width="202" height="202" alt="Фото автора статьи"/>
+                    <source media="(max-width: 767px)" srcset="img/content/blog/blog-userpick-mobile@1x.png 1x, img/content/blog/blog-userpick-mobile@2x.png 2x"/><img src="img/content/blog/blog-userpick-desktop@1x.png" srcset="img/content/blog/blog-userpick-desktop@2x.png 2x" width="202" height="202" alt="Фото автора статьи" loading="lazy"/>
                   </picture>
                 </div><span class="article__author-name">Диана Афанасьева</span><span class="article__author-specialty">Представитель туроператора</span>
               </div>
@@ -295,7 +281,7 @@
               <ul>
                 <li><a class="countries-details__preview preview-details" href="korea-details.html">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/content/main/korea-details-mobile@1x.png 1x, img/content/main/korea-details-mobile@2x.png 2x"/><img src="img/content/main/korea-details-desktop@1x.png" srcset="img/content/main/korea-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне гор"/>
+                      <source media="(max-width: 767px)" srcset="img/content/main/korea-details-mobile@1x.png 1x, img/content/main/korea-details-mobile@2x.png 2x"/><img src="img/content/main/korea-details-desktop@1x.png" srcset="img/content/main/korea-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне гор" loading="lazy"/>
                     </picture>
                     <svg width="46" height="36" aria-hidden="true">
                       <use xlink:href="#korea-flag"></use>
@@ -309,7 +295,7 @@
                 </li>
                 <li><a class="countries-details__preview preview-details" href="japan-details.html">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/content/main/japan-details-mobile@1x.png 1x, img/content/main/japan-details-mobile@2x.png 2x"/><img src="img/content/main/japan-details-desktop@1x.png" srcset="img/content/main/japan-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне воды"/>
+                      <source media="(max-width: 767px)" srcset="img/content/main/japan-details-mobile@1x.png 1x, img/content/main/japan-details-mobile@2x.png 2x"/><img src="img/content/main/japan-details-desktop@1x.png" srcset="img/content/main/japan-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне воды" loading="lazy"/>
                     </picture>
                     <svg width="30" height="36" aria-hidden="true">
                       <use xlink:href="#japan-flag"></use>
@@ -331,12 +317,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-lotte-1-mobile@1x.png 1x, img/content/main/hotel-lotte-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-lotte-1-desktop@1x.png" srcset="img/content/main/hotel-lotte-1-desktop@2x.png 2x" width="646" height="352" alt="Серое здание"/>
+                              <source media="(max-width: 767px)" srcset="img/content/hotel-lotte-1-mobile@1x.png 1x, img/content/hotel-lotte-1-mobile@2x.png 2x"/><img src="img/content/hotel-lotte-1-desktop@1x.png" srcset="img/content/hotel-lotte-1-desktop@2x.png 2x" width="646" height="352" alt="Серое здание" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
@@ -391,12 +377,12 @@
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-okura-1-mobile@1x.png 1x, img/content/main/hotel-okura-1-mobile@2x.png 2x"/><img src="img/content/main/hotel-okura-1-desktop@1x.png" srcset="img/content/main/hotel-okura-1-desktop@2x.png 2x" width="646" height="352" alt="Серое здание на набережной"/>
+                              <source media="(max-width: 767px)" srcset="img/content/hotel-okura-1-mobile@1x.png 1x, img/content/hotel-okura-1-mobile@2x.png 2x"/><img src="img/content/hotel-okura-1-desktop@1x.png" srcset="img/content/hotel-okura-1-desktop@2x.png 2x" width="646" height="352" alt="Серое здание на набережной" loading="lazy"/>
                             </picture>
                           </div>
                           <div class="swiper-slide">
                             <picture>
-                              <source media="(max-width: 767px)" srcset="img/content/main/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/main/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/main/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/main/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб"/>
+                              <source media="(max-width: 767px)" srcset="img/content/hotel-grand-hyatt-2-mobile@1x.png 1x, img/content/hotel-grand-hyatt-2-mobile@2x.png 2x"/><img src="img/content/hotel-grand-hyatt-2-desktop@1x.png" srcset="img/content/hotel-grand-hyatt-2-desktop@2x.png 2x" width="646" height="352" alt="Стеклянный небоскреб" loading="lazy"/>
                             </picture>
                           </div>
                         </div>
