@@ -26,3 +26,9 @@
     text-transform: initial;
   }
 }
+
+.link-back span:last-child {
+  @include viewport--lg {
+    display: none;
+  }
+}

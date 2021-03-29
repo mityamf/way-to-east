@@ -24,20 +24,20 @@ block variables
 block main
   main
     .page-content
-      +link-back("Назад")
+      +link-back("Назад", "")
       .container
         h1 Соединяем Корею и Японию в одном туре
         +article(blogPage)
-        h2.page-content__title Вас может заинтересовать
-        section.countries-details
+        h2 Вас может заинтересовать
+        section.countries-details.countries-details--inner
           ul
             each item in mainCountryDetails
               li
-                +main-country-details("countries-details", item)
+                +main-country-details("countries-details--inner", item)
         section.hotels.inner-hotels.inner-hotels--blog
           ul
             li
-              +hotel-preview("inner", lotteHotelSeul)
+              +hotel-preview("inner-hotels", lotteHotelSeul)
             li
-              +hotel-preview("inner", hotelOkuraCobe)
+              +hotel-preview("inner-hotels", hotelOkuraCobe)
           +button("inner-hotels", "Показать ещё")
