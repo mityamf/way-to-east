@@ -11,7 +11,7 @@
 }
 
 .travel-media--white .travel-media__link span {
-  color: #ffffff;
+  color: $color-default-white;
 }
 
 .travel-media__logo {
@@ -22,13 +22,6 @@
   display: flex;
   align-items: center;
   max-width: 400px;
-  transition: opacity $default-transition-settings;
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-    transition: opacity $default-transition-settings;
-  }
 
   & span {
     margin-left: 4px;
@@ -36,6 +29,6 @@
     line-height: 20px;
     font-weight: 400;
     font-family: $font-family-inter;
-    color: #6f6f6f;
+    color: $color-dim-gray;
     }
 }
