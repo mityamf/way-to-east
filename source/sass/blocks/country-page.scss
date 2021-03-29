@@ -44,6 +44,7 @@
 
   @include viewport--sm {
     position: static;
+    margin: 0 auto;
     background-color: $color-default-white;
     border-radius: 10px;
     margin-bottom: 20px;

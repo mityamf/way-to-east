@@ -2524,6 +2524,7 @@ main {
   @media (max-width: 767px) {
     .country-page__countries {
       position: static;
+      margin: 0 auto;
       background-color: #ffffff;
       border-radius: 10px;
       margin-bottom: 20px; } }
