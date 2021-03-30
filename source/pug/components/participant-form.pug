@@ -2,15 +2,15 @@ mixin participant-form
   div.participant-form__wrapper
     form(action="#", method="post")
       label.visually-hidden(for="name-field") Имя и фамилия
-      input#name-field(type="text", name="name-field", placeholder="Имя и фамилия")
+      input#name-field(type="text", name="name-field", placeholder="Имя и фамилия", required, pattern="^[a-zA-Z0-9]+$")
       label.visually-hidden(for="email-field") E-mail
-      input#email-field(type="email", name="email-field", placeholder="E-mail")
+      input#email-field(type="email", name="email-field", placeholder="E-mail", required)
       label.visually-hidden(for="phone-field") Телефон
-      input#phone-field(type="tel", name="phone-field", placeholder="Телефон +7(000) 000 00 00")
+      input#phone-field(type="tel", name="phone-field", placeholder="Телефон +7(000) 000 00 00", required)
       label.visually-hidden(for="message-field") Введите текст сообщения
-      textarea#message-field(name="message-field", cols="30", rows="10", placeholder="Введите текст сообщения")
+      textarea#message-field(name="message-field", cols="30", rows="7", placeholder="Введите текст сообщения", required, pattern="^[a-zA-Z0-9]+$")
+      input#accept(class="visually-hidden", type="checkbox", name="accept")
       label(for="accept") Подтверждаю своё согласие на сбор, хранение и обработку вышеуказанных данных в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006, № 152-ФЗ
-      input#accept(type="checkbox", name="accept")
       input.button.participant-form__button(type="submit" value="Отправить")
 
 
