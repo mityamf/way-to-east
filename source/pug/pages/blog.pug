@@ -28,16 +28,16 @@ block main
       .container
         h1 Соединяем Корею и Японию в одном туре
         +article(blogPage)
-        h2 Вас может заинтересовать
-        section.countries-details.countries-details--inner
+        h2.page-content__title Вас может заинтересовать
+        section.inner-details.countries-details
           ul
             each item in mainCountryDetails
               li
-                +main-country-details("countries-details--inner", item)
+                +main-country-details("inner-details", item)
         section.hotels.inner-hotels.inner-hotels--blog
-          ul
-            li
+          ul.hotels__wrapper
+            li.hotels__item
               +hotel-preview("inner-hotels", lotteHotelSeul)
-            li
+            li.hotels__item
               +hotel-preview("inner-hotels", hotelOkuraCobe)
           +button("inner-hotels", "Показать ещё")

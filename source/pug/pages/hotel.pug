@@ -3,6 +3,7 @@ extends ../base/layout
 include ../components/link-back
 include ../components/hotel-card
 include ../components/participant-form
+include ../base/modal
 
 block data
   include ../data/hotel-card-details
@@ -23,7 +24,9 @@ block main
       .container
         +hotel-card(signielSeoul)
         section.participant-form
-          h2 Написать участнику:
+          h2.page-content__title Написать участнику:
           +participant-form()
+
+  +modal("modal--success")
 
 

@@ -4,7 +4,7 @@ mixin main-country-details(parent, country)
     +icon(country.svgName, country.svgWidth, country.svgHeight)
     if(parent== "countries-details")
       h2.preview-details__title= "Особенности гостеприимства в " + country.title
-    if(parent== "countries-details--inner")
+    if(parent== "inner-details")
       h3.preview-details__title= "Особенности гостеприимства в " + country.title
     .preview-details__text
       each item in country.description

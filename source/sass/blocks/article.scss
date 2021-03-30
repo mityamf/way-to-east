@@ -22,7 +22,7 @@
     margin-bottom: 15px;
 
     &--blog {
-      padding-bottom: 3px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -95,6 +95,12 @@
 
   @include viewport--sm {
     margin: 13px 0 20px 0;
+  }
+}
+
+.article.article--blog p {
+  @include viewport--sm {
+    margin: 13px 0 19px 0;
   }
 }
 

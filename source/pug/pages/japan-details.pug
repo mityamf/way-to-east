@@ -26,11 +26,11 @@ block main
       .container
         h1 Особенности гостеприимства в Японии
         +article(japanDetails)
-        h2 Вас может заинтересовать
+        h2.page-content__title Вас может заинтересовать
         section.hotels.inner-hotels
-          ul
-            li
+          ul.hotels__wrapper
+            li.hotels__item
               +hotel-preview("inner-hotels", peninsulaTokio)
-            li
+            li.hotels__item
               +hotel-preview("inner-hotels", hotelOkuraCobe)
           +button("inner-hotels", "Показать ещё")
