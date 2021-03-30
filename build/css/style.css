@@ -2394,7 +2394,7 @@ main {
   margin-top: -120px;
   margin-bottom: 51px;
   z-index: 10; }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .page-content {
       margin-top: -17px; } }
 
@@ -2407,13 +2407,17 @@ main {
   font-family: "Inter", "Arial", sans-serif;
   color: #ffffff;
   text-align: center; }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .page-content h1 {
       font-size: 24px;
       line-height: 29px; } }
 
 .page-content--hotel h1 {
   margin-bottom: 9px; }
+  @media (max-width: 767px) {
+    .page-content--hotel h1 {
+      font-size: 32px;
+      line-height: 39px; } }
 
 .page-content__title {
   margin: 20px 0;
@@ -2432,6 +2436,9 @@ main {
 
 .page-content--hotel {
   margin-bottom: 102px; }
+  @media (max-width: 1023px) {
+    .page-content--hotel {
+      margin-top: -30px; } }
 
 .button {
   display: inline-block;
@@ -2653,6 +2660,9 @@ main {
   font-family: "Inter", "Arial", sans-serif;
   color: #ffffff;
   text-align: center; }
+  @media (max-width: 767px) {
+    .hotel-card__subtitle {
+      margin-bottom: 25px; } }
 
 .hotel-card__content {
   position: relative;
@@ -2670,10 +2680,22 @@ main {
       margin-bottom: 15px; } }
 
 .hotel-card__button {
-  display: none; }
+  display: none;
+  margin-left: auto;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 600;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #1c54d1;
+  background-color: rgba(255, 255, 255, 0);
+  border: none; }
+  .hotel-card__button span {
+    margin-right: 5px; }
   @media (max-width: 767px) {
     .hotel-card__button {
-      display: block; } }
+      display: block; }
+      .hotel-card__button.hidden {
+        display: none; } }
 
 .hotel-card__image img {
   border-radius: 10px 10px 0 0; }
@@ -2686,11 +2708,11 @@ main {
       padding: 0 20px; } }
 
 @media (max-width: 767px) {
-  .hotel-card__text-more--show {
+  .hotel-card__text-wrapper.show {
     display: block; } }
 
 @media (max-width: 767px) {
-  .hotel-card__text-more--hidden {
+  .hotel-card__text-wrapper {
     display: none; } }
 
 @media (max-width: 767px) {
@@ -2737,6 +2759,9 @@ main {
   display: block;
   width: 132px;
   margin: 54px auto 40px auto; }
+  @media (max-width: 767px) {
+    .hotel-card__logo {
+      margin-top: 100px; } }
 
 .hotel-card__description h2 {
   margin: 20px 0;
@@ -2746,6 +2771,11 @@ main {
   font-family: "Inter", "Arial", sans-serif;
   color: #313131;
   text-align: center; }
+  @media (max-width: 767px) {
+    .hotel-card__description h2 {
+      font-size: 22px;
+      line-height: 26px;
+      font-weight: 600; } }
 
 .hotel-card__description p {
   margin: 20px 0;
@@ -2798,6 +2828,9 @@ main {
 .participant-form {
   width: 83%;
   margin: 0 auto; }
+  @media (max-width: 767px) {
+    .participant-form {
+      width: 100%; } }
 
 .participant-form h2 {
   text-align: left; }
@@ -2814,9 +2847,16 @@ main {
   margin: 0 auto;
   padding-top: 68px;
   padding-bottom: 75px; }
-  @media (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     .participant-form form {
       width: 50%; } }
+  @media (max-width: 767px) {
+    .participant-form form {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .participant-form__wrapper {
   background-color: #ffffff;

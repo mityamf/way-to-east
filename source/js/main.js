@@ -5,6 +5,7 @@ import {initModals} from './modules/init-modals';
 import {mobileMenu} from './modules/mobile-menu';
 import {hotelPreviewSlider} from './modules/hotel-preview-slider';
 import {createComments} from './modules/main-comments';
+import {readMore} from './modules/read-more';
 
 // Utils
 // ---------------------------------
@@ -19,3 +20,4 @@ initModals();
 mobileMenu();
 hotelPreviewSlider();
 createComments();
+readMore();
