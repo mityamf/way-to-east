@@ -4,7 +4,7 @@
   margin-bottom: 51px;
   z-index: 10;
 
-  @include viewport--md {
+  @include viewport--sm {
     margin-top: -17px;
   }
 }
@@ -19,7 +19,7 @@
   color: $color-default-white;
   text-align: center;
 
-  @include viewport--md {
+  @include viewport--sm {
     font-size: 24px;
     line-height: 29px;
   }
@@ -27,6 +27,11 @@
 
 .page-content--hotel h1 {
   margin-bottom: 9px;
+
+  @include viewport--sm {
+    font-size: 32px;
+    line-height: 39px;
+  }
 }
 
 .page-content__title {
@@ -48,4 +53,8 @@
 
 .page-content--hotel {
   margin-bottom: 102px;
+
+  @include viewport--md {
+    margin-top: -30px;
+  }
 }

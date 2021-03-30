@@ -14,6 +14,10 @@
   font-family: $font-family-inter;
   color: $color-default-white;
   text-align: center;
+
+  @include viewport--sm {
+    margin-bottom: 25px;
+  }
 }
 
 .hotel-card__content {
@@ -35,9 +39,25 @@
 
 .hotel-card__button {
   display: none;
+  margin-left: auto;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 600;
+  font-family: $font-family-inter;
+  color: $color-cerulean-blue;
+  background-color: $color-transparent;
+  border: none;
+
+  & span {
+    margin-right: 5px;
+  }
 
   @include viewport--sm {
     display: block;
+
+    &.hidden {
+      display: none;
+    }
   }
 }
 
@@ -54,13 +74,13 @@
   }
 }
 
-.hotel-card__text-more--show {
+.hotel-card__text-wrapper.show {
   @include viewport--sm {
     display: block;
   }
 }
 
-.hotel-card__text-more--hidden {
+.hotel-card__text-wrapper {
   @include viewport--sm {
     display: none;
   }
@@ -116,6 +136,10 @@
   display: block;
   width: 132px;
   margin: 54px auto 40px auto;
+
+  @include viewport--sm {
+    margin-top: 100px;
+  }
 }
 
 .hotel-card__description h2 {
@@ -126,6 +150,12 @@
   font-family: $font-family-inter;
   color: $color-night-rider;
   text-align: center;
+
+  @include viewport--sm {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+  }
 }
 
 .hotel-card__description p {

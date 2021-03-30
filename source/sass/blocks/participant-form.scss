@@ -1,6 +1,10 @@
 .participant-form {
   width: 83%;
   margin: 0 auto;
+
+  @include viewport--sm {
+    width: 100%;
+  }
 }
 
 .participant-form h2 {
@@ -15,8 +19,16 @@
   padding-top: 68px;
   padding-bottom: 75px;
 
-  @include viewport--md {
+  @media (min-width: 768px) and (max-width: 1200px) {
     width: 50%;
+  }
+
+  @include viewport--sm {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 

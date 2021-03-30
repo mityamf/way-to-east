@@ -24,11 +24,11 @@ mixin hotel-card(details)
       .hotel-card__logo
         +icon(details.logoName, details.logoWidth, details.logoHeight)
       h2= details.descriptionTitle
-      p= details.descriptionTextMain
+      p= details.descriptionTextPreview
       button.hotel-card__button(type="button")
         span Читать полностью
         +icon("icon-arrow-down", 19, 11)
-      .hotel-card__text-more.hotel-card__text-more--hidden
+      .hotel-card__text-wrapper
         each item in details.descriptionText
           p= item
       .hotel-card__links
