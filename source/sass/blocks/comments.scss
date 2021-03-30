@@ -58,6 +58,7 @@
   max-width: 222px;
   padding-bottom: 54px;
   margin-bottom: 10px;
+  cursor: pointer;
 
   @include viewport--sm {
     max-width: 100%;
@@ -203,9 +204,14 @@
 }
 
 .comments .swiper-pagination {
-  width: 100%;
-  bottom: -30px;
-  padding-right: 10px;
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+    width: 100%;
+    bottom: -30px;
+    padding-right: 10px;
+  }
 }
 
 .swiper-pagination-bullet {

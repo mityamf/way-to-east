@@ -1,0 +1,4 @@
+mixin filter-cities(parent, data)
+  select(class = parent + "__filter-cities filter-cities")
+    each item in data
+      option(value=item)= item

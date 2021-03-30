@@ -16,7 +16,7 @@ block variables
   - var title = "Цветущий путь на Восток — Главная"
   - var wrapperMod = ""
   - var hasHeader = true
-  - var headerMod = ""
+  - var headerMod = "main"
   - var hasFooter = true
   - var footerMod = ""
   - var currentPage = "main" //- для остальных страниц пишем либо пустую строку, либо индекс
@@ -33,17 +33,17 @@ block main
               li
                 +main-country-details("countries-details", item)
         section.main__hotels.hotels
-          ul
+          ul.hotels__wrapper
             each item in mainHotels1
-              li
+              li.hotels__item
                 +hotel-preview("hotels", item)
         section.main__comments.comments
           h2 Комментарии представителей туроператоров
           +comments-slider(mainComments)
         section.main__hotels.hotels
-          ul
+          ul.hotels__wrapper
             each item in mainHotels2
-              li
+              li.hotels__item
                 +hotel-preview("hotels", item)
         .main__pagination.pagination
           +page-pagination(1, 7)
