@@ -14,7 +14,7 @@
   margin: 0 0 32px;
   font-family: $font-family-inter;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 30px;
   color: $color-night-rider;
 
@@ -59,11 +59,24 @@
   padding-bottom: 54px;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 
   @include viewport--sm {
     max-width: 100%;
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+}
+
+.comments__top.comments__top.swiper-slide-thumb-active {
+  &:hover,
+  &:focus {
+    opacity: 1;
   }
 }
 
@@ -148,7 +161,7 @@
   margin: 0;
   font-family: $font-family-inter;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 30px;
   text-align: left;
   color: $color-night-rider;

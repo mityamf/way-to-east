@@ -2,10 +2,16 @@
   display: block;
   font-family: $font-family-inter;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 19px;
   color: $color-cerulean-blue;
   text-align: right;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 
   @include viewport--sm {
     text-align: center;

@@ -5,7 +5,6 @@ main {
 .main__content,
 .country-page__content {
   position: relative;
-  z-index: 10;
   padding-top: 28px;
 
   @include viewport--sm {

@@ -70,6 +70,8 @@
 }
 
 .choose-country__link {
+  outline: none;
+
   &:hover,
   &:focus {
     transform: scale(1.05);

@@ -72,20 +72,3 @@ const createComments = () => {
 };
 
 export {createComments};
-/*
-galleryThumbs.addEventListener('slideChange', function () {
-  if (window.innerWidth < 768) {
-    const commentsAvatars = commentsSlider.querySelectorAll('.comments__top');
-    const commentsTexts = commentsSlider.querySelectorAll('.comments__bottom');
-
-    const visibleSlide = commentsSlider.querySelector('.swiper-slide-visible');
-    visibleSlide.classList.add('swiper-slide-active');
-
-    console.log(commentsAvatars);
-    console.log(commentsTexts);
-    console.log(visibleSlide);
-  }
-});
-
-*/
-
