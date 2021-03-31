@@ -6,6 +6,8 @@ import {mobileMenu} from './modules/mobile-menu';
 import {hotelPreviewSlider} from './modules/hotel-preview-slider';
 import {createComments} from './modules/main-comments';
 import {readMore} from './modules/read-more';
+import {lightBox} from './modules/lightbox';
+import {modal} from './modules/modal';
 
 // Utils
 // ---------------------------------
@@ -21,3 +23,5 @@ mobileMenu();
 hotelPreviewSlider();
 createComments();
 readMore();
+lightBox();
+modal();

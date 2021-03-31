@@ -296,23 +296,23 @@
               <div class="hotel-card__description hotel-card__description--hidden">
                 <div class="hotel-card__gallery">
                   <ul>
-                    <li><a href="#">
+                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-1@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-1@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
-                    <li><a href="#">
+                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-2@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-2@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
-                    <li><a href="#">
+                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-3@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-3@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-3@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
-                    <li><a class="hotel-card__gallery-link" href="#">
-                        <div class="div"><span>+ 15 фото</span></div>
+                    <li><a class="hotel-card__gallery-link" data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-4@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-4@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
-                        </picture></a></li>
+                        </picture>
+                        <div class="div"><span>+ 15 фото</span></div></a></li>
                   </ul>
                 </div>
                 <div class="hotel-card__logo">
@@ -334,7 +334,7 @@
                   <p>В ресторане BICENA, отмеченном 1 звездой Мишлен, на обед и ужин подают блюда корейской кухни. В ресторане STAY, который принадлежит удостоенному 3 звезд Мишлен шеф-повару Яннику Аллено, гости могут отведать изысканные французские блюда.</p>
                   <p>Отель Signiel Seoul находится в 7 км от железнодорожного вокзала Каннамгу и менее чем в 20 минутах езды от торгового центра COEX Mall. Поездка до аэропорта Кимпхо занимает 45 минут, а до международного аэропорта Инчхон — менее 70 минут. </p>
                 </div>
-                <div class="hotel-card__links"><a class="hotel-card__link" href="#">
+                <div class="hotel-card__links"><a class="hotel-card__link hotel-card__link--video" href="#">
                     <svg width="44" height="31" aria-hidden="true">
                       <use xlink:href="#icon-youtube"></use>
                     </svg><span>Посмотреть видео-презентацию</span></a><a class="hotel-card__link" href="#">
@@ -378,13 +378,13 @@
                 </svg><span>Написать в Travel Media</span></a>
             </div>
             <div class="footer__countries">
-              <div class="footer__countries-wrapper">
-                <div class="footer__countries-logo footer__countries-logo--korea">
+              <div class="countries-logo">
+                <div class="countries-logo__image countries-logo__image--korea">
                   <svg width="91" height="60" aria-hidden="true">
                     <use xlink:href="#logo-korea"></use>
                   </svg>
                 </div>
-                <div class="footer__countries-logo footer__countries-logo--japan">
+                <div class="countries-logo__image countries-logo__image--japan">
                   <svg width="151" height="60" aria-hidden="true">
                     <use xlink:href="#logo-japan"></use>
                   </svg>
@@ -399,6 +399,45 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal-success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <div class="countries-logo">
+            <div class="countries-logo__image countries-logo__image--korea">
+              <svg width="91" height="60" aria-hidden="true">
+                <use xlink:href="#logo-korea"></use>
+              </svg>
+            </div>
+            <div class="countries-logo__image countries-logo__image--japan">
+              <svg width="151" height="60" aria-hidden="true">
+                <use xlink:href="#logo-japan"></use>
+              </svg>
+            </div>
+          </div>
+          <p>Ваше сообщение успешно отправлено!</p>
+          <button class="modal-success__button button" type="button">Закрыть</button>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="23" height="23" aria-hidden="true">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal-video">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <video controls="controls" autoplay="autoplay" src="https://www.youtube.com/watch?v=xshEZzpS4CQ"></video>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="23" height="23" aria-hidden="true">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

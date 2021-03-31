@@ -1,0 +1,58 @@
+.modal-success .modal__content {
+  width: 646px;
+  height: 354px;
+  padding: 50px 120px 30px;
+  border-radius: 10px;
+  transform: scale(0.83);
+
+  @include viewport--sm {
+    height: 429px;
+    padding: 50px 25px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.modal-success p {
+  margin: 10px 0 48px;
+  padding: 0 33px;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  font-family: $font-family-inter;
+  color: $color-cerulean-blue;
+  text-align: center;
+
+  @include viewport--sm {
+    padding: 0;
+    margin-bottom: 70px;
+  }
+}
+
+.modal-success__button {
+  display: block;
+  margin: 0 auto;
+  width: 210px;
+}
+
+.modal-success .countries-logo {
+  width: 315px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 54px;
+
+  @include viewport--sm {
+    width: auto;
+    margin-bottom: 80px;
+  }
+}
+
+.modal-success .modal__close-btn {
+  top: 0;
+  right: -40px;
+
+  @include viewport--sm {
+    top: 450px;
+    right: 50%;
+  }
+}

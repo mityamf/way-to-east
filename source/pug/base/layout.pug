@@ -41,6 +41,9 @@ html(lang="ru")
         +footer(footerMod)
 
     block modals
+      if (hasModals)
+        +modal("modal-success")
+        +modal("modal-video")
 
     script(src="js/vendor.min.js")
     script(src="js/main.min.js")
