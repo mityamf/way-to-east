@@ -26,12 +26,12 @@ block main
       .container
           h1 Особенности гостеприимства в Корее
           +article(koreaDetails)
-          h2 Вас может заинтересовать
+          h2.page-content__title Вас может заинтересовать
           section.hotels.inner-hotels
-            ul
-              li
+            ul.hotels__wrapper
+              li.hotels__item
                 +hotel-preview("inner-hotels", signielSeoul)
-              li
+              li.hotels__item
                 +hotel-preview("inner-hotels", continentalSeoul)
             +button("inner-hotels", "Показать ещё")
 

@@ -9,7 +9,7 @@ mixin hotel-card(details)
       +icon("icon-cross", 23, 23)
     .hotel-card__image
       +picture("content/hotel-card", "hotel-card-main" + "-desktop", "hotel-card-main" + "-mobile", "jpg", "1090", "490", "Фото отеля" + details.alt)
-    .hotel-card__description
+    .hotel-card__description.hotel-card__description--hidden
       .hotel-card__gallery
         ul
           - var n = 0;
@@ -19,13 +19,19 @@ mixin hotel-card(details)
                   +picture("content/hotel-card", details.pictures[n].imageName, details.pictures[n].imageName , "jpg", details.pictures[n].imageWidth, details.pictures[n].imageHeight, "Фото интерьера отеля " + details.alt)
           li
             a.hotel-card__gallery-link(href="#")
-              span + 15 фото
+              .div
+                span + 15 фото
               +picture("content/hotel-card", details.pictures[3].imageName, details.pictures[3].imageName , "jpg", details.pictures[3].imageWidth, details.pictures[3].imageHeight, "Фото интерьера отеля " + details.alt)
       .hotel-card__logo
         +icon(details.logoName, details.logoWidth, details.logoHeight)
       h2= details.descriptionTitle
-      each item in details.descriptionText
-        p= item
+      p= details.descriptionTextPreview
+      button.hotel-card__button(type="button")
+        span Читать полностью
+        +icon("icon-arrow-down", 19, 11)
+      .hotel-card__text-wrapper
+        each item in details.descriptionText
+          p= item
       .hotel-card__links
         a.hotel-card__link(href="#")
           +icon("icon-youtube", 44, 31)

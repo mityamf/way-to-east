@@ -4,7 +4,7 @@
   margin-bottom: 51px;
   z-index: 10;
 
-  @include viewport--md {
+  @include viewport--sm {
     margin-top: -17px;
   }
 }
@@ -19,13 +19,22 @@
   color: $color-default-white;
   text-align: center;
 
-  @include viewport--md {
+  @include viewport--sm {
     font-size: 24px;
     line-height: 29px;
   }
 }
 
-.page-content h2 {
+.page-content--hotel h1 {
+  margin-bottom: 9px;
+
+  @include viewport--sm {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+.page-content__title {
   margin: 20px 0;
   font-size: 26px;
   line-height: 31px;
@@ -34,7 +43,7 @@
   color: $color-dim-gray;
   text-align: center;
 
-  @include viewport--md {
+  @include viewport--sm {
     margin: 18px 0;
     font-size: 18px;
     line-height: 24px;
@@ -42,8 +51,10 @@
   }
 }
 
-.page-content--hotel h2 {
-  padding-left: 100px;
-  color: $color-dim-gray;
-  text-align: left;
+.page-content--hotel {
+  margin-bottom: 102px;
+
+  @include viewport--md {
+    margin-top: -30px;
+  }
 }
