@@ -4,7 +4,7 @@
   padding: 10px;
   font-family: $font-family-inter;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 19px;
   letter-spacing: 0.025em;
   word-break: break-word;
@@ -17,4 +17,10 @@
   border-radius: 10px;
   outline: none;
   cursor: pointer;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 }

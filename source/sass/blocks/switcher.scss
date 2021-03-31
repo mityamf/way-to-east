@@ -16,6 +16,13 @@
   line-height: 20px;
   text-align: center;
   color: $color-default-white;
+  outline: none;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 }
 
 .switcher__toggle {

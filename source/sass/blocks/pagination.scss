@@ -30,13 +30,24 @@
   padding: 5px;
   font-family: $font-family-inter;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 20px;
   color: $color-cerulean-blue;
   cursor: pointer;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 }
 
 .pagination__number--active .pagination__link {
   color: $color-dim-gray;
   cursor: default;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
