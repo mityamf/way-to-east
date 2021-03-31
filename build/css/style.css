@@ -2738,14 +2738,18 @@ main {
 
 .hotel-card__gallery-link {
   display: block; }
-  .hotel-card__gallery-link span {
+  .hotel-card__gallery-link div {
     position: absolute;
     top: 0;
     left: 0;
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 28%;
     font-size: 15px;
     line-height: 19px;
     font-weight: 400;
@@ -2754,6 +2758,10 @@ main {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
     pointer-events: none; }
+
+.hotel-card__gallery-link span {
+  display: block;
+  margin: 0 auto; }
 
 .hotel-card__logo {
   display: block;
@@ -2835,7 +2843,11 @@ main {
 .participant-form h2 {
   text-align: left; }
 
-.participant-form form {
+.participant-form__wrapper {
+  background-color: #ffffff;
+  border-radius: 10px; }
+
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2848,116 +2860,112 @@ main {
   padding-top: 68px;
   padding-bottom: 75px; }
   @media (min-width: 768px) and (max-width: 1200px) {
-    .participant-form form {
+    .form {
       width: 50%; } }
   @media (max-width: 767px) {
-    .participant-form form {
+    .form {
       width: 100%;
       padding-top: 20px;
       padding-bottom: 50px;
       padding-left: 10px;
       padding-right: 10px; } }
 
-.participant-form__wrapper {
-  background-color: #ffffff;
-  border-radius: 10px; }
-
-.participant-form form input {
+.form input {
   margin-bottom: 15px;
   height: 45px; }
-  .participant-form form input::-webkit-input-placeholder {
+  .form input::-webkit-input-placeholder {
     font-size: 17px;
     line-height: 20px;
     font-weight: 400;
     font-family: "Inter", "Arial", sans-serif;
     color: #313131; }
-  .participant-form form input::-moz-placeholder {
+  .form input::-moz-placeholder {
     font-size: 17px;
     line-height: 20px;
     font-weight: 400;
     font-family: "Inter", "Arial", sans-serif;
     color: #313131; }
-  .participant-form form input:-ms-input-placeholder {
+  .form input:-ms-input-placeholder {
     font-size: 17px;
     line-height: 20px;
     font-weight: 400;
     font-family: "Inter", "Arial", sans-serif;
     color: #313131; }
-  .participant-form form input::-ms-input-placeholder {
+  .form input::-ms-input-placeholder {
     font-size: 17px;
     line-height: 20px;
     font-weight: 400;
     font-family: "Inter", "Arial", sans-serif;
     color: #313131; }
-  .participant-form form input::placeholder {
+  .form input::placeholder {
     font-size: 17px;
     line-height: 20px;
     font-weight: 400;
     font-family: "Inter", "Arial", sans-serif;
     color: #313131; }
 
-.participant-form form input,
-.participant-form form textarea {
+.form input,
+.form textarea {
   padding: 10px 15px;
   background-color: #ebebeb;
   border: none;
   border-radius: 10px; }
 
-.participant-form form label {
+.form label {
   font-size: 15px;
   line-height: 19px;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #6f6f6f; }
 
-.participant-form form textarea {
+.form textarea {
   margin-bottom: 35px;
   resize: vertical; }
 
-.participant-form form textarea::-webkit-input-placeholder {
+.form textarea::-webkit-input-placeholder {
   font-size: 17px;
   line-height: 20px;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131; }
 
-.participant-form form textarea::-moz-placeholder {
+.form textarea::-moz-placeholder {
   font-size: 17px;
   line-height: 20px;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131; }
 
-.participant-form form textarea:-ms-input-placeholder {
+.form textarea:-ms-input-placeholder {
   font-size: 17px;
   line-height: 20px;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131; }
 
-.participant-form form textarea::-ms-input-placeholder {
+.form textarea::-ms-input-placeholder {
   font-size: 17px;
   line-height: 20px;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131; }
 
-.participant-form form textarea::placeholder {
+.form textarea::placeholder {
   font-size: 17px;
   line-height: 20px;
   font-weight: 400;
   font-family: "Inter", "Arial", sans-serif;
   color: #313131; }
 
-.participant-form__button.button {
+.form__button.button {
   width: 200px;
   margin: 53px auto 0;
   background-color: #1c54d1; }
 
-.participant-form label[for="accept"] {
+.form label[for="accept"] {
   position: relative;
   padding-left: 31px; }
-  .participant-form label[for="accept"]::before {
+  .form label[for="accept"]::before {
     position: absolute;
     content: "";
     top: -2px;
@@ -2968,7 +2976,7 @@ main {
     border: 1px solid #6f6f6f;
     border-radius: 50%; }
 
-.participant-form input:checked + label::after {
+.form input:checked + label::after {
   position: absolute;
   content: "";
   top: 1px;
