@@ -1,10 +1,18 @@
+include ../components/countries-logo
+include ../components/button
+
 mixin modal(mods)
   div(class="modal modal--preload " + mods)
     .modal__wrapper
       .modal__overlay
       .modal__content
-        p Контент
-        if block
-          block
-        button.modal__close-btn.btn-reset(type="button", aria-label="Закрыть попап")
-          +icon("icon-close", 15, 15)
+        if(mods== "modal-success")
+          +countries-logo()
+          p Ваше сообщение успешно отправлено!
+          +button("modal-success", "Закрыть")
+          button.modal__close-btn.btn-reset(type="button", aria-label="Закрыть попап")
+            +icon("icon-cross", 23, 23)
+        if(mods== "modal-video")
+          video(controls autoplay src="https://www.youtube.com/watch?v=xshEZzpS4CQ")
+          button.modal__close-btn.btn-reset(type="button", aria-label="Закрыть попап")
+            +icon("icon-cross", 23, 23)

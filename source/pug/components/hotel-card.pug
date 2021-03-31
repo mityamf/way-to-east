@@ -15,13 +15,13 @@ mixin hotel-card(details)
           - var n = 0;
             - for (var n = 0; n < 3; n++)
               li
-                a(href="#")
+                a(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-" + (n+1) + "@2x.jpg")
                   +picture("content/hotel-card", details.pictures[n].imageName, details.pictures[n].imageName , "jpg", details.pictures[n].imageWidth, details.pictures[n].imageHeight, "Фото интерьера отеля " + details.alt)
           li
-            a.hotel-card__gallery-link(href="#")
+            a.hotel-card__gallery-link(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg")
+              +picture("content/hotel-card", details.pictures[3].imageName, details.pictures[3].imageName , "jpg", details.pictures[3].imageWidth, details.pictures[3].imageHeight, "Фото интерьера отеля " + details.alt)
               .div
                 span + 15 фото
-              +picture("content/hotel-card", details.pictures[3].imageName, details.pictures[3].imageName , "jpg", details.pictures[3].imageWidth, details.pictures[3].imageHeight, "Фото интерьера отеля " + details.alt)
       .hotel-card__logo
         +icon(details.logoName, details.logoWidth, details.logoHeight)
       h2= details.descriptionTitle
@@ -33,7 +33,7 @@ mixin hotel-card(details)
         each item in details.descriptionText
           p= item
       .hotel-card__links
-        a.hotel-card__link(href="#")
+        a.hotel-card__link.hotel-card__link--video(href="#")
           +icon("icon-youtube", 44, 31)
           span Посмотреть видео-презентацию
         a.hotel-card__link(href="#")

@@ -1,0 +1,25 @@
+.modal-video .modal__content {
+  padding: 0;
+  width: 60%;
+  height: 60vh;
+
+  @include viewport--sm {
+    width: 82%;
+    height: 40vh;
+  }
+}
+
+.modal-video video {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-video .modal__close-btn {
+  top: 0;
+  right: -40px;
+
+  @include viewport--sm {
+    top: 42vh;
+    right: 50%;
+  }
+}
