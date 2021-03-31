@@ -1,7 +1,6 @@
 .header {
   display: flex;
   align-items: center;
-  z-index: 2;
   width: 100%;
 
   &__wrapper {
@@ -27,7 +26,6 @@
 
 .header__background {
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -47,6 +45,7 @@
 
 .header__logo {
   position: fixed;
+  z-index: 2;
   left: 50px;
   display: block;
   margin-top: 6px;
@@ -59,11 +58,13 @@
 }
 
 .header__nav {
+  z-index: 2;
   margin: 0 10px;
 }
 
 .header__switcher {
   position: fixed;
+  z-index: 2;
   right: 50px;
 
   @include viewport--md {
