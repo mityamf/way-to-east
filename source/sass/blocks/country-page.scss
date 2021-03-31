@@ -37,8 +37,8 @@
 
 .country-page__countries {
   position: fixed;
-  top: 78px;
-  right: 20px;
+  top: 110px;
+  right: 57px;
   transition: $default-transition-settings;
 
   &:hover,
@@ -48,8 +48,8 @@
 
   @include viewport--md {
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: -30px;
+    right: 18px;
   }
 
   @include viewport--sm {
@@ -58,7 +58,15 @@
     background-color: $color-default-white;
     border-radius: 10px;
     margin-bottom: 20px;
+
+    @include viewport--sm {
+      padding: 25px 18px 20px;
+    }
   }
+}
+
+.country-page__countries .preview-details {
+  padding: 0;
 }
 
 .country-page__countries svg,

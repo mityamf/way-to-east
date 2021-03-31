@@ -1159,7 +1159,6 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 2;
   width: 100%; }
   .header__wrapper {
     position: relative;
@@ -1189,7 +1188,6 @@ button,
 
 .header__background {
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%; }
@@ -1208,6 +1206,7 @@ button,
 
 .header__logo {
   position: fixed;
+  z-index: 2;
   left: 50px;
   display: block;
   margin-top: 6px; }
@@ -1218,10 +1217,12 @@ button,
       margin: 0 auto; } }
 
 .header__nav {
+  z-index: 2;
   margin: 0 10px; }
 
 .header__switcher {
   position: fixed;
+  z-index: 2;
   right: 50px; }
   @media (max-width: 1023px) {
     .header__switcher {
@@ -1817,7 +1818,6 @@ main {
 .main__content,
 .country-page__content {
   position: relative;
-  z-index: 10;
   padding-top: 28px; }
   @media (max-width: 767px) {
     .main__content,
@@ -2439,8 +2439,7 @@ main {
 .page-content {
   position: relative;
   margin-top: -120px;
-  margin-bottom: 51px;
-  z-index: 10; }
+  margin-bottom: 51px; }
   @media (max-width: 767px) {
     .page-content {
       margin-top: -17px; } }
@@ -2587,8 +2586,8 @@ main {
 
 .country-page__countries {
   position: fixed;
-  top: 78px;
-  right: 20px;
+  top: 110px;
+  right: 57px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease; }
   .country-page__countries:hover, .country-page__countries:focus {
@@ -2596,8 +2595,8 @@ main {
   @media (max-width: 1023px) {
     .country-page__countries {
       position: absolute;
-      top: -50px;
-      right: 0; } }
+      top: -30px;
+      right: 18px; } }
   @media (max-width: 767px) {
     .country-page__countries {
       position: static;
@@ -2605,6 +2604,12 @@ main {
       background-color: #ffffff;
       border-radius: 10px;
       margin-bottom: 20px; } }
+  @media (max-width: 767px) and (max-width: 767px) {
+    .country-page__countries {
+      padding: 25px 18px 20px; } }
+
+.country-page__countries .preview-details {
+  padding: 0; }
 
 .country-page__countries svg,
 .country-page__countries .preview-details__text,
