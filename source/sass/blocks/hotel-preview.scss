@@ -31,6 +31,12 @@
   padding: 5px 0;
   height: auto;
   outline: none;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 }
 
 .hotel-preview__slider .swiper-button-next::after,
@@ -85,7 +91,7 @@
   margin: 0 0 5px;
   font-family: $font-family-inter;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 26px;
 
   @include viewport--sm {

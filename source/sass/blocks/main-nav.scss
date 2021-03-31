@@ -5,6 +5,13 @@
   top: 50%;
   left: 21px;
   transform: translateY(-50%);
+  outline: none;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 }
 
 .main-nav__open-menu {
@@ -45,6 +52,12 @@
   font-weight: 400;
   line-height: 23px;
   color: $color-default-white;
+  transition: $default-transition-settings;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
 }
 
 .header--mobile .main-nav__open-menu {
