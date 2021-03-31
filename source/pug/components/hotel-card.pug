@@ -19,7 +19,8 @@ mixin hotel-card(details)
                   +picture("content/hotel-card", details.pictures[n].imageName, details.pictures[n].imageName , "jpg", details.pictures[n].imageWidth, details.pictures[n].imageHeight, "Фото интерьера отеля " + details.alt)
           li
             a.hotel-card__gallery-link(href="#")
-              span + 15 фото
+              .div
+                span + 15 фото
               +picture("content/hotel-card", details.pictures[3].imageName, details.pictures[3].imageName , "jpg", details.pictures[3].imageWidth, details.pictures[3].imageHeight, "Фото интерьера отеля " + details.alt)
       .hotel-card__logo
         +icon(details.logoName, details.logoWidth, details.logoHeight)

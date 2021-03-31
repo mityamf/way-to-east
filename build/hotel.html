@@ -292,7 +292,8 @@
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-3@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-3@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
-                    <li><a class="hotel-card__gallery-link" href="#"><span>+ 15 фото</span>
+                    <li><a class="hotel-card__gallery-link" href="#">
+                        <div class="div"><span>+ 15 фото</span></div>
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-4@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-4@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
@@ -329,7 +330,7 @@
             <section class="participant-form">
               <h2 class="page-content__title">Написать участнику:</h2>
               <div class="participant-form__wrapper">
-                <form action="#" method="post">
+                <form class="form" action="#" method="post">
                   <label class="visually-hidden" for="name-field">Имя и фамилия</label>
                   <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" pattern="^[a-zA-Z0-9]+$"/>
                   <label class="visually-hidden" for="email-field">E-mail</label>
@@ -340,26 +341,13 @@
                   <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required" pattern="^[a-zA-Z0-9]+$"></textarea>
                   <input class="visually-hidden" id="accept" type="checkbox" name="accept"/>
                   <label for="accept">Подтверждаю своё согласие на сбор, хранение и обработку вышеуказанных данных в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006, № 152-ФЗ</label>
-                  <input class="button participant-form__button" type="submit" value="Отправить"/>
+                  <input class="button form__button" type="submit" value="Отправить"/>
                 </form>
               </div>
             </section>
           </div>
         </div>
       </main>
-      <div class="modal modal--preload modal--success">
-        <div class="modal__wrapper">
-          <div class="modal__overlay"></div>
-          <div class="modal__content">
-            <p>Контент</p>
-            <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#icon-close"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
       <footer class="footer">
         <div class="container">
           <div class="footer__wrapper">
