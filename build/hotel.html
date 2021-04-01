@@ -196,9 +196,9 @@
     <path id="Path_301" data-name="Path 301" d="M7669.9,117.049l8.246,8.246-8.246,8.246" transform="translate(-7669.9 -117.049)" fill="none" stroke="#fff" stroke-width="3"/>
   </g>
 </symbol><symbol id="star-white" viewBox="0 0 16.25 15.234">
-  <path id="Polygon_5" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#ffffff"/>
+  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#ffffff"/>
 </symbol><symbol id="star-yellow" viewBox="0 0 16.25 15.234">
-  <path id="Polygon_5" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#edbd3a"/>
+  <path id="Polygon_5_yellow" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#edbd3a"/>
 </symbol></svg>
     </div>
     <div class="wrapper">
@@ -258,7 +258,7 @@
         </div>
       </header>
       <main>
-        <div class="page-content page-content--hotel"><a class="link-back" href="#">
+        <div class="page-content page-content--hotel"><a class="link-back" onclick="javascript:history.back();">
             <svg width="11" height="19" aria-hidden="true">
               <use xlink:href="#icon-back"></use>
             </svg><span>Назад</span><span>к списку</span></a>
@@ -282,12 +282,10 @@
               </svg><span>5</span>
             </div>
             <p class="hotel-card__subtitle">Корея, Сеул</p>
-            <section class="hotel-card__content">
-              <div class="hotel-card__icon article__icon">
+            <section class="hotel-card__content"><a class="hotel-card__icon article__icon" onclick="javascript:history.back();">
                 <svg width="23" height="23" aria-hidden="true">
                   <use xlink:href="#icon-cross"></use>
-                </svg>
-              </div>
+                </svg></a>
               <div class="hotel-card__image">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-main-mobile@1x.jpg 1x, img/content/hotel-card/hotel-card-main-mobile@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-main-desktop@1x.jpg" srcset="img/content/hotel-card/hotel-card-main-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото отеляSigniel Seoul"/>

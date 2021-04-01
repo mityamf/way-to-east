@@ -5,7 +5,7 @@ mixin hotel-card(details)
   +hotel-rating("hotel-card", 5, "white")
   p.hotel-card__subtitle= details.subtitle
   section.hotel-card__content
-    .hotel-card__icon.article__icon
+    a.hotel-card__icon.article__icon(onclick="javascript:history.back();")
       +icon("icon-cross", 23, 23)
     .hotel-card__image
       +picture("content/hotel-card", "hotel-card-main" + "-desktop", "hotel-card-main" + "-mobile", "jpg", "1090", "490", "Фото отеля" + details.alt)

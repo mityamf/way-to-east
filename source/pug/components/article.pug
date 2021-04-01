@@ -1,6 +1,6 @@
 mixin article(content)
   article(class = "article article--" + content.pageClass)
-    .article__icon
+    a.article__icon(onclick="javascript:history.back();")
       +icon("icon-cross", 23, 23)
     if (content.isBlog== "true")
       .article__image
@@ -10,14 +10,14 @@ mixin article(content)
           +picture("content/blog", "blog" + "-userpick-desktop", "blog" + "-userpick-mobile", "png", "202", "202", "Фото автора статьи")
         span.article__author-name= content.authorName
         span.article__author-specialty= content.authorSpecialty
-      .article__text
+      .article__content-text.content-text
         h2= content.title
         each item in content.blogText
           p= item
     else if (content.isBlog== "false")
       .article__image
         +picture("content/details", content.country + "-details-culture-desktop", content.country + "-details-culture-mobile", "jpg", "1090", "490", "Фото пейзажа " + content.alt)
-      .article__text
+      .article__content-text.content-text
         h2= content.title[0]
         each item in content.culture
           p= item

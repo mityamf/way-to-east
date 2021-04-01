@@ -1,0 +1,26 @@
+.content-text {
+  margin-top: 50px;
+  padding: 0 110px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: $font-family-inter;
+  color: $color-night-rider;
+
+  @include viewport--sm {
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+}
+
+.content-text img {
+  @include viewport--sm {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 20px;
+    max-width: calc(100% + 40px)
+  }
+}

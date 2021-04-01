@@ -176,7 +176,7 @@
     <path id="Path_301" data-name="Path 301" d="M7669.9,117.049l8.246,8.246-8.246,8.246" transform="translate(-7669.9 -117.049)" fill="none" stroke="#fff" stroke-width="3"/>
   </g>
 </symbol><symbol id="star-white" viewBox="0 0 16.25 15.234">
-  <path id="Polygon_5" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#ffffff"/>
+  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#ffffff"/>
 </symbol><symbol id="star-yellow" viewBox="0 0 16.25 15.234">
-  <path id="Polygon_5" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#edbd3a"/>
+  <path id="Polygon_5_yellow" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#edbd3a"/>
 </symbol></svg>

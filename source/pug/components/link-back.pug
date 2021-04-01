@@ -1,5 +1,5 @@
 mixin link-back(text, textMore)
-  a.link-back(href="#")
+  a.link-back(onclick="javascript:history.back();")
     +icon("icon-back", 11, 19)
     span= text
     span= textMore
