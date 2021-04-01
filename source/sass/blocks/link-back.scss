@@ -1,14 +1,25 @@
 .link-back {
   position: fixed;
   top: 71px;
-  right: 50px;
+  right: 45px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: $default-transition-settings;
+
+  &:hover {
+    opacity: 0.8;
+    transition: $default-transition-settings;
+  }
 
   @include viewport--md {
     position: absolute;
     top: -82px;
     right: 21px;
+  }
+
+  @include viewport--sm {
+    top: -70px;
   }
 }
 

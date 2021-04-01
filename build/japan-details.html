@@ -196,7 +196,7 @@
     <path id="Path_301" data-name="Path 301" d="M7669.9,117.049l8.246,8.246-8.246,8.246" transform="translate(-7669.9 -117.049)" fill="none" stroke="#fff" stroke-width="3"/>
   </g>
 </symbol><symbol id="star-white" viewBox="0 0 16.25 15.234">
-  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#ffffff"/>
+  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z"/>
 </symbol><symbol id="star-yellow" viewBox="0 0 16.25 15.234">
   <path id="Polygon_5_yellow" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#edbd3a"/>
 </symbol></svg>
@@ -258,24 +258,22 @@
         </div>
       </header>
       <main>
-        <div class="page-content"><a class="link-back" href="#">
+        <div class="page-content"><a class="link-back" onclick="javascript:history.back();">
             <svg width="11" height="19" aria-hidden="true">
               <use xlink:href="#icon-back"></use>
             </svg><span>Назад</span><span></span></a>
           <div class="container">
             <h1>Особенности гостеприимства в Японии</h1>
-            <article class="article article--japan-details">
-              <div class="article__icon">
+            <article class="article article--japan-details"><a class="article__icon" onclick="javascript:history.back();">
                 <svg width="23" height="23" aria-hidden="true">
                   <use xlink:href="#icon-cross"></use>
-                </svg>
-              </div>
+                </svg></a>
               <div class="article__image">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/content/details/japan-details-culture-mobile@1x.jpg 1x, img/content/details/japan-details-culture-mobile@2x.jpg 2x"/><img src="img/content/details/japan-details-culture-desktop@1x.jpg" srcset="img/content/details/japan-details-culture-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото пейзажа В Японии"/>
                 </picture>
               </div>
-              <div class="article__text">
+              <div class="article__content-text content-text">
                 <h2>Культурные особенности и неочевидные факты</h2>
                 <p>Япония — самая уникальная представительница экзотической Азии. Страна — загадка, органично сочетающая высокие технологии с древними традициями, где обычаи действуют наравне с законом. Она многогранна как бриллиант. Поэтическое название — Страна восходящего солнца.</p>
                 <p>Это островное государство, основная территория которого расположена на четырех крупных островах: Хонсю, Сикоку, Хоккайдо, Кюсю. Остальные из 6852 островов большинство обжитые, но встречаются и необитаемые.</p>
@@ -301,8 +299,8 @@
                 <p>В стране распространены как европейские, так и национальные отели «рекан», обставленные в японском стиле. Европейские гостиницы в основном работают на базе завтраков (либо вообще без питания), кухня разнообразная. «Реканы» обычно предлагают полупансион, кухня в них — только национальная. В большинстве отелей курортных городов есть собственные «онсэны» и «о-фуро»: японские варианты бани, особые горячие минеральные ванны.</p>
               </div>
             </article>
-            <h2 class="page-content__title">Вас может заинтересовать</h2>
             <section class="hotels inner-hotels">
+              <h2>Вас может заинтересовать</h2>
               <ul class="hotels__wrapper">
                 <li class="hotels__item"><a class="inner-hotels__hotel-preview hotel-preview" href="#">
                     <div class="hotel-preview__slider">
