@@ -25,8 +25,8 @@ block main
   main.main
     .container
       .main__content
-        h1 Цветущий путь на Восток.
-        p.main__content-subtitle Подробности о лучших отелях и особенностях двух стран.
+        h1 Цветущий путь на&nbsp;Восток.
+        p.main__content-subtitle Подробности о&nbsp;лучших отелях и&nbsp;особенностях двух стран.
         section.main__countries.countries-details
           ul
             each item in mainCountryDetails
@@ -46,7 +46,7 @@ block main
               li.hotels__item
                 +hotel-preview("hotels", item)
         .main__pagination.pagination
-          +page-pagination(1, 7)
+          +button("pagination", "показать ещё")
 
 //- block modals
 //-   +modal("modal--feedback")
