@@ -74,8 +74,9 @@
 
   &:hover,
   &:focus {
-    transform: scale(1.05);
-    transition: $default-transition-settings;
+    backface-visibility: hidden;
+    transform: scale(1.1) translateZ(0);
+    transition: transform 0.2s;
   }
 }
 
