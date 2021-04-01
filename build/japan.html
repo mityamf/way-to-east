@@ -265,7 +265,10 @@
       <main class="country-page">
         <div class="container">
           <div class="country-page__content">
-            <h1>Япония</h1>
+            <h1>Япония</h1><a class="country-page__mini-details mini-details" href="japan-details.html">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/content/main/japan-details-mobile@1x.png 1x, img/content/main/japan-details-mobile@2x.png 2x"/><img src="img/content/main/japan-details-desktop@1x.png" srcset="img/content/main/japan-details-desktop@2x.png 2x" width="242" height="242" alt="Храм на фоне воды"/>
+              </picture><span>Особенности</span></a>
             <!-- +filter-cities("country-page", japanCities)-->
             <section class="country-page__hotels hotels">
               <div class="hotels__wrapper">
@@ -887,15 +890,6 @@
             </section>
             <div class="country-page__pagination pagination">
               <button class="pagination__button button" type="button">показать ещё</button>
-              <ol class="pagination__numbers">
-                <li class="pagination__number pagination__number--active"><a class="pagination__link" href="#" aria-label="Текущая страница 1">1</a></li>
-                <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 2">2</a></li>
-                <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 3">3</a></li>
-                <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 4">4</a></li>
-                <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 5">5</a></li>
-                <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 6">6</a></li>
-                <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 7">7</a></li>
-              </ol>
             </div>
           </div>
         </div>

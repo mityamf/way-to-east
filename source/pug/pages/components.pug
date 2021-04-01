@@ -2,6 +2,7 @@ extends ../base/layout
 
 include ../components/hotel-rating
 include ../components/button
+include ../components/page-pagination
 
 block data
 
@@ -73,3 +74,4 @@ block main
         +hotel-rating("parentClass", 5, "yellow")
         +hotel-rating("parentClass", 5, "white")
         +button("класс родительского блока", "текст кнопки")
+        +page-pagination(1, 7)
