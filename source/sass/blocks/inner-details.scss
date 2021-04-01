@@ -1,23 +1,4 @@
-.inner-hotels {
-  margin-top: 23px;
-
-  &--blog {
-    @include viewport--md {
-      margin-top: 0;
-    }
-  }
-}
-
-.inner-hotels__button {
-  display: block;
-  margin: 50px auto 0;
-
-  @include viewport--md {
-    margin-top: 30px;
-  }
-}
-
-.inner-hotels h2 {
+.inner-details h2 {
   margin: 20px 0;
   font-size: 26px;
   line-height: 31px;

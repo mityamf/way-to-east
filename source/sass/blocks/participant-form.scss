@@ -8,7 +8,16 @@
 }
 
 .participant-form h2 {
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: bold;
+  font-family: $font-family-inter;
+  color: $color-dim-gray;
   text-align: left;
+
+  @include viewport--sm {
+    text-align: center;
+  }
 }
 
 .participant-form__wrapper {

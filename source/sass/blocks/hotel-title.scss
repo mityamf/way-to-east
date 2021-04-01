@@ -1,0 +1,19 @@
+.hotel-title {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.hotel-title p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 400;
+  font-family: $font-family-inter;
+  color: $color-default-white;
+  text-align: center;
+
+  @include viewport--sm {
+    margin-bottom: 25px;
+  }
+}

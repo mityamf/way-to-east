@@ -33,27 +33,14 @@
   }
 }
 
-.page-content__title {
-  margin: 20px 0;
-  font-size: 26px;
-  line-height: 31px;
-  font-weight: 700;
-  font-family: $font-family-inter;
-  color: $color-dim-gray;
-  text-align: center;
-
-  @include viewport--sm {
-    margin: 18px 0;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 500;
-  }
-}
-
 .page-content--hotel {
   margin-bottom: 102px;
 
   @include viewport--md {
-    margin-top: -30px;
+    margin-top: -33px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 50px;
   }
 }

@@ -1,3 +1,13 @@
 .hotel-rating span {
   display: none;
 }
+
+.hotel-title__hotel-rating {
+  margin: 0 auto;
+  width: 95px;
+  transform: scale(1.2);
+}
+
+.hotel-title__hotel-rating svg {
+  fill: $color-default-white;
+}
