@@ -196,7 +196,7 @@
     <path id="Path_301" data-name="Path 301" d="M7669.9,117.049l8.246,8.246-8.246,8.246" transform="translate(-7669.9 -117.049)" fill="none" stroke="#fff" stroke-width="3"/>
   </g>
 </symbol><symbol id="star-white" viewBox="0 0 16.25 15.234">
-  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#ffffff"/>
+  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z"/>
 </symbol><symbol id="star-yellow" viewBox="0 0 16.25 15.234">
   <path id="Polygon_5_yellow" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#edbd3a"/>
 </symbol></svg>
@@ -263,26 +263,28 @@
               <use xlink:href="#icon-back"></use>
             </svg><span>Назад</span><span>к списку</span></a>
           <div class="container">
-            <h1>Signiel Seoul</h1>
-            <div class="hotel-card__hotel-rating hotel-rating">
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>1</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>2</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>3</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>4</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>5</span>
+            <div class="hotel-title">
+              <h1>Signiel Seoul</h1>
+              <div class="hotel-title__hotel-rating hotel-rating">
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>1</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>2</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>3</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>4</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>5</span>
+              </div>
+              <p>Корея, Сеул</p>
             </div>
-            <p class="hotel-card__subtitle">Корея, Сеул</p>
-            <section class="hotel-card__content"><a class="hotel-card__icon article__icon" onclick="javascript:history.back();">
+            <section class="hotel-card"><a class="hotel-card__icon" onclick="javascript:history.back();">
                 <svg width="23" height="23" aria-hidden="true">
                   <use xlink:href="#icon-cross"></use>
                 </svg></a>
@@ -291,28 +293,35 @@
                   <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-main-mobile@1x.jpg 1x, img/content/hotel-card/hotel-card-main-mobile@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-main-desktop@1x.jpg" srcset="img/content/hotel-card/hotel-card-main-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото отеляSigniel Seoul"/>
                 </picture>
               </div>
-              <div class="hotel-card__description hotel-card__description--hidden">
-                <div class="hotel-card__gallery">
-                  <ul>
-                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg">
+              <div class="hotel-card__gallery hotel-card__slider">
+                <div class="swiper-container">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a class="hotel-card__image-main" data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-main-mobile@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-main-mobile@1x.jpg 1x, img/content/hotel-card/hotel-card-main-mobile@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-main-desktop@1x.jpg" srcset="img/content/hotel-card/hotel-card-main-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото отеляSigniel Seoul"/>
+                        </picture></a></li>
+                    <li class="swiper-slide"><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-1@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-1@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
-                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg">
+                    <li class="swiper-slide"><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-2@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-2@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
-                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-3@2x.jpg">
+                    <li class="swiper-slide"><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-3@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-3@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-3@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture></a></li>
-                    <li><a class="hotel-card__gallery-link" data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg">
+                    <li class="swiper-slide"><a class="hotel-card__gallery-link" data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg">
                         <picture>
                           <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-4@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-4@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
                         </picture>
                         <div class="div"><span>+ 15 фото</span></div></a></li>
                   </ul>
+                  <div class="swiper-pagination hotel-card__slider-pagination"></div>
                 </div>
+              </div>
+              <div class="hotel-card__description">
                 <div class="hotel-card__logo">
                   <svg width="126" height="17" aria-hidden="true">
                     <use xlink:href="#logo-hotel-signiel"></use>
@@ -335,10 +344,10 @@
                 <div class="hotel-card__links"><a class="hotel-card__link hotel-card__link--video" href="#">
                     <svg width="44" height="31" aria-hidden="true">
                       <use xlink:href="#icon-youtube"></use>
-                    </svg><span>Посмотреть видео-презентацию</span></a><a class="hotel-card__link" href="#">
+                    </svg>Посмотреть видео-презентацию</a><a class="hotel-card__link" href="#">
                     <svg width="26" height="35" aria-hidden="true">
                       <use xlink:href="#icon-pdf"></use>
-                    </svg><span>Скачать PDF-презентацию</span></a></div>
+                    </svg>Скачать PDF-презентацию</a></div>
               </div>
             </section>
             <section class="participant-form">
@@ -352,9 +361,9 @@
                   <label class="visually-hidden" for="phone-field">Телефон</label>
                   <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required"/>
                   <label class="visually-hidden" for="message-field">Введите текст сообщения</label>
-                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required" pattern="^[a-zA-Z0-9]+$"></textarea>
+                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required"></textarea>
                   <input class="visually-hidden" id="accept" type="checkbox" name="accept"/>
-                  <label for="accept">Подтверждаю своё согласие на сбор, хранение и обработку вышеуказанных данных в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006, № 152-ФЗ</label>
+                  <label for="accept">Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ</label>
                   <input class="button form__button" type="submit" value="Отправить"/>
                 </form>
               </div>

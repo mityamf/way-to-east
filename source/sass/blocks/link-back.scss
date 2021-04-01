@@ -17,6 +17,10 @@
     top: -82px;
     right: 21px;
   }
+
+  @include viewport--sm {
+    top: -70px;
+  }
 }
 
 
