@@ -70,6 +70,7 @@
 .form label[for="accept"] {
   position: relative;
   padding-left: 31px;
+  cursor: pointer;
 
   &::before {
     position: absolute;

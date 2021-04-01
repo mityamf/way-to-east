@@ -1,4 +1,5 @@
 include ../components/travel-media
+include ../components/countries-logo
 
 mixin footer(footerMod)
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
@@ -6,11 +7,7 @@ mixin footer(footerMod)
       .footer__wrapper
         +travel-media("gray")
         .footer__countries
-          .footer__countries-wrapper
-            .footer__countries-logo.footer__countries-logo--korea
-              +icon("logo-korea", 91, 60)
-            .footer__countries-logo.footer__countries-logo--japan
-              +icon("logo-japan", 151, 60)
+          +countries-logo()
           .footer__countries-copyright
             +icon("icon-official", 15, 15)
             span Project of tourism authorities

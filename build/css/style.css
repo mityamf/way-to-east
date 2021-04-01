@@ -1342,23 +1342,6 @@ button,
       margin-right: auto;
       width: 100%; } }
 
-.footer__countries-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 15px; }
-  @media (max-width: 767px) {
-    .footer__countries-wrapper {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; } }
-
-.footer__countries-logo--japan {
-  margin-left: 71px; }
-  @media (max-width: 767px) {
-    .footer__countries-logo--japan {
-      margin-left: auto; } }
-
 .footer__countries-copyright span {
   font-size: 15px;
   line-height: 20px;
@@ -1390,7 +1373,7 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   overflow-y: auto;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: black;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   visibility: hidden;
@@ -3034,7 +3017,8 @@ main {
 
 .form label[for="accept"] {
   position: relative;
-  padding-left: 31px; }
+  padding-left: 31px;
+  cursor: pointer; }
   .form label[for="accept"]::before {
     position: absolute;
     content: "";
@@ -3055,6 +3039,95 @@ main {
   height: 15px;
   background-color: #6f6f6f;
   border-radius: 50%; }
+
+.modal-success .modal__content {
+  width: 646px;
+  height: 354px;
+  padding: 50px 120px 30px;
+  border-radius: 10px;
+  -webkit-transform: scale(0.83);
+          transform: scale(0.83); }
+  @media (max-width: 767px) {
+    .modal-success .modal__content {
+      height: 429px;
+      padding: 50px 25px;
+      width: 100%;
+      margin: 0 auto; } }
+
+.modal-success p {
+  margin: 10px 0 48px;
+  padding: 0 33px;
+  font-size: 26px;
+  line-height: 31px;
+  font-weight: 700;
+  font-family: "Inter", "Arial", sans-serif;
+  color: #1c54d1;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .modal-success p {
+      padding: 0;
+      margin-bottom: 70px; } }
+
+.modal-success__button {
+  display: block;
+  margin: 0 auto;
+  width: 210px; }
+
+.modal-success .countries-logo {
+  width: 315px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 54px; }
+  @media (max-width: 767px) {
+    .modal-success .countries-logo {
+      width: auto;
+      margin-bottom: 80px; } }
+
+.modal-success .modal__close-btn {
+  top: 0;
+  right: -40px; }
+  @media (max-width: 767px) {
+    .modal-success .modal__close-btn {
+      top: 450px;
+      right: 50%; } }
+
+.countries-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px; }
+  @media (max-width: 767px) {
+    .countries-logo {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
+
+.countries-logo__image--japan {
+  margin-left: 71px; }
+  @media (max-width: 767px) {
+    .countries-logo__image--japan {
+      margin-left: auto; } }
+
+.modal-video .modal__content {
+  padding: 0;
+  width: 60%;
+  height: 60vh; }
+  @media (max-width: 767px) {
+    .modal-video .modal__content {
+      width: 82%;
+      height: 40vh; } }
+
+.modal-video video {
+  width: 100%;
+  height: 100%; }
+
+.modal-video .modal__close-btn {
+  top: 0;
+  right: -40px; }
+  @media (max-width: 767px) {
+    .modal-video .modal__close-btn {
+      top: 42vh;
+      right: 50%; } }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,

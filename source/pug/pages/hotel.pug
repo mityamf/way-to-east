@@ -3,7 +3,6 @@ extends ../base/layout
 include ../components/link-back
 include ../components/hotel-card
 include ../components/participant-form
-include ../base/modal
 
 block data
   include ../data/hotel-card-details
@@ -16,6 +15,8 @@ block variables
   - var hasFooter = true
   - var footerMod = ""
   - var currentPage = ""
+  - var hasModals = true
+
 
 block main
   main
@@ -26,5 +27,3 @@ block main
         section.participant-form
           h2.page-content__title Написать участнику:
           +participant-form()
-
-
