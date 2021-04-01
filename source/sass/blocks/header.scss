@@ -134,7 +134,8 @@
   display: none;
 }
 
-.header--korea .header__switcher {
+.header--korea .header__switcher,
+.header--japan .header__switcher {
   @include viewport--sm {
     display: flex;
     position: absolute;

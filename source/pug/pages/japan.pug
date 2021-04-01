@@ -6,6 +6,7 @@ include ../components/link-details
 include ../components/button
 include ../components/page-pagination
 include ../components/filter-cities
+include ../components/country-mini-details
 
 block data
   include ../data/japan-hotels
@@ -26,6 +27,7 @@ block main
     .container
       .country-page__content
         h1 Япония
+        +country-mini-details("country-page", japanCountryDetails)
         // +filter-cities("country-page", japanCities)
         section.country-page__hotels.hotels
           .hotels__wrapper
@@ -33,8 +35,7 @@ block main
               .hotels__item
                 +hotel-preview("hotels", item)
             .country-page__countries.countries-details
-              each item in japanCountryDetails
-                +main-country-details("countries-details", item)
+              +main-country-details("countries-details", japanCountryDetails)
             each item in japanHotels2
               .hotels__item
                 +hotel-preview("hotels", item)

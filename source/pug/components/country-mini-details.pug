@@ -1,0 +1,4 @@
+mixin country-mini-details(parent, country)
+  a(href= country.href, class = parent + "__mini-details mini-details")
+    +picture("content/main", country.imageDesktop, country.imageMobile, country.imageFormat, country.imageWidth, country.imageHeight, country.imageAlt)
+    span Особенности
