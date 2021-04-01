@@ -7,18 +7,17 @@ const createComments = () => {
   }
 
   const commentThumbsProperties = {
-    spaceBetween: 28,
+    spaceBetween: 0,
     slidesPerView: 'auto',
+    slidesOffsetAfter: 0,
     freeMode: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     breakpoints: {
       320: {
-        spaceBetween: 0,
         slidesPerView: 1,
       },
       768: {
-        spaceBetween: 28,
         slidesPerView: 'auto',
       },
     },
@@ -36,6 +35,8 @@ const createComments = () => {
       fadeEffect: {
         crossFade: true,
       },
+      noSwiping: true,
+      noSwipingClass: 'comments__bottom',
       pagination: {
         el: '.comments .swiper-pagination',
         clickable: true,
@@ -56,6 +57,8 @@ const createComments = () => {
         fadeEffect: {
           crossFade: true,
         },
+        noSwiping: true,
+        noSwipingClass: 'comments__bottom',
         pagination: {
           el: '.comments .swiper-pagination',
           clickable: true,
