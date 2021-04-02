@@ -20,10 +20,10 @@ const hotelCardSlider = () => {
       });
     };
 
-  createSliders();
+    createSliders();
+    slider.update();
 
-  window.addEventListener('resize', createSliders);
-
+    window.addEventListener('resize', createSliders);
   }
 };
 
