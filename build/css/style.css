@@ -2789,21 +2789,24 @@ main {
     display: none; } }
 
 .hotel-card__gallery ul {
-  margin: 22px auto 55px;
-  padding: 0;
+  margin: 22px auto 35px;
+  padding: 0 9%;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%; }
 
 .hotel-card__gallery li {
-  margin-right: 20px; }
+  margin-bottom: 20px; }
 
 .hotel-card__gallery li:last-child {
   position: relative;
-  overflow-y: hidden;
-  margin-right: 0; }
+  overflow-y: hidden; }
 
 .hotel-card__gallery-link {
   display: block; }
@@ -2891,7 +2894,7 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 84px; }
+  margin-top: 145px; }
   .hotel-card__links::after {
     position: absolute;
     content: "";
