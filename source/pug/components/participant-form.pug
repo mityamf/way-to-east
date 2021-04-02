@@ -9,8 +9,9 @@ mixin participant-form
       input#phone-field(type="tel", name="phone-field", placeholder="Телефон +7(000) 000 00 00", required)
       label.visually-hidden(for="message-field") Введите текст сообщения
       textarea#message-field(name="message-field", cols="30", rows="7", placeholder="Введите текст сообщения", required)
-      input#accept(class="visually-hidden", type="checkbox", name="accept")
-      label(for="accept") Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ
+      div
+        input#accept(class="visually-hidden", type="checkbox", name="accept", required)
+        label(for="accept") Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ
       input.button.form__button(type="submit" value="Отправить")
 
 

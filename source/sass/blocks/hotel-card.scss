@@ -93,55 +93,26 @@
 
 .hotel-card__gallery {
   @include viewport--sm {
-    display: block;
+    display: none;
   }
 }
 
 .hotel-card__gallery ul {
-  margin: 22px auto;
+  margin: 22px auto 55px;
   padding: 0;
   list-style: none;
   display: flex;
-  width: 100%;
-  align-items: stretch;
-
-  @include viewport--sm {
-    margin: 0 auto;
-  }
-}
-
-.hotel-card__image-main {
-  display: none;
-
-  @include viewport--sm {
-    display: block;
-    height: 280px;
-  }
-}
-.hotel-card__gallery img {
-  @include viewport--sm {
-    width: 100%;
-    height: 100%;
-  }
+  width: 80%;
 }
 
 .hotel-card__gallery li {
-  margin-right: 19px;
-
-  @include viewport--sm {
-    margin-right: 0;
-    width: 100%;
-    height: 280px;
-  }
-}
-
-.hotel-card__gallery li:first-child img {
-  height: 280px;
+  margin-right: 20px;
 }
 
 .hotel-card__gallery li:last-child {
   position: relative;
   overflow-y: hidden;
+  margin-right: 0;
 }
 
 .hotel-card__gallery-link {
@@ -181,13 +152,21 @@
   margin: 0 auto;
 }
 
+.hotel-card__slider {
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+  }
+}
+
 .hotel-card__logo {
   display: block;
   width: 132px;
   margin: 30px auto;
 
   @include viewport--sm {
-    margin-top: 94px;
+    margin-top: 76px;
   }
 }
 
@@ -228,7 +207,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 145px;
+  margin-top: 84px;
 
   &::after {
     position: absolute;
@@ -287,35 +266,23 @@
   position: static;
 
   & .swiper-pagination-bullet {
+    margin: 0 5px;
     border: 1px solid #c7c7c7;
   }
 
   & .swiper-pagination-bullet-active {
     background-color: #c7c7c7;
   }
-
-  @media(min-width: 768px) {
-    display: none;
-  }
 }
 
-.hotel-card__slider .swiper-slide {
-  @media(min-width: 768px) {
-    position: static;
-    width: 22.4%;
-
-    &:first-child {
-      width: 0;
-    }
-  }
+.hotel-card__slider a {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
 }
 
-.hotel-card__slider .swiper-container {
-  @media(min-width: 768px) {
-    position: static;
-    display: flex;
-    width: 83%;
-    overflow: visible;
-    margin-bottom: 30px;
-  }
+.hotel-card__slider img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

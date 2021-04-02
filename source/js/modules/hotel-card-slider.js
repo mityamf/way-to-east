@@ -20,14 +20,9 @@ const hotelCardSlider = () => {
       });
     };
 
-    window.addEventListener('resize', function () {
-        if(window.screen.width < 768) {
-          createSliders();
-        }
-        if(window.screen.width >= 768) {
-          location.reload();
-        }
-    });
+  createSliders();
+
+  window.addEventListener('resize', createSliders);
 
   }
 };
