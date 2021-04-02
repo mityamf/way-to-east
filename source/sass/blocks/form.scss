@@ -78,6 +78,7 @@
   position: relative;
   padding-left: 31px;
   cursor: pointer;
+  display: block;
 
   @include viewport--sm {
     padding-left: 40px;
