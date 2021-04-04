@@ -12,6 +12,8 @@ const hotelCardSlider = () => {
       hotelsSliders.forEach((n) => {
         const slider = new Swiper(n.querySelector('.swiper-container'), {
           loop: true,
+          slidesPerView: 1,
+          spaceBetween: 1,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -21,9 +23,6 @@ const hotelCardSlider = () => {
     };
 
     createSliders();
-    slider.update();
-
-    window.addEventListener('resize', createSliders);
   }
 };
 

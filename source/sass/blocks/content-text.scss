@@ -1,11 +1,12 @@
 .content-text {
-  margin-top: 50px;
+  margin-top: 0;
   padding: 0 110px;
   font-size: 17px;
   line-height: 20px;
   font-weight: 400;
   font-family: $font-family-inter;
   color: $color-night-rider;
+  border-radius: 0 0 10px 10px;
 
   @include viewport--sm {
     padding: 0 20px;

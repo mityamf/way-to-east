@@ -2,11 +2,11 @@ mixin participant-form
   div.participant-form__wrapper
     form(class="form", action="#", method="post")
       label.visually-hidden(for="name-field") Имя и фамилия
-      input#name-field(type="text", name="name-field", placeholder="Имя и фамилия", required, pattern="^[a-zA-Z0-9]+$")
+      input#name-field(type="text", name="name-field", placeholder="Имя и фамилия", required, pattern="^\s*[a-zA-Z]+$")
       label.visually-hidden(for="email-field") E-mail
       input#email-field(type="email", name="email-field", placeholder="E-mail", required)
       label.visually-hidden(for="phone-field") Телефон
-      input#phone-field(type="tel", name="phone-field", placeholder="Телефон +7(000) 000 00 00", required)
+      input#phone-field(type="text", name="phone-field", placeholder="Телефон +7(000) 000 00 00", required, pattern="[0-9-()+]{7,15}")
       label.visually-hidden(for="message-field") Введите текст сообщения
       textarea#message-field(name="message-field", cols="30", rows="7", placeholder="Введите текст сообщения", required)
       div

@@ -1,8 +1,8 @@
 .inner-hotels {
-  margin-top: 23px;
+  margin-top: 20px;
 
   &--blog {
-    @include viewport--md {
+    @include viewport--sm {
       margin-top: 0;
     }
   }
