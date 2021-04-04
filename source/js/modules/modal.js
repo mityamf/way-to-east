@@ -36,7 +36,8 @@ const modal = () => {
     }
   })
 
-  form.addEventListener('submit', function () {
+  form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
     modalSuccess.classList.add('modal--active');
   });
 

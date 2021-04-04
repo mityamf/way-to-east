@@ -31,3 +31,9 @@
     right: 50%;
   }
 }
+
+.modal-video .modal__close-btn svg {
+  @include viewport--sm {
+    transform: translateX(50%);
+  }
+}
