@@ -1,35 +1,37 @@
 mixin article(content)
   article(class = "article article--" + content.pageClass)
-    .article__icon
+    a.article__icon(onclick="javascript:history.back();")
       +icon("icon-cross", 23, 23)
     if (content.isBlog== "true")
-      .article__image
-        +picture("content/blog", "blog" + "-image-desktop", "blog" + "-image-mobile", "jpg", "1090", "490", "Фото японского пейзажа")
-      .article__author
-        .article__author-image
-          +picture("content/blog", "blog" + "-userpick-desktop", "blog" + "-userpick-mobile", "png", "202", "202", "Фото автора статьи")
-        span.article__author-name= content.authorName
-        span.article__author-specialty= content.authorSpecialty
-      .article__text
-        h2= content.title
-        each item in content.blogText
-          p= item
+      .article__wrapper
+        .article__image
+          +picture("content/blog", "blog" + "-image-desktop", "blog" + "-image-mobile", "jpg", "1090", "490", "Фото японского пейзажа")
+        .article__author
+          .article__author-image
+            +picture("content/blog", "blog" + "-userpick-desktop", "blog" + "-userpick-mobile", "png", "202", "202", "Фото автора статьи")
+          span.article__author-name= content.authorName
+          span.article__author-specialty= content.authorSpecialty
+        .article__content-text.content-text
+          h2= content.title
+          each item in content.blogText
+            p= item
     else if (content.isBlog== "false")
-      .article__image
-        +picture("content/details", content.country + "-details-culture-desktop", content.country + "-details-culture-mobile", "jpg", "1090", "490", "Фото пейзажа " + content.alt)
-      .article__text
-        h2= content.title[0]
-        each item in content.culture
-          p= item
-        h2= content.title[1]
-        +picture("content/details", content.country + "-details-shopping-desktop", content.country + "-details-shopping-mobile", "jpg", "868", "350", "Фото магазина " + content.alt)
-        each item in content.shopping
-          p= item
-        h2= content.title[2]
-        +picture("content/details", content.country + "-details-cuisine-desktop", content.country + "-details-cuisine-mobile", "jpg", "868", "350", "Фото ресторана " + content.alt)
-        each item in content.cuisine
-          p= item
-        h2= content.title[3]
-        +picture("content/details", content.country + "-details-hotels-desktop", content.country + "-details-hotels-mobile", "jpg", "868", "350", "Фото отелей " + content.alt)
-        each item in content.hotels
-          p= item
+      .article__wrapper
+        .article__image
+          +picture("content/details", content.country + "-details-culture-desktop", content.country + "-details-culture-mobile", "jpg", "1090", "490", "Фото пейзажа " + content.alt)
+        .article__content-text.content-text
+          h2= content.title[0]
+          each item in content.culture
+            p= item
+          h2= content.title[1]
+          +picture("content/details", content.country + "-details-shopping-desktop", content.country + "-details-shopping-mobile", "jpg", "868", "350", "Фото магазина " + content.alt)
+          each item in content.shopping
+            p= item
+          h2= content.title[2]
+          +picture("content/details", content.country + "-details-cuisine-desktop", content.country + "-details-cuisine-mobile", "jpg", "868", "350", "Фото ресторана " + content.alt)
+          each item in content.cuisine
+            p= item
+          h2= content.title[3]
+          +picture("content/details", content.country + "-details-hotels-desktop", content.country + "-details-hotels-mobile", "jpg", "868", "350", "Фото отелей " + content.alt)
+          each item in content.hotels
+            p= item

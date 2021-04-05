@@ -196,7 +196,7 @@
     <path id="Path_301" data-name="Path 301" d="M7669.9,117.049l8.246,8.246-8.246,8.246" transform="translate(-7669.9 -117.049)" fill="none" stroke="#fff" stroke-width="3"/>
   </g>
 </symbol><symbol id="star-white" viewBox="0 0 16.25 15.234">
-  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#ffffff"/>
+  <path id="Polygon_5_white" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z"/>
 </symbol><symbol id="star-yellow" viewBox="0 0 16.25 15.234">
   <path id="Polygon_5_yellow" data-name="Polygon 5" d="M8.125,0l2.234,5.39,5.891.429-4.51,3.76,1.406,5.655L8.125,12.169,3.1,15.234,4.51,9.579,0,5.819,5.891,5.39Z" fill="#edbd3a"/>
 </symbol></svg>
@@ -258,42 +258,57 @@
         </div>
       </header>
       <main>
-        <div class="page-content page-content--hotel"><a class="link-back" href="#">
+        <div class="page-content page-content--hotel"><a class="link-back" onclick="javascript:history.back();">
             <svg width="11" height="19" aria-hidden="true">
               <use xlink:href="#icon-back"></use>
             </svg><span>Назад</span><span>к списку</span></a>
           <div class="container">
-            <h1>Signiel Seoul</h1>
-            <div class="hotel-card__hotel-rating hotel-rating">
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>1</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>2</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>3</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>4</span>
-              <svg width="15" height="15" aria-hidden="true">
-                <use xlink:href="#star-white"></use>
-              </svg><span>5</span>
+            <div class="hotel-title">
+              <h1>Signiel Seoul</h1>
+              <div class="hotel-title__hotel-rating hotel-rating">
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>1</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>2</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>3</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>4</span>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg><span>5</span>
+              </div>
+              <p>Корея, Сеул</p>
             </div>
-            <p class="hotel-card__subtitle">Корея, Сеул</p>
-            <section class="hotel-card__content">
-              <div class="hotel-card__icon article__icon">
+            <section class="hotel-card"><a class="hotel-card__icon" onclick="javascript:history.back();">
                 <svg width="23" height="23" aria-hidden="true">
                   <use xlink:href="#icon-cross"></use>
-                </svg>
-              </div>
+                </svg></a>
               <div class="hotel-card__image">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-main-mobile@1x.jpg 1x, img/content/hotel-card/hotel-card-main-mobile@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-main-desktop@1x.jpg" srcset="img/content/hotel-card/hotel-card-main-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото отеляSigniel Seoul"/>
                 </picture>
               </div>
-              <div class="hotel-card__description hotel-card__description--hidden">
+              <div class="hotel-card__wrapper">
+                <div class="hotel-card__slider">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper"><a class="swiper-slide" data-fslightbox="slider" href="img/content/hotel-card/hotel-card-main-mobile@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-main-mobile@1x.jpg 1x, img/content/hotel-card/hotel-card-main-mobile@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-main-desktop@1x.jpg" srcset="img/content/hotel-card/hotel-card-main-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото отеляSigniel Seoul"/>
+                        </picture></a><a class="swiper-slide" data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-1@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-1@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture></a><a class="swiper-slide" data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-2@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-2@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture></a></div>
+                    <div class="swiper-pagination hotel-card__slider-pagination"></div>
+                  </div>
+                </div>
                 <div class="hotel-card__gallery">
                   <ul>
                     <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg">
@@ -315,32 +330,33 @@
                         <div class="div"><span>+ 15 фото</span></div></a></li>
                   </ul>
                 </div>
-                <div class="hotel-card__logo">
-                  <svg width="126" height="17" aria-hidden="true">
-                    <use xlink:href="#logo-hotel-signiel"></use>
-                  </svg>
+                <div class="hotel-card__description">
+                  <div class="hotel-card__logo">
+                    <svg width="126" height="17" aria-hidden="true">
+                      <use xlink:href="#logo-hotel-signiel"></use>
+                    </svg>
+                  </div>
+                  <h2>Быть над Сеулом в роскоши Signiel Seoul</h2>
+                  <p>В отеле Signiel Seoul, расположенном на 77—102 этажах в небоскребе Lotte World Tower, к услугам гостей 235 номеров с панорамным видом на Сеул. В этом 5-звездочном отеле имеется бар шампанского, ресторан, отмеченный звездой Мишлен, крытый бассейн, фитнес-центр и банкетный зал.  По подземному переходу из отеля можно пройти к станции метро Jamsil (линий 2 и 8). На всей территории отеля доступен бесплатный Wi-Fi.</p>
+                  <button class="hotel-card__button" type="button"><span>Читать полностью</span>
+                    <svg width="19" height="11" aria-hidden="true">
+                      <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
+                  </button>
+                  <div class="hotel-card__text-wrapper">
+                    <p>В номерах в числе удобств мини-бар, холодильник, кофемашина, сейф и телевизор с плоским экраном. Пол в номерах покрыт ковролином. В распоряжении гостей собственная ванная комната с феном, бесплатными туалетно-косметическими принадлежностями, тапочками и электронным унитазом-биде.</p>
+                    <p>На 87 этаже здания работает спа-центр Evian с сауной. Сотрудники отеля Signiel Seoul помогут гостям воспользоваться камерой хранения багажа, услугами парковщика и услугами консьержа. За дополнительную плату предоставляется пресс для брюк, услуги химчистки, услуги прачечной и гладильные услуги.</p>
+                    <p>В ресторане BICENA, отмеченном 1 звездой Мишлен, на обед и ужин подают блюда корейской кухни. В ресторане STAY, который принадлежит удостоенному 3 звезд Мишлен шеф-повару Яннику Аллено, гости могут отведать изысканные французские блюда.</p>
+                    <p>Отель Signiel Seoul находится в 7 км от железнодорожного вокзала Каннамгу и менее чем в 20 минутах езды от торгового центра COEX Mall. Поездка до аэропорта Кимпхо занимает 45 минут, а до международного аэропорта Инчхон — менее 70 минут. </p>
+                  </div>
+                  <div class="hotel-card__links"><a class="hotel-card__link hotel-card__link--video" href="#">
+                      <svg width="44" height="31" aria-hidden="true">
+                        <use xlink:href="#icon-youtube"></use>
+                      </svg>Посмотреть видео-презентацию</a><a class="hotel-card__link" href="#">
+                      <svg width="26" height="35" aria-hidden="true">
+                        <use xlink:href="#icon-pdf"></use>
+                      </svg>Скачать PDF-презентацию</a></div>
                 </div>
-                <h2>Быть над Сеулом в роскоши Signiel Seoul</h2>
-                <p>В отеле Signiel Seoul, расположенном на 77—102 этажах в небоскребе Lotte World Tower, к услугам гостей 235 номеров с панорамным видом на Сеул. В этом 5-звездочном отеле имеется бар шампанского, ресторан, отмеченный звездой Мишлен, крытый бассейн, фитнес-центр и банкетный зал.  По подземному переходу из отеля можно пройти к станции метро Jamsil (линий 2 и 8). На всей территории отеля доступен бесплатный Wi-Fi.</p>
-                <button class="hotel-card__button" type="button"><span>Читать полностью</span>
-                  <svg width="19" height="11" aria-hidden="true">
-                    <use xlink:href="#icon-arrow-down"></use>
-                  </svg>
-                </button>
-                <div class="hotel-card__text-wrapper">
-                  <p>По подземному переходу из отеля можно пройти к станции метро Jamsil (линий 2 и 8). На всей территории отеля доступен бесплатный Wi-Fi.</p>
-                  <p>В номерах в числе удобств мини-бар, холодильник, кофемашина, сейф и телевизор с плоским экраном. Пол в номерах покрыт ковролином. В распоряжении гостей собственная ванная комната с феном, бесплатными туалетно-косметическими принадлежностями, тапочками и электронным унитазом-биде.</p>
-                  <p>На 87 этаже здания работает спа-центр Evian с сауной. Сотрудники отеля Signiel Seoul помогут гостям воспользоваться камерой хранения багажа, услугами парковщика и услугами консьержа. За дополнительную плату предоставляется пресс для брюк, услуги химчистки, услуги прачечной и гладильные услуги.</p>
-                  <p>В ресторане BICENA, отмеченном 1 звездой Мишлен, на обед и ужин подают блюда корейской кухни. В ресторане STAY, который принадлежит удостоенному 3 звезд Мишлен шеф-повару Яннику Аллено, гости могут отведать изысканные французские блюда.</p>
-                  <p>Отель Signiel Seoul находится в 7 км от железнодорожного вокзала Каннамгу и менее чем в 20 минутах езды от торгового центра COEX Mall. Поездка до аэропорта Кимпхо занимает 45 минут, а до международного аэропорта Инчхон — менее 70 минут. </p>
-                </div>
-                <div class="hotel-card__links"><a class="hotel-card__link hotel-card__link--video" href="#">
-                    <svg width="44" height="31" aria-hidden="true">
-                      <use xlink:href="#icon-youtube"></use>
-                    </svg><span>Посмотреть видео-презентацию</span></a><a class="hotel-card__link" href="#">
-                    <svg width="26" height="35" aria-hidden="true">
-                      <use xlink:href="#icon-pdf"></use>
-                    </svg><span>Скачать PDF-презентацию</span></a></div>
               </div>
             </section>
             <section class="participant-form">
@@ -348,15 +364,17 @@
               <div class="participant-form__wrapper">
                 <form class="form" action="#" method="post">
                   <label class="visually-hidden" for="name-field">Имя и фамилия</label>
-                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" pattern="^[a-zA-Z0-9]+$"/>
+                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" pattern="^s*[a-zA-Z]+$"/>
                   <label class="visually-hidden" for="email-field">E-mail</label>
                   <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required"/>
                   <label class="visually-hidden" for="phone-field">Телефон</label>
-                  <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required"/>
+                  <input id="phone-field" type="text" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required" pattern="[0-9-()+]{7,15}"/>
                   <label class="visually-hidden" for="message-field">Введите текст сообщения</label>
-                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required" pattern="^[a-zA-Z0-9]+$"></textarea>
-                  <input class="visually-hidden" id="accept" type="checkbox" name="accept"/>
-                  <label for="accept">Подтверждаю своё согласие на сбор, хранение и обработку вышеуказанных данных в соответствии с ФЗ РФ «О персональных данных» от 27.07.2006, № 152-ФЗ</label>
+                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required"></textarea>
+                  <div>
+                    <input class="visually-hidden" id="accept" type="checkbox" name="accept" required="required"/>
+                    <label for="accept">Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ</label>
+                  </div>
                   <input class="button form__button" type="submit" value="Отправить"/>
                 </form>
               </div>

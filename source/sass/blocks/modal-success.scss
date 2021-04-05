@@ -33,6 +33,9 @@
   display: block;
   margin: 0 auto;
   width: 210px;
+  cursor: pointer;
+  pointer-events: visible;
+  transform: translate3d(0,0,0);
 }
 
 .modal-success .countries-logo {
@@ -50,6 +53,15 @@
 .modal-success .modal__close-btn {
   top: 0;
   right: -40px;
+  cursor: pointer;
+  pointer-events: visible;
+  transition: $default-transition-settings;
+  outline: none;
+
+  &:hover {
+    opacity: 0.8;
+    transition: $default-transition-settings;
+  }
 
   @include viewport--sm {
     top: 450px;
