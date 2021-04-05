@@ -4,34 +4,34 @@ mixin choose-country(parent, country)
     ul.choose-country__list
       if (country === "none")
         li
-          a.choose-country__link(href="korea.html")
+          a.choose-country__link.choose-country__link--korea(href="korea.html")
             .choose-country__svg
               +icon("korea-circle", 57, 57)
             span.choose-country__name Корея
         li
-          a.choose-country__link(href="japan.html")
+          a.choose-country__link.choose-country__link--japan(href="japan.html")
             .choose-country__svg
               +icon("japan-circle", 57, 57)
             span.choose-country__name Япония
       if (country === "korea")
         li
-          a.choose-country__link.choose-country__link--active
+          a.choose-country__link.choose-country__link--korea.choose-country__link--active
             .choose-country__svg
               +icon("korea-circle", 57, 57)
             span.choose-country__name Корея
         li
-          a.choose-country__link(href="japan.html")
+          a.choose-country__link.choose-country__link--japan(href="japan.html")
             .choose-country__svg
               +icon("japan-circle", 57, 57)
             span.choose-country__name Япония
       if (country === "japan")
         li
-          a.choose-country__link(href="korea.html")
+          a.choose-country__link.choose-country__link--korea(href="korea.html")
             .choose-country__svg
               +icon("korea-circle", 57, 57)
             span.choose-country__name Корея
         li
-          a.choose-country__link.choose-country__link--active
+          a.choose-country__link.choose-country__link--japan.choose-country__link--active
             .choose-country__svg
               +icon("japan-circle", 57, 57)
             span.choose-country__name Япония

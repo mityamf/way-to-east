@@ -71,13 +71,19 @@
 
 .choose-country__link {
   outline: none;
+}
 
-  &:hover,
-  &:focus {
-    backface-visibility: hidden;
-    transform: scale(1.1) translateZ(0);
-    transition: transform 0.2s;
-  }
+.choose-country__link .choose-country__svg {
+  border-radius: 50%;
+  transition: box-shadow 0.2s;
+}
+
+.choose-country__link.choose-country__link--korea:hover .choose-country__svg {
+  box-shadow: 0 0 0 5px rgba(28, 84, 209, 0.5);
+}
+
+.choose-country__link.choose-country__link--japan:hover .choose-country__svg {
+  box-shadow: 0 0 0 5px rgba(226, 53, 40, 0.5);
 }
 
 .choose-country__link--active {
@@ -95,9 +101,12 @@
   }
 }
 
-
-.choose-country__link--active .choose-country__svg {
-  border-radius: 50%;
+.choose-country__link--active.choose-country__link--korea .choose-country__svg,
+.choose-country__link--active.choose-country__link--korea:hover .choose-country__svg {
   box-shadow: inset 0 0 0 3px $color-cerulean-blue;
 }
 
+.choose-country__link--active.choose-country__link--japan .choose-country__svg,
+.choose-country__link--active.choose-country__link--japan:hover .choose-country__svg {
+  box-shadow: inset 0 0 0 3px $color-cinnabar;
+}
