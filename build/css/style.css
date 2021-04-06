@@ -2838,18 +2838,37 @@ main {
     display: none; } }
 
 .hotel-card__gallery ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto 35px;
-  padding: 22px 20px;
+  padding: 20px 110px;
   list-style: none;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .hotel-card__gallery li {
-  margin-right: 15px; }
+  width: 25%;
+  margin-right: 18px; }
   .hotel-card__gallery li:last-child {
     margin-right: 0; }
+
+.hotel-card__gallery a {
+  position: relative;
+  padding-top: 68%;
+  display: block;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.hotel-card__gallery a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; }
 
 .hotel-card__gallery li:last-child {
   position: relative;
@@ -3238,12 +3257,18 @@ main {
   @media (max-width: 767px) {
     .modal-success .countries-logo {
       width: auto;
-      margin-bottom: 80px; } }
+      margin-bottom: 80px;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 .modal-success .countries-logo__image {
   height: 60px; }
   .modal-success .countries-logo__image--japan {
     margin-left: 63px; }
+    @media (max-width: 767px) {
+      .modal-success .countries-logo__image--japan {
+        margin-left: 0; } }
 
 .modal-success .modal__close-btn {
   top: 0;

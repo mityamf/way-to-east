@@ -106,19 +106,37 @@
 }
 
 .hotel-card__gallery ul {
-  display: inline-flex;
+  display: flex;
   margin: 0 auto 35px;
-  padding: 22px 20px;
+  padding: 20px 110px;
   list-style: none;
   width: 100%;
+  justify-content: space-between;
 }
 
 .hotel-card__gallery li {
-  margin-right: 15px;
+  width: 25%;
+  margin-right: 18px;
 
   &:last-child {
     margin-right: 0;
   }
+}
+
+.hotel-card__gallery a {
+  position: relative;
+  padding-top: 68%;
+  display: block;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.hotel-card__gallery a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 .hotel-card__gallery li:last-child {

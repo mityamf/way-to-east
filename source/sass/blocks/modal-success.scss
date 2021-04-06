@@ -47,6 +47,7 @@
   @include viewport--sm {
     width: auto;
     margin-bottom: 80px;
+    justify-content: space-between;
   }
 }
 
@@ -55,6 +56,10 @@
 
   &--japan {
     margin-left: 63px;
+
+    @include viewport--sm {
+      margin-left: 0;
+    }
   }
 }
 
