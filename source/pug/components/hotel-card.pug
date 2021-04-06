@@ -20,6 +20,16 @@ mixin hotel-card(details)
               +picture("content/hotel-card", details.pictures[0].imageName, details.pictures[0].imageName , "jpg", details.pictures[0].imageWidth, details.pictures[0].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
             a.swiper-slide(data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg")
               +picture("content/hotel-card", details.pictures[1].imageName, details.pictures[1].imageName , "jpg", details.pictures[1].imageWidth, details.pictures[1].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
+            a.swiper-slide(data-fslightbox="slider" href="img/content/hotel-card/hotel-card-main-mobile@2x.jpg")
+              +picture("content/hotel-card", "hotel-card-main" + "-desktop", "hotel-card-main" + "-mobile", "jpg", "1090", "490", "Фото отеля" + details.alt, lazyLoading)
+            a.swiper-slide(data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg")
+              +picture("content/hotel-card", details.pictures[0].imageName, details.pictures[0].imageName , "jpg", details.pictures[0].imageWidth, details.pictures[0].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
+            a.swiper-slide(data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg")
+              +picture("content/hotel-card", details.pictures[1].imageName, details.pictures[1].imageName , "jpg", details.pictures[1].imageWidth, details.pictures[1].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
+            a.swiper-slide(data-fslightbox="slider" href="img/content/hotel-card/hotel-card-main-mobile@2x.jpg")
+              +picture("content/hotel-card", "hotel-card-main" + "-desktop", "hotel-card-main" + "-mobile", "jpg", "1090", "490", "Фото отеля" + details.alt, lazyLoading)
+            a.swiper-slide(data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg")
+              +picture("content/hotel-card", details.pictures[0].imageName, details.pictures[0].imageName , "jpg", details.pictures[0].imageWidth, details.pictures[0].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
           .swiper-pagination.hotel-card__slider-pagination
       .hotel-card__gallery
           ul
@@ -35,8 +45,20 @@ mixin hotel-card(details)
             li
               a.hotel-card__gallery-link(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg")
                 +picture("content/hotel-card", details.pictures[3].imageName, details.pictures[3].imageName , "jpg", details.pictures[3].imageWidth, details.pictures[3].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
+            li
+              a(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg")
+                +picture("content/hotel-card", details.pictures[0].imageName, details.pictures[0].imageName , "jpg", details.pictures[0].imageWidth, details.pictures[0].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
+            li
+              a(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg")
+                +picture("content/hotel-card", details.pictures[1].imageName, details.pictures[1].imageName , "jpg", details.pictures[1].imageWidth, details.pictures[1].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
+            li
+              a(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-3@2x.jpg")
+                +picture("content/hotel-card", details.pictures[2].imageName, details.pictures[2].imageName , "jpg", details.pictures[2].imageWidth, details.pictures[2].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
+            li
+              a.hotel-card__gallery-link(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg")
+                +picture("content/hotel-card", details.pictures[3].imageName, details.pictures[3].imageName , "jpg", details.pictures[3].imageWidth, details.pictures[3].imageHeight, "Фото интерьера отеля " + details.alt, lazyLoading)
                 .div
-                  span + 15 фото
+                  span +&nbsp;15&nbsp;фото
       .hotel-card__description
         .hotel-card__logo
           +icon(details.logoName, details.logoWidth, details.logoHeight)

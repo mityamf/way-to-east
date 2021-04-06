@@ -16,7 +16,7 @@
 .hotel-card__wrapper {
   padding-bottom: 33px;
   background-color: $color-default-white;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 
   @include viewport--sm {
     padding-bottom: 15px;
@@ -106,17 +106,19 @@
 }
 
 .hotel-card__gallery ul {
+  display: inline-flex;
   margin: 0 auto 35px;
-  padding: 22px 100px 0;
+  padding: 22px 20px;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   width: 100%;
 }
 
 .hotel-card__gallery li {
-  margin-bottom: 20px;
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .hotel-card__gallery li:last-child {
@@ -150,6 +152,10 @@
     background-color: rgba(0, 0, 0, 0.3);
     pointer-events: none;
 
+    @media (min-width: 768px) and (max-width: 1440px) {
+      font-size: 7px;
+    }
+
     @include viewport--sm {
       display: none;
     }
@@ -159,10 +165,6 @@
 .hotel-card__gallery-link span {
   display: block;
   margin: 0 auto;
-}
-
-.hotel-card__gallery-link img {
-  height: 100%;
 }
 
 .hotel-card__slider {
