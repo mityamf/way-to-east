@@ -10,7 +10,7 @@ const createComments = () => {
     spaceBetween: 0,
     slidesPerView: 'auto',
     slidesOffsetAfter: 0,
-    freeMode: true,
+    freeMode: false,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     breakpoints: {
@@ -46,6 +46,38 @@ const createComments = () => {
       },
     });
 
+    let mobileSlider = () => {
+      let thumbs = document.querySelectorAll('.gallery-thumbs .swiper-slide');
+      let comments = document.querySelectorAll('.gallery-thumbs .swiper-slide');
+      let removeActive = () => {
+        thumbs.forEach((thumb) => {
+          thumb.classList.remove('swiper-slide-active');
+        });
+        comments.forEach((comment) => {
+          comment.classList.remove('swiper-slide-active');
+        });
+      };
+      let showActive = (i = 0) => {
+        thumbs[i].classList.add('swiper-slide-active');
+        comments[i].classList.add('swiper-slide-active');
+      };
+
+      galleryThumbs.on('slideChange', function () {
+        thumbs.forEach((thumb, i) => {
+          if (thumb.classList.contains('swiper-slide-visible')) {
+            removeActive();
+            showActive(i);
+
+            galleryTop.slideTo(i);
+          }
+        });
+      });
+    };
+
+    if (window.innerWidth < 767) {
+      mobileSlider();
+    }
+
     window.addEventListener('resize', function () {
       galleryThumbs.destroy();
       galleryThumbs = new window.Swiper(thumbsContainer, commentThumbsProperties);
@@ -67,6 +99,9 @@ const createComments = () => {
           swiper: galleryThumbs,
         },
       });
+      if (window.innerWidth < 767) {
+        mobileSlider();
+      }
     });
   };
 
