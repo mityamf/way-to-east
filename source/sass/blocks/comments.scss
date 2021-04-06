@@ -249,3 +249,17 @@
 .swiper-pagination-bullet-active {
   background-color: $color-default-white;
 }
+
+.comments__top--mobile {
+  display: none;
+
+  @include viewport--sm {
+    display: flex;
+  }
+}
+
+.comments__top--desktop {
+  @include viewport--sm {
+    display: none;
+  }
+}

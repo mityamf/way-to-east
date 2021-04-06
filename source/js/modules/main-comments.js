@@ -35,8 +35,6 @@ const createComments = () => {
       fadeEffect: {
         crossFade: true,
       },
-      noSwiping: true,
-      noSwipingClass: 'comments__bottom',
       pagination: {
         el: '.comments .swiper-pagination',
         clickable: true,
@@ -44,8 +42,58 @@ const createComments = () => {
       thumbs: {
         swiper: galleryThumbs,
       },
+      breakpoints: {
+        320: {
+          noSwiping: false,
+        },
+        768: {
+          noSwiping: true,
+          noSwipingClass: 'comments__bottom',
+        },
+      },
     });
 
+    window.addEventListener('resize', function () {
+      galleryThumbs.destroy();
+      galleryThumbs = new window.Swiper(thumbsContainer, commentThumbsProperties);
+      galleryTop.destroy();
+      galleryTop = new window.Swiper(topContainer, {
+        spaceBetween: 0,
+        observer: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: '.comments .swiper-pagination',
+          clickable: true,
+        },
+        thumbs: {
+          swiper: galleryThumbs,
+        },
+        breakpoints: {
+          320: {
+            noSwiping: false,
+          },
+          768: {
+            noSwiping: true,
+            noSwipingClass: 'comments__bottom',
+          },
+        },
+      });
+      /* if (window.innerWidth < 767) {
+        mobileSlider();
+      } */
+    });
+  };
+
+  createCommentsSwiper(commentsThumbsContainer, commentsTopContainer);
+
+};
+
+export {createComments};
+
+/*
     let mobileSlider = () => {
       let thumbs = document.querySelectorAll('.gallery-thumbs .swiper-slide');
       let comments = document.querySelectorAll('.gallery-thumbs .swiper-slide');
@@ -77,36 +125,4 @@ const createComments = () => {
     if (window.innerWidth < 767) {
       mobileSlider();
     }
-
-    window.addEventListener('resize', function () {
-      galleryThumbs.destroy();
-      galleryThumbs = new window.Swiper(thumbsContainer, commentThumbsProperties);
-      galleryTop.destroy();
-      galleryTop = new window.Swiper(topContainer, {
-        spaceBetween: 0,
-        observer: true,
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true,
-        },
-        noSwiping: true,
-        noSwipingClass: 'comments__bottom',
-        pagination: {
-          el: '.comments .swiper-pagination',
-          clickable: true,
-        },
-        thumbs: {
-          swiper: galleryThumbs,
-        },
-      });
-      if (window.innerWidth < 767) {
-        mobileSlider();
-      }
-    });
-  };
-
-  createCommentsSwiper(commentsThumbsContainer, commentsTopContainer);
-
-};
-
-export {createComments};
+*/
