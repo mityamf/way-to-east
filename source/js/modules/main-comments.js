@@ -51,7 +51,7 @@ const createComments = () => {
       let comments = document.querySelectorAll('.gallery-thumbs .swiper-slide');
       let removeActive = () => {
         thumbs.forEach((thumb) => {
-          thumb.classList.remove('swiper-slide-active');
+          thumb.classList.remove('swiper-slide-thumb-active');
         });
         comments.forEach((comment) => {
           comment.classList.remove('swiper-slide-active');
