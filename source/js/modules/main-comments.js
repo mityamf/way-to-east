@@ -51,14 +51,14 @@ const createComments = () => {
       let comments = document.querySelectorAll('.gallery-thumbs .swiper-slide');
       let removeActive = () => {
         thumbs.forEach((thumb) => {
-          thumb.classList.remove('swiper-slide-thumb-active');
+          thumb.classList.remove('swiper-slide-thumb-active', 'swiper-slide-active');
         });
         comments.forEach((comment) => {
           comment.classList.remove('swiper-slide-active');
         });
       };
       let showActive = (i = 0) => {
-        thumbs[i].classList.add('swiper-slide-active');
+        thumbs[i].classList.add('swiper-slide-thumb-active', 'swiper-slide-active');
         comments[i].classList.add('swiper-slide-active');
       };
 
