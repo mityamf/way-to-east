@@ -1002,11 +1002,6 @@ video {
 textarea {
   resize: none; }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
-          box-shadow: inset 0 0 0 1000px #ffffff;
-  -webkit-text-fill-color: #000000; }
-
 input,
 textarea {
   border-radius: 0; }
@@ -2833,6 +2828,9 @@ main {
   .hotel-card__text-wrapper {
     display: none; } }
 
+.hotel-card__gallery li.hidden {
+  display: none; }
+
 @media (max-width: 767px) {
   .hotel-card__gallery {
     display: none; } }
@@ -2842,7 +2840,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto 35px;
-  padding: 20px 110px;
+  padding: 20px 109px;
   list-style: none;
   width: 100%;
   -webkit-box-pack: justify;
@@ -2850,14 +2848,14 @@ main {
           justify-content: space-between; }
 
 .hotel-card__gallery li {
-  width: 25%;
-  margin-right: 18px; }
+  width: 23%;
+  margin-right: 5px; }
   .hotel-card__gallery li:last-child {
     margin-right: 0; }
 
 .hotel-card__gallery a {
   position: relative;
-  padding-top: 68%;
+  padding-top: 69%;
   display: block;
   overflow: hidden;
   -o-object-fit: cover;
@@ -2868,7 +2866,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto; }
+  height: 100%; }
 
 .hotel-card__gallery li:last-child {
   position: relative;
@@ -2902,9 +2900,6 @@ main {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
     pointer-events: none; }
-    @media (min-width: 768px) and (max-width: 1440px) {
-      .hotel-card__gallery-link div {
-        font-size: 7px; } }
     @media (max-width: 767px) {
       .hotel-card__gallery-link div {
         display: none; } }
@@ -3213,23 +3208,28 @@ main {
       top: 3px;
       left: 10px; } }
 
+.form input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 1000px #ebebeb;
+          box-shadow: inset 0 0 0 1000px #ebebeb;
+  -webkit-text-fill-color: #000000; }
+
 .modal-success .modal__content {
   width: 646px;
   height: 354px;
-  padding: 50px 120px 30px;
+  padding: 58px 120px 30px;
   border-radius: 10px; }
   @media (max-width: 767px) {
     .modal-success .modal__content {
       height: 429px;
-      padding: 50px 25px;
-      width: 100%;
+      padding: 57px 19px;
+      width: 97.1%;
       margin: 0 auto; } }
 
 .modal-success p {
-  margin: 10px 0 48px;
+  margin: 10px 0 40px;
   padding: 0 33px;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 35px;
   font-weight: 700;
   font-family: "Inter", "Arial", sans-serif;
   color: #1c54d1;
@@ -3244,6 +3244,8 @@ main {
   margin: 0 auto;
   width: 202px;
   height: 40px;
+  font-size: 15px;
+  line-height: 20px;
   cursor: pointer;
   pointer-events: visible;
   -webkit-transform: translate3d(0, 0, 0);
@@ -3253,11 +3255,11 @@ main {
   width: 315px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 60px; }
+  margin-bottom: 56px; }
   @media (max-width: 767px) {
     .modal-success .countries-logo {
       width: auto;
-      margin-bottom: 80px;
+      margin-bottom: 76px;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; } }
