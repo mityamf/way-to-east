@@ -117,3 +117,9 @@
     left: 10px;
   }
 }
+
+.form input:-webkit-autofill {
+  box-shadow: inset 0 0 0 1000px $color-whisper;
+
+  -webkit-text-fill-color: $color-default-black;
+}
