@@ -39,6 +39,10 @@
   }
 }
 
+.wrapper--blur {
+  filter: blur(25px);
+}
+
 .scroll-lock {
   position: fixed;
 
