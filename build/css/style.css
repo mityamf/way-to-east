@@ -2416,6 +2416,18 @@ main {
 .swiper-pagination-bullet-active {
   background-color: #ffffff; }
 
+.comments__top--mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .comments__top--mobile {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+@media (max-width: 767px) {
+  .comments__top--desktop {
+    display: none; } }
+
 @media (max-width: 767px) {
   .travel-media--gray {
     display: none; } }
