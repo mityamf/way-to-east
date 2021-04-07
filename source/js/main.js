@@ -10,6 +10,7 @@ import {lightBox} from './modules/lightbox';
 import {modal} from './modules/modal';
 import {hotelCardSlider} from './modules/hotel-card-slider';
 
+
 // Utils
 // ---------------------------------
 

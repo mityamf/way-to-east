@@ -17,6 +17,7 @@ const modal = () => {
   const modalSuccessOverlay = modalSuccess.querySelector('.modal__overlay');
   const modalSuccessButton = modalSuccess.querySelector('.modal-success__button');
   const form = document.querySelector('.form');
+  const wrapper = document.querySelector('.wrapper');
 
 
   buttonVideoClose.addEventListener('click', function () {
@@ -38,6 +39,7 @@ const modal = () => {
     if (evt.key === 'Escape') {
       modalVideo.classList.remove('modal--active');
       modalSuccess.classList.remove('modal--active');
+      wrapper.classList.remove('wrapper--blur');
       enableScrolling();
     }
   })
@@ -45,21 +47,25 @@ const modal = () => {
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
     modalSuccess.classList.add('modal--active');
+    wrapper.classList.add('wrapper--blur');
     disableScrolling();
   });
 
   buttonSuccessClose.addEventListener('click', function () {
     modalSuccess.classList.remove('modal--active');
+    wrapper.classList.remove('wrapper--blur');
     enableScrolling();
   });
 
   modalSuccessOverlay.addEventListener('click', function () {
     modalSuccess.classList.remove('modal--active');
+    wrapper.classList.remove('wrapper--blur');
     enableScrolling();
   });
 
   modalSuccessButton.addEventListener('click', function () {
     modalSuccess.classList.remove('modal--active');
+    wrapper.classList.remove('wrapper--blur');
     enableScrolling();
   });
 

@@ -3,6 +3,7 @@
   height: 354px;
   padding: 58px 120px 30px;
   border-radius: 10px;
+  z-index: 1000;
 
   @include viewport--sm {
     height: 429px;
@@ -89,3 +90,7 @@
     transform: translateX(50%);
   }
 }
+
+
+
+
