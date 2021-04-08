@@ -47,7 +47,7 @@ mixin hotel-card(details)
               a.hotel-card__gallery-link(data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg")
       .hotel-card__description
         .hotel-card__logo
-          +icon(details.logoName, details.logoWidth, details.logoHeight)
+          img(src=`img/svg/${details.logoName}.svg`, width= details.logoWidth, height= details.logoHeight, alt = "Логотип отеля")
         h2= details.descriptionTitle
         p= details.descriptionTextPreview
         button.hotel-card__button(type="button")

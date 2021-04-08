@@ -2156,8 +2156,8 @@ main {
 .hotel-preview__rating span {
   display: none; }
 
-.hotel-rating span {
-  display: none; }
+.hotel-rating {
+  text-align: center; }
 
 .hotel-title__hotel-rating {
   margin: 0 auto;
@@ -2167,6 +2167,18 @@ main {
 
 .hotel-title__hotel-rating svg {
   fill: #ffffff; }
+
+.hotel-rating--4 svg:last-child {
+  display: none; }
+
+.hotel-rating--3 svg:nth-last-child(-n+2) {
+  display: none; }
+
+.hotel-rating--2 svg:not(:nth-child(-n+2)) {
+  display: none; }
+
+.hotel-rating--1 svg:not(:first-child) {
+  display: none; }
 
 .link-details {
   display: block;
@@ -2927,7 +2939,7 @@ main {
       margin-top: 76px; } }
 
 .hotel-card__description h2 {
-  margin: 40px 0 20px 0;
+  margin: 46px 0 20px 0;
   font-size: 26px;
   line-height: 31px;
   font-weight: 700;
@@ -2939,7 +2951,7 @@ main {
       font-size: 22px;
       line-height: 26px;
       font-weight: 600;
-      margin-top: 86px;
+      margin-top: 92px;
       margin-bottom: 14px; } }
 
 .hotel-card__description p {
