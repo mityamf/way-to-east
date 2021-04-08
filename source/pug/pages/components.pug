@@ -57,6 +57,14 @@ block main
       padding: 20px 0;
     }
 
+    section > .modal-success {
+      position: static;
+      display: block;
+      margin-top: 70px;
+      opacity: 1;
+      visibility: visible;
+    }
+
   main
     .container
       a.components-backwards(href="index.html")
@@ -75,3 +83,4 @@ block main
         +hotel-rating("parentClass", 5, "white")
         +button("класс родительского блока", "текст кнопки")
         +page-pagination(1, 7)
+        +modal("modal-success")
