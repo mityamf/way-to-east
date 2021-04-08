@@ -2156,8 +2156,8 @@ main {
 .hotel-preview__rating span {
   display: none; }
 
-.hotel-rating span {
-  display: none; }
+.hotel-rating {
+  text-align: center; }
 
 .hotel-title__hotel-rating {
   margin: 0 auto;
@@ -2167,6 +2167,18 @@ main {
 
 .hotel-title__hotel-rating svg {
   fill: #ffffff; }
+
+.hotel-rating--4 svg:last-child {
+  display: none; }
+
+.hotel-rating--3 svg:nth-last-child(-n+2) {
+  display: none; }
+
+.hotel-rating--2 svg:not(:nth-child(-n+2)) {
+  display: none; }
+
+.hotel-rating--1 svg:not(:first-child) {
+  display: none; }
 
 .link-details {
   display: block;
