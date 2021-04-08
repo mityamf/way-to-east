@@ -282,6 +282,14 @@
           padding: 20px 0;
         }
         
+        section > .modal-success {
+          position: static;
+          display: block;
+          margin-top: 70px;
+          opacity: 1;
+          visibility: visible;
+        }
+        
       </style>
       <main>
         <div class="container"><a class="components-backwards" href="index.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
@@ -335,6 +343,32 @@
               <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 6">6</a></li>
               <li class="pagination__number"><a class="pagination__link" href="#" aria-label="Переход на страницу 7">7</a></li>
             </ol>
+            <div class="modal modal--preload modal-success">
+              <div class="modal__wrapper">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                  <div class="countries-logo">
+                    <div class="countries-logo__image countries-logo__image--korea">
+                      <svg width="91" height="60" aria-hidden="true">
+                        <use xlink:href="#logo-korea"></use>
+                      </svg>
+                    </div>
+                    <div class="countries-logo__image countries-logo__image--japan">
+                      <svg width="151" height="60" aria-hidden="true">
+                        <use xlink:href="#logo-japan"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <p>Ваше сообщение успешно отправлено!</p>
+                  <button class="modal-success__button button" type="button">Закрыть</button>
+                  <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+                    <svg width="23" height="23" aria-hidden="true">
+                      <use xlink:href="#icon-modal-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </section>
         </div>
       </main>
