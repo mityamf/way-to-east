@@ -18,11 +18,17 @@ const modal = () => {
   const modalSuccessButton = modalSuccess.querySelector('.modal-success__button');
   const form = document.querySelector('.form');
   const wrapper = document.querySelector('.wrapper');
+  const video = document.getElementById('video');
 
+ const stopVideo = (video) => {
+    video.pause();
+    video.currentTime = 0;
+}
 
   buttonVideoClose.addEventListener('click', function () {
     modalVideo.classList.remove('modal--active');
     enableScrolling();
+    stopVideo(video);
   });
 
   modalVideoLink.addEventListener('click', function () {
@@ -33,6 +39,7 @@ const modal = () => {
   modalVideoOverlay.addEventListener('click', function () {
     modalVideo.classList.remove('modal--active');
     enableScrolling();
+    stopVideo(video);
   });
 
   document.addEventListener('keydown', function (evt) {
@@ -41,6 +48,7 @@ const modal = () => {
       modalSuccess.classList.remove('modal--active');
       wrapper.classList.remove('wrapper--blur');
       enableScrolling();
+      stopVideo(video);
     }
   })
 
