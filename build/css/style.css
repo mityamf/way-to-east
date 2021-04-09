@@ -3331,11 +3331,11 @@ main {
 .modal-video .modal__content {
   padding: 0;
   width: 60%;
-  height: 60vh; }
+  height: auto; }
   @media (max-width: 767px) {
     .modal-video .modal__content {
       width: 82%;
-      height: 40vh; } }
+      height: auto; } }
 
 .modal-video video {
   width: 100%;
