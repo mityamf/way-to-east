@@ -453,7 +453,9 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content">
-          <video controls="controls" autoplay="autoplay" src="https://www.youtube.com/watch?v=xshEZzpS4CQ"></video>
+          <video id="video" controls="controls" autoplay="autoplay">
+            <source src="video/video.mp4" type="video/mp4"/>
+          </video>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
             <svg width="23" height="23" aria-hidden="true">
               <use xlink:href="#icon-modal-close"></use>
