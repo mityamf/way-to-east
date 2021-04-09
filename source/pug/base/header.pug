@@ -27,12 +27,13 @@ mixin header(headerMod, currentPage)
     .header__wrapper.container.container--header
       .header__background
         +img("bg", "main-background", "jpg", "1920", "1343", "Закат на фоне гор")
+
       if(currentPage === "main")
         a.header__logo
-          +icon("logo-header", 128, 68)
+          img(src="img/svg/main-logo.svg", width = "128", height = "68", alt = "Логотип")
       else
         a.header__logo(href="main.html", aria-label="Переход на главную")
-          +icon("logo-header", 128, 68)
+          img(src="img/svg/main-logo.svg", width = "128", height = "68", alt = "Логотип")
       nav.header__nav.main-nav
         button.main-nav__open-menu.btn-reset(type="button", aria-label="Открыть мобильное меню", aria-pressed="false")
           +icon("icon-burger", 30, 14)
