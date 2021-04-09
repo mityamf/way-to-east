@@ -1,6 +1,6 @@
 mixin participant-form
   div.participant-form__wrapper
-    form(class="form", action="#", method="post")
+    form(class="form", action="mock/response.json", method="post")
       label.visually-hidden(for="name-field") Имя и фамилия
       input#name-field(type="text", name="name-field", placeholder="Имя и фамилия", title="Только латинские символы", required, pattern="[a-zA-Z ]{3,30}")
       label.visually-hidden(for="email-field") E-mail
@@ -13,5 +13,6 @@ mixin participant-form
         input#accept(class="visually-hidden", type="checkbox", name="accept", required)
         label(for="accept") Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ
       input.button.form__button(type="submit" value="Отправить")
+      div.form__error-message.hidden
 
 

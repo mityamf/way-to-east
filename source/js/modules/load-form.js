@@ -1,29 +1,29 @@
 const loadForm = () => {
 
-  let form = document.querySelector(`form`);
-  let address = form.getAttribute(`action`);
-  let method = form.getAttribute(`method`);
-  let noConnection = form.getAttribute(`data-noConnect`);
-  let sendFormButton = form.querySelector(`.form__button`);
-  let modalSuccess = document.querySelector(`.modal-success`);
+  let form = document.querySelector('.form');
+  let address = form.getAttribute('action');
+  let method = form.getAttribute('method');
+  let noConnection = form.getAttribute('data-noConnect');
+  let sendFormButton = form.querySelector('.form__button');
+  let modalSuccess = document.querySelector('.modal-success');
+  let errorMessage = form.querySelector('.form__error-message');
 
   const load = (url, onSuccess, onError, sent) => {
     const xhr = new XMLHttpRequest();
-    xhr.responseType = `json`;
+    xhr.responseType = 'json';
 
-    xhr.addEventListener(`load`, () => {
-      let result = xhr.status;
-      if (result === 200 && result.status === true) {
+    xhr.addEventListener('load', () => {
+      if (xhr.status === 200) {
         onSuccess(xhr.response);
       } else {
         onError(noConnection);
       }
     });
 
-    xhr.addEventListener(`error`, () => {
+    xhr.addEventListener('error', () => {
       onError(noConnection);
     });
-    xhr.addEventListener(`timeout`, () => {
+    xhr.addEventListener('timeout', () => {
       onError(noConnection);
     });
 
@@ -37,20 +37,20 @@ const loadForm = () => {
 
   const onSuccess = (responseSuccess) => {
     if (responseSuccess.success) {
-      modalSuccess.classList.add(`modal--active`);
+      modalSuccess.classList.add('modal--active');
     }
   };
 
   const onError = (message) => {
-    pswErrorMessage.classList.remove(`hidden`);
-    pswErrorMessage.textContent = message;
+    errorMessage.classList.remove('hidden');
+    errorMessage.textContent = message;
   };
 
   function sendForm() {
     load(address, onSuccess, onError);
   }
 
-  sendFormButton.addEventListener(`click`, sendForm());
+  sendFormButton.addEventListener('click', sendForm());
 };
 
 export {loadForm};
