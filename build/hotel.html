@@ -360,7 +360,7 @@
               <h2 class="page-content__title">Написать участнику:</h2>
               <!-- Модальное окно успешной отправки формы - "modal-success" Открывается при добавлении класса "modal--active"-->
               <div class="participant-form__wrapper">
-                <form class="form" action="#" method="post">
+                <form class="form" action="mock/response.json" method="post">
                   <label class="visually-hidden" for="name-field">Имя и фамилия</label>
                   <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" title="Только латинские символы" required="required" pattern="[a-zA-Z ]{3,30}"/>
                   <label class="visually-hidden" for="email-field">E-mail</label>
@@ -374,6 +374,7 @@
                     <label for="accept">Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ</label>
                   </div>
                   <input class="button form__button" type="submit" value="Отправить"/>
+                  <div class="form__error-message hidden"></div>
                 </form>
               </div>
             </section>
@@ -446,7 +447,7 @@
       <div class="modal__wrapper">
         <div class="modal__overlay"></div>
         <div class="modal__content">
-          <video id="video" controls="controls" autoplay="autoplay">
+          <video id="video" controls="controls">
             <source src="video/video.mp4" type="video/mp4"/>
           </video>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">

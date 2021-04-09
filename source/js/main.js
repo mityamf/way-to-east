@@ -9,6 +9,7 @@ import {readMore} from './modules/read-more';
 import {lightBox} from './modules/lightbox';
 import {modal} from './modules/modal';
 import {hotelCardSlider} from './modules/hotel-card-slider';
+import {loadForm} from './modules/load-form';
 
 
 // Utils
@@ -28,3 +29,4 @@ readMore();
 lightBox();
 modal();
 hotelCardSlider();
+loadForm();

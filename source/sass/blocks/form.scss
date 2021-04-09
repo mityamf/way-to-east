@@ -123,3 +123,19 @@
 
   -webkit-text-fill-color: $color-default-black;
 }
+
+.form__error-message {
+  display: block;
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 500;
+  font-family: $font-family-inter;
+  color: $color-dim-gray;
+  text-align: left;
+}
+
+.form__error-message.hidden {
+  display: none;
+}
+
