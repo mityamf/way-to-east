@@ -1,22 +1,24 @@
 const loadForm = () => {
 
-  let form = document.querySelector('.form');
-  let address = form.getAttribute('action');
-  let method = form.getAttribute('method');
-  let noConnection = form.getAttribute('data-noConnect');
-  let sendFormButton = form.querySelector('.form__button');
-  let modalSuccess = document.querySelector('.modal-success');
-  let errorMessage = form.querySelector('.form__error-message');
+  const form = document.querySelector('.form');
+  const address = form.getAttribute('action');
+  const method = form.getAttribute('method');
+  const noConnection = form.getAttribute(`data-noConnect`);
+  const sendFormButton = form.querySelector('.form__button');
+  const modalSuccess = document.querySelector('.modal-success');
+  const errorMessage = form.querySelector('.form__error-message');
+  const wrapper = document.querySelector('.wrapper');
 
   const load = (url, onSuccess, onError, sent) => {
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
 
     xhr.addEventListener('load', () => {
-      if (xhr.status === 200) {
+      let result = xhr.response;
+      if (xhr.status === 200 && result.status === true) {
         onSuccess(xhr.response);
       } else {
-        onError(noConnection);
+        onError(result.errors);
       }
     });
 
@@ -37,7 +39,7 @@ const loadForm = () => {
 
   const onSuccess = (responseSuccess) => {
     if (responseSuccess.success) {
-      modalSuccess.classList.add('modal--active');
+      openModalSuccess();
     }
   };
 
@@ -50,7 +52,16 @@ const loadForm = () => {
     load(address, onSuccess, onError);
   }
 
-  sendFormButton.addEventListener('click', sendForm());
+  sendFormButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    sendForm();
+  });
+
+  const openModalSuccess = () => {
+    modalSuccess.classList.add('modal--active');
+    wrapper.classList.add('wrapper--blur');
+    disableScrolling();
+  }
 };
 
 export {loadForm};
