@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Оглавление</title>
+    <title>Signiel Seoul</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -202,73 +202,261 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <style>
-        .container {
-          padding-top: 50px;
-          padding-bottom: 50px;
-        }
-        
-        h1 {
-          font-size: 24px;
-          line-height: 28px;
-        }
-        
-        a {
-          color: rgb(10, 10, 175);
-        }
-        
-        li {
-          font-size: 18px;
-          line-height: 22px;
-          margin-bottom: 7px;
-        }
-        
-        img {
-          width: 100%;
-          max-width: 300px;
-          height: auto;
-          display: block;
-        }
-        
-        .main-index--logo {
-          display: inline-block;
-          vertical-align: middle;
-          margin-bottom: 30px;
-          padding: 20px;
-          background-color: #b990cc;
-        }
-        
-        @media (max-width: 768px) {
-          ol {
-            padding-left: 20px;
-          }
-        
-          ol li {
-            margin-bottom: 15px;
-          }
-        
-          .container {
-            padding-top: 20px;
-            padding-bottom: 20px;
-          }
-        }
-        
-      </style>
-      <main class="container main-index">
-        <div class="main-index--logo"><img src="../../img/svg/logo.svg" width="128" height="68" alt="Логотип проекта"></div>
-        <h1>Список страниц и компонентов</h1>
-        <ol>
-          <li><a href="components.html">UI Kit — components.html</a></li>
-          <li><a href="main.html">Главная — main.html</a></li>
-          <li><a href="korea.html">Корея — korea.html</a></li>
-          <li><a href="japan.html">Япония — japan.html</a></li>
-          <li><a href="hotel-success.html">Отель-успешная отправка — hotel-success.html</a></li>
-          <li><a href="hotel-error.html">Отель-ошибка отправки — hotel-error.html</a></li>
-          <li><a href="korea-details.html">Особенности Кореи — korea-details.html</a></li>
-          <li><a href="japan-details.html">Особенности Японии — japan-details.html</a></li>
-          <li><a href="blog.html">Блог — blog.html</a></li>
-        </ol>
+      <header class="header header--inner">
+        <div class="header__wrapper container container--header">
+          <div class="header__background"><img src="img/bg/main-background.jpg" srcset="img/bg/main-background@2x.jpg 2x" width="1920" height="1343" alt="Закат на фоне гор"/>
+          </div><a class="header__logo" href="main.html" aria-label="Переход на главную"><img src="img/svg/main-logo.svg" width="128" height="68" alt="Логотип"/></a>
+          <nav class="header__nav main-nav">
+            <button class="main-nav__open-menu btn-reset" type="button" aria-label="Открыть мобильное меню" aria-pressed="false">
+              <svg width="30" height="14" aria-hidden="true">
+                <use xlink:href="#icon-burger"></use>
+              </svg>
+            </button>
+            <button class="main-nav__close-menu btn-reset" type="button" aria-label="Закрыть мобильное меню" aria-pressed="false">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </button>
+            <div class="main-nav__wrapper">
+              <div class="main-nav__choose-country choose-country choose-country--none"><span class="choose-country__text">Выберете страну:</span>
+                <ul class="choose-country__list">
+                  <li><a class="choose-country__link choose-country__link--korea" href="korea.html">
+                      <div class="choose-country__svg">
+                        <svg width="57" height="57" aria-hidden="true">
+                          <use xlink:href="#korea-circle"></use>
+                        </svg>
+                      </div><span class="choose-country__name">Корея</span></a></li>
+                  <li><a class="choose-country__link choose-country__link--japan" href="japan.html">
+                      <div class="choose-country__svg">
+                        <svg width="57" height="57" aria-hidden="true">
+                          <use xlink:href="#japan-circle"></use>
+                        </svg>
+                      </div><span class="choose-country__name">Япония</span></a></li>
+                </ul>
+              </div>
+              <ul class="main-nav__list">
+                <li><a class="main-nav__link" href="korea-details.html">Особенности гостеприимства в Корее</a></li>
+                <li><a class="main-nav__link" href="japan-details.html">Особенности гостеприимства в Японии</a></li>
+                <li><a class="main-nav__link" href="korea.html">Отели Кореи</a></li>
+                <li><a class="main-nav__link" href="japan.html">Отели Японии</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="travel-media travel-media--white">
+            <div class="travel-media__logo">
+              <svg width="133" height="58" aria-hidden="true">
+                <use xlink:href="#logo-travel-media-white"></use>
+              </svg>
+            </div><a class="travel-media__link" href="mailto:shankina@tm-russia.ru" target="_blank" rel="nofollow noopener">
+              <svg width="20" height="14" aria-hidden="true">
+                <use xlink:href="#icon-mail-white"></use>
+              </svg><span>Написать в Travel Media</span></a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="page-content page-content--hotel"><a class="link-back" onclick="javascript:history.back();">
+            <svg width="11" height="19" aria-hidden="true">
+              <use xlink:href="#icon-back"></use>
+            </svg><span>Назад</span><span>к списку</span></a>
+          <div class="container">
+            <div class="hotel-title">
+              <h1>Signiel Seoul</h1>
+              <div class="hotel-title__hotel-rating hotel-rating hotel-rating--5">
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg>
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#star-white"></use>
+                </svg>
+              </div>
+              <p>Корея, Сеул</p>
+            </div>
+            <section class="hotel-card"><a class="hotel-card__icon" onclick="javascript:history.back();">
+                <svg width="23" height="23" aria-hidden="true">
+                  <use xlink:href="#icon-cross"></use>
+                </svg></a>
+              <div class="hotel-card__image">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-main-mobile@1x.jpg 1x, img/content/hotel-card/hotel-card-main-mobile@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-main-desktop@1x.jpg" srcset="img/content/hotel-card/hotel-card-main-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото отеляSigniel Seoul"/>
+                </picture>
+              </div>
+              <div class="hotel-card__wrapper">
+                <div class="hotel-card__slider">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper"><a class="swiper-slide" data-fslightbox="slider" href="img/content/hotel-card/hotel-card-main-mobile@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-main-mobile@1x.jpg 1x, img/content/hotel-card/hotel-card-main-mobile@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-main-desktop@1x.jpg" srcset="img/content/hotel-card/hotel-card-main-desktop@2x.jpg 2x" width="1090" height="490" alt="Фото отеляSigniel Seoul"/>
+                        </picture></a><a class="swiper-slide" data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-1@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-1@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture></a><a class="swiper-slide" data-fslightbox="slider" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-2@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-2@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture></a></div>
+                    <div class="swiper-pagination hotel-card__slider-pagination"></div>
+                  </div>
+                </div>
+                <div class="hotel-card__gallery">
+                  <ul>
+                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-1@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-1@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-1@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture></a></li>
+                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-2@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-2@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-2@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture></a></li>
+                    <li><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-3@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-3@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-3@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-3@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture></a></li>
+                    <li><a class="hotel-card__gallery-link" data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg">
+                        <picture>
+                          <source media="(max-width: 767px)" srcset="img/content/hotel-card/hotel-card-photo-4@1x.jpg 1x, img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x"/><img src="img/content/hotel-card/hotel-card-photo-4@1x.jpg" srcset="img/content/hotel-card/hotel-card-photo-4@2x.jpg 2x" width="202" height="134" alt="Фото интерьера отеля Signiel Seoul"/>
+                        </picture>
+                        <div class="div"><span>+ 15 фото</span></div></a></li>
+                    <li class="hidden"><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-1@2x.jpg"></a></li>
+                    <li class="hidden"><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-2@2x.jpg"></a></li>
+                    <li class="hidden"><a data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-3@2x.jpg"></a></li>
+                    <li class="hidden"><a class="hotel-card__gallery-link" data-fslightbox="gallery" href="img/content/hotel-card/hotel-card-photo-4@2x.jpg"></a></li>
+                  </ul>
+                </div>
+                <div class="hotel-card__description">
+                  <div class="hotel-card__logo"><img src="img/svg/logo-hotel-signiel.svg" width="126" height="17" alt="Логотип отеля"/></div>
+                  <h2>Быть над Сеулом в роскоши Signiel Seoul</h2>
+                  <p>В отеле Signiel Seoul, расположенном на 77—102 этажах в небоскребе Lotte World Tower, к услугам гостей 235 номеров с панорамным видом на Сеул. В этом 5-звездочном отеле имеется бар шампанского, ресторан, отмеченный звездой Мишлен, крытый бассейн, фитнес-центр и банкетный зал.  По подземному переходу из отеля можно пройти к станции метро Jamsil (линий 2 и 8). На всей территории отеля доступен бесплатный Wi-Fi.</p>
+                  <button class="hotel-card__button" type="button"><span>Читать полностью</span>
+                    <svg width="19" height="11" aria-hidden="true">
+                      <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
+                  </button>
+                  <div class="hotel-card__text-wrapper">
+                    <p>В номерах в числе удобств мини-бар, холодильник, кофемашина, сейф и телевизор с плоским экраном. Пол в номерах покрыт ковролином. В распоряжении гостей собственная ванная комната с феном, бесплатными туалетно-косметическими принадлежностями, тапочками и электронным унитазом-биде.</p>
+                    <p>На 87 этаже здания работает спа-центр Evian с сауной. Сотрудники отеля Signiel Seoul помогут гостям воспользоваться камерой хранения багажа, услугами парковщика и услугами консьержа. За дополнительную плату предоставляется пресс для брюк, услуги химчистки, услуги прачечной и гладильные услуги.</p>
+                    <p>В ресторане BICENA, отмеченном 1 звездой Мишлен, на обед и ужин подают блюда корейской кухни. В ресторане STAY, который принадлежит удостоенному 3 звезд Мишлен шеф-повару Яннику Аллено, гости могут отведать изысканные французские блюда.</p>
+                    <p>Отель Signiel Seoul находится в 7 км от железнодорожного вокзала Каннамгу и менее чем в 20 минутах езды от торгового центра COEX Mall. Поездка до аэропорта Кимпхо занимает 45 минут, а до международного аэропорта Инчхон — менее 70 минут. </p>
+                  </div>
+                  <div class="hotel-card__links"><a class="hotel-card__link hotel-card__link--video" href="#">
+                      <svg width="44" height="31" aria-hidden="true">
+                        <use xlink:href="#icon-youtube"></use>
+                      </svg>Посмотреть видео-презентацию</a><a class="hotel-card__link" href="#">
+                      <svg width="26" height="35" aria-hidden="true">
+                        <use xlink:href="#icon-pdf"></use>
+                      </svg>Скачать PDF-презентацию</a></div>
+                </div>
+              </div>
+            </section>
+            <section class="participant-form">
+              <h2 class="page-content__title">Написать участнику:</h2>
+              <!-- Модальное окно успешной отправки формы - "modal-success" Открывается при добавлении класса "modal--active"-->
+              <div class="participant-form__wrapper">
+                <form class="form" action="mock/response-e.json" method="POST">
+                  <label class="visually-hidden" for="name-field">Имя и фамилия</label>
+                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" data-error="Поле обязательно для заполнения и должно содержать не менее 3-х символов"/>
+                  <label class="visually-hidden" for="email-field">E-mail</label>
+                  <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required" data-error="Адрес электронной почты должен содержать буквы или цифры до символа @, после него, затем точку и домен первого уровня."/>
+                  <label class="visually-hidden" for="phone-field">Телефон</label>
+                  <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required" data-error="Недостаточное количество цифр в номере телефона"/>
+                  <label class="visually-hidden" for="message-field">Введите текст сообщения</label>
+                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required" data-error="Поле обязательно для заполнения и должно содержать не менее 3-х символов"></textarea>
+                  <div>
+                    <input class="visually-hidden" id="accept" type="checkbox" name="accept" required="required" data-error="Подтвердите свое согласие на обработку данных"/>
+                    <label for="accept">Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ</label>
+                  </div>
+                  <input class="button form__button" type="submit" value="Отправить"/>
+                  <div class="form__error-message hidden"></div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
       </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrapper">
+            <div class="travel-media travel-media--gray">
+              <div class="travel-media__logo">
+                <svg width="133" height="58" aria-hidden="true">
+                  <use xlink:href="#logo-travel-media-gray"></use>
+                </svg>
+              </div><a class="travel-media__link" href="mailto:shankina@tm-russia.ru" target="_blank" rel="nofollow noopener">
+                <svg width="20" height="14" aria-hidden="true">
+                  <use xlink:href="#icon-mail-gray"></use>
+                </svg><span>Написать в Travel Media</span></a>
+            </div>
+            <div class="footer__countries">
+              <div class="countries-logo">
+                <div class="countries-logo__image countries-logo__image--korea">
+                  <svg width="91" height="60" aria-hidden="true">
+                    <use xlink:href="#logo-korea"></use>
+                  </svg>
+                </div>
+                <div class="countries-logo__image countries-logo__image--japan">
+                  <svg width="151" height="60" aria-hidden="true">
+                    <use xlink:href="#logo-japan"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="footer__countries-copyright">
+                <svg width="15" height="15" aria-hidden="true">
+                  <use xlink:href="#icon-official"></use>
+                </svg><span>Project of tourism authorities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal modal--preload modal-success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <div class="countries-logo">
+            <div class="countries-logo__image countries-logo__image--korea">
+              <svg width="91" height="60" aria-hidden="true">
+                <use xlink:href="#logo-korea"></use>
+              </svg>
+            </div>
+            <div class="countries-logo__image countries-logo__image--japan">
+              <svg width="151" height="60" aria-hidden="true">
+                <use xlink:href="#logo-japan"></use>
+              </svg>
+            </div>
+          </div>
+          <p>Ваше сообщение успешно отправлено!</p>
+          <button class="modal-success__button button" type="button">Закрыть</button>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="23" height="23" aria-hidden="true">
+              <use xlink:href="#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal-video">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <video id="video" controls="controls">
+            <source src="video/video.mp4" type="video/mp4"/>
+          </video>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="23" height="23" aria-hidden="true">
+              <use xlink:href="#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

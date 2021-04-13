@@ -1,0 +1,34 @@
+extends ../base/layout
+
+include ../components/link-back
+include ../components/hotel-card
+include ../components/participant-form-error
+
+block data
+  include ../data/hotel-card-details
+
+block variables
+  - var title = "Signiel Seoul"
+  - var wrapperMod = ""
+  - var hasHeader = true
+  - var headerMod = "inner"
+  - var hasFooter = true
+  - var footerMod = ""
+  - var currentPage = ""
+  - var hasModals = true
+
+
+block main
+  main
+    .page-content.page-content--hotel
+      +link-back("Назад", "к списку")
+      .container
+        +hotel-card(signielSeoul)
+        section.participant-form
+          h2.page-content__title Написать участнику:
+          // Модальное окно успешной отправки формы - "modal-success" Открывается при добавлении класса "modal--active"
+          +participant-form-error()
+
+
+
+
