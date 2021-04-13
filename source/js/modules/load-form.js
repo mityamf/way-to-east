@@ -1,12 +1,6 @@
 const REG = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const MIN_LENGTH = 3;
 const MIN_TEL_LENGTH = 11;
-const ERROR_TEXT = {
-  length: '<p>Поле обязательно для заполнения и должно содержать не менее 3-х символов</p>',
-  email: '<p>Адрес электронной почты должен содержать буквы или цифры до символа @, после него, затем точку и домен первого уровня.</p>',
-  phone: '<p>Недостаточное количество цифр в номере телефона</p>',
-  agreement: '<p>Подтвердите свое согласие на обработку данных</p>',
-};
 
 const loadForm = () => {
 
@@ -29,12 +23,12 @@ const loadForm = () => {
     return;
   }
 
-  const checkForMinLength = function (field) {
-    if (field.value.length < MIN_LENGTH) {
+  const checkInput = function (field, condition) {
+    if (!condition) {
       field.classList.add('invalid');
       field.classList.remove('valid');
       errorMessage.classList.remove('hidden');
-      errorMessage.innerHTML = ERROR_TEXT.length;
+      errorMessage.innerHTML = field.dataset.error;
       return false;
     } else {
       field.classList.remove('invalid');
@@ -44,51 +38,13 @@ const loadForm = () => {
     }
   };
 
-  const validateEmail = function () {
-    if (!(emailField.value.length >= MIN_LENGTH) || !REG.test(String(emailField.value).toLowerCase())) {
-      emailField.classList.add('invalid');
-      emailField.classList.remove('valid');
-      errorMessage.classList.remove('hidden');
-      errorMessage.innerHTML = ERROR_TEXT.email;
-      return false;
-    } else {
-      emailField.classList.remove('invalid');
-      emailField.classList.add('valid');
-      errorMessage.classList.add('hidden');
-      return ((emailField.value.length >= MIN_LENGTH) && REG.test(String(emailField.value).toLowerCase()));
-    }
-  };
-
-  const validatePhone = function () {
-    if (phoneField.value.replace(/\D+/g, '').length < MIN_TEL_LENGTH) {
-      phoneField.classList.add('invalid');
-      phoneField.classList.remove('valid');
-      errorMessage.classList.remove('hidden');
-      errorMessage.innerHTML = ERROR_TEXT.phone;
-      return false;
-    } else {
-      phoneField.classList.remove('invalid');
-      phoneField.classList.add('valid');
-      errorMessage.classList.add('hidden');
-      return (phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH);
-    }
-  };
-
-  const checkAgreement = function () {
-    if (!agreement.checked) {
-      agreement.classList.add('invalid');
-      errorMessage.classList.remove('hidden');
-      errorMessage.innerHTML = ERROR_TEXT.agreement;
-      return false;
-    } else {
-      agreement.classList.remove('invalid');
-      errorMessage.classList.add('hidden');
-      return true;
-    }
-  };
-
   function validate() {
-    if (checkForMinLength(nameField) && validateEmail() && validatePhone() && checkForMinLength(messageField) && checkAgreement()) {
+    if (checkInput(nameField, nameField.value.length >= MIN_LENGTH) &&
+        checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG.test(String(emailField.value).toLowerCase())) &&
+        checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH) &&
+        checkInput(messageField, messageField.value.length >= MIN_LENGTH) &&
+        checkInput(agreement, (agreement.checked))
+    ) {
       return true;
     } else {
       return false;
@@ -103,74 +59,34 @@ const loadForm = () => {
     load(address, onSuccess, onError);
   }
 
+  function iterateFields(evt) {
+    if (evt.target.value.length !== 0) {
+      switch (evt.target.id) {
+        case 'name-field': checkInput(nameField, nameField.value.length >= MIN_LENGTH);
+          break;
+        case 'email-field': checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG.test(String(emailField.value).toLowerCase()));
+          break;
+        case 'phone-field': checkInput(phoneField, checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH));
+          break;
+        case 'message-field': checkInput(messageField, messageField.value.length >= MIN_LENGTH);
+          break;
+      }
+    }
+  }
+
   sendFormButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     sendForm();
   });
 
-  nameField.addEventListener('blur', function () {
-    if (nameField.value.length !== 0) {
-      checkForMinLength(nameField);
-    }
-  });
-  emailField.addEventListener('blur', function () {
-    if (emailField.value.length !== 0) {
-      validateEmail();
-    }
-  });
-  phoneField.addEventListener('blur', function () {
-    if (phoneField.value.length !== 0) {
-      validatePhone();
-    }
-  });
-  messageField.addEventListener('blur', function () {
-    if (messageField.value.length !== 0) {
-      checkForMinLength(messageField);
-    }
-  });
-  nameField.addEventListener('focus', function () {
-    if (nameField.value.length !== 0) {
-      checkForMinLength(nameField);
-    }
-  });
-  emailField.addEventListener('focus', function () {
-    if (emailField.value.length !== 0) {
-      validateEmail();
-    }
-  });
-  phoneField.addEventListener('focus', function () {
-    if (phoneField.value.length !== 0) {
-      validatePhone();
-    }
-  });
-  messageField.addEventListener('focus', function () {
-    if (messageField.value.length !== 0) {
-      checkForMinLength(messageField);
-    }
-  });
+  form.addEventListener('blur', iterateFields, true);
 
-  nameField.addEventListener('input', function () {
-    if (nameField.value.length !== 0) {
-      checkForMinLength(nameField);
-    }
-  });
-  emailField.addEventListener('input', function () {
-    if (emailField.value.length !== 0) {
-      validateEmail();
-    }
-  });
-  phoneField.addEventListener('input', function () {
-    if (phoneField.value.length !== 0) {
-      validatePhone();
-    }
-  });
-  messageField.addEventListener('input', function () {
-    if (messageField.value.length !== 0) {
-      checkForMinLength(messageField);
-    }
-  });
+  form.addEventListener('focus', iterateFields, true);
+
+  form.addEventListener('input', iterateFields, true);
+
   agreement.addEventListener('change', function () {
-    checkAgreement();
+    checkInput(agreement, (agreement.checked));
   });
 
   const load = (url, onSuccess, onError, sent) => {
