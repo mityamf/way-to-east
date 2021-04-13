@@ -7,6 +7,11 @@ const MIN_TEL_LENGTH = 11;
 const loadForm = () => {
 
   const form = document.querySelector('.form');
+
+  if (!form) {
+    return;
+  }
+
   const address = form.getAttribute('action');
   const method = form.getAttribute('method');
   const noConnection = form.getAttribute('data-noConnect');
@@ -20,10 +25,6 @@ const loadForm = () => {
   const phoneField = document.getElementById('phone-field');
   const messageField = document.getElementById('message-field');
   const agreement = document.getElementById('accept');
-
-  if (!form) {
-    return;
-  }
 
   const checkInput = function (field, condition) {
     if (!condition) {
