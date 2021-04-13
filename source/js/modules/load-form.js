@@ -1,10 +1,19 @@
+const REG = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const MIN_LENGTH = 3;
+const MIN_TEL_LENGTH = 11;
+const ERROR_TEXT = {
+  length: '<p>Поле обязательно для заполнения и должно содержать не менее 3-х символов</p>',
+  email: '<p>Адрес электронной почты должен содержать буквы или цифры до символа @, после него, затем точку и домен первого уровня.</p>',
+  phone: '<p>Недостаточное количество цифр в номере телефона</p>',
+  agreement: '<p>Подтвердите свое согласие на обработку данных</p>',
+};
+
 const loadForm = () => {
 
   const form = document.querySelector('.form');
   const address = form.getAttribute('action');
   const method = form.getAttribute('method');
-  const noConnection = form.getAttribute(`data-noConnect`);
-  const validTextMessage = 'Все поля обязательны к заполнению. Только латинские символы.';
+  const noConnection = form.getAttribute('data-noConnect');
 
   const sendFormButton = form.querySelector('.form__button');
   const modalSuccess = document.querySelector('.modal-success');
@@ -14,49 +23,154 @@ const loadForm = () => {
   const emailField = document.getElementById('email-field');
   const phoneField = document.getElementById('phone-field');
   const messageField = document.getElementById('message-field');
+  const agreement = document.getElementById('accept');
 
-  if(!form) {
+  if (!form) {
     return;
   }
 
-  const validateInput = function(field) {
-    checkForMinLength(field);
-  };
-
-  const validateForm = function () {
-    if (validateInput(nameField) && validateInput(emailField) && validateInput(phoneField) && validateInput(messageField)) {
+  const checkForMinLength = function (field) {
+    if (field.value.length < MIN_LENGTH) {
+      field.classList.add('invalid');
+      field.classList.remove('valid');
+      errorMessage.classList.remove('hidden');
+      errorMessage.innerHTML = ERROR_TEXT.length;
+      return false;
+    } else {
+      field.classList.remove('invalid');
+      field.classList.add('valid');
       errorMessage.classList.add('hidden');
       return true;
-    } else {
-      errorMessage.classList.remove('hidden');
-      errorMessage.textContent = validTextMessage;
-      return false;
     }
   };
 
-  const checkForMinLength = function(field) {
-    if(field.value.length > 0) {
+  const validateEmail = function () {
+    if (!(emailField.value.length >= MIN_LENGTH) || !REG.test(String(emailField.value).toLowerCase())) {
+      emailField.classList.add('invalid');
+      emailField.classList.remove('valid');
+      errorMessage.classList.remove('hidden');
+      errorMessage.innerHTML = ERROR_TEXT.email;
+      return false;
+    } else {
+      emailField.classList.remove('invalid');
+      emailField.classList.add('valid');
+      errorMessage.classList.add('hidden');
+      return ((emailField.value.length >= MIN_LENGTH) && REG.test(String(emailField.value).toLowerCase()));
+    }
+  };
+
+  const validatePhone = function () {
+    if (phoneField.value.replace(/\D+/g, '').length < MIN_TEL_LENGTH) {
+      phoneField.classList.add('invalid');
+      phoneField.classList.remove('valid');
+      errorMessage.classList.remove('hidden');
+      errorMessage.innerHTML = ERROR_TEXT.phone;
+      return false;
+    } else {
+      phoneField.classList.remove('invalid');
+      phoneField.classList.add('valid');
+      errorMessage.classList.add('hidden');
+      return (phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH);
+    }
+  };
+
+  const checkAgreement = function () {
+    if (!agreement.checked) {
+      agreement.classList.add('invalid');
+      errorMessage.classList.remove('hidden');
+      errorMessage.innerHTML = ERROR_TEXT.agreement;
+      return false;
+    } else {
+      agreement.classList.remove('invalid');
+      errorMessage.classList.add('hidden');
       return true;
     }
-    else {
-      return false;
-    }
   };
 
+  function validate() {
+    if (checkForMinLength(nameField) && validateEmail() && validatePhone() && checkForMinLength(messageField) && checkAgreement()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function sendForm() {
+    if (!validate()) {
+      return;
+    }
+
+    load(address, onSuccess, onError);
+  }
+
+  sendFormButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    sendForm();
+  });
+
   nameField.addEventListener('blur', function () {
-    validateForm();
+    if (nameField.value.length !== 0) {
+      checkForMinLength(nameField);
+    }
   });
-
   emailField.addEventListener('blur', function () {
-    validateForm();
+    if (emailField.value.length !== 0) {
+      validateEmail();
+    }
   });
-
   phoneField.addEventListener('blur', function () {
-    validateForm();
+    if (phoneField.value.length !== 0) {
+      validatePhone();
+    }
+  });
+  messageField.addEventListener('blur', function () {
+    if (messageField.value.length !== 0) {
+      checkForMinLength(messageField);
+    }
+  });
+  nameField.addEventListener('focus', function () {
+    if (nameField.value.length !== 0) {
+      checkForMinLength(nameField);
+    }
+  });
+  emailField.addEventListener('focus', function () {
+    if (emailField.value.length !== 0) {
+      validateEmail();
+    }
+  });
+  phoneField.addEventListener('focus', function () {
+    if (phoneField.value.length !== 0) {
+      validatePhone();
+    }
+  });
+  messageField.addEventListener('focus', function () {
+    if (messageField.value.length !== 0) {
+      checkForMinLength(messageField);
+    }
   });
 
-  messageField.addEventListener('blur', function () {
-    validateForm();
+  nameField.addEventListener('input', function () {
+    if (nameField.value.length !== 0) {
+      checkForMinLength(nameField);
+    }
+  });
+  emailField.addEventListener('input', function () {
+    if (emailField.value.length !== 0) {
+      validateEmail();
+    }
+  });
+  phoneField.addEventListener('input', function () {
+    if (phoneField.value.length !== 0) {
+      validatePhone();
+    }
+  });
+  messageField.addEventListener('input', function () {
+    if (messageField.value.length !== 0) {
+      checkForMinLength(messageField);
+    }
+  });
+  agreement.addEventListener('change', function () {
+    checkAgreement();
   });
 
   const load = (url, onSuccess, onError, sent) => {
@@ -98,24 +212,11 @@ const loadForm = () => {
     errorMessage.innerHTML = message;
   };
 
-  function sendForm() {
-    if(!validateForm()) {
-      return;
-    }
-
-    load(address, onSuccess, onError);
-  }
-
-  sendFormButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    sendForm();
-  });
-
   const openModalSuccess = () => {
     modalSuccess.classList.add('modal--active');
     wrapper.classList.add('wrapper--blur');
-    disableScrolling();
-  }
+    // disableScrolling();
+  };
 };
 
 export {loadForm};
