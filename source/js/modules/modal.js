@@ -16,7 +16,6 @@ const modal = () => {
   const buttonSuccessClose = modalSuccess.querySelector('.modal__close-btn');
   const modalSuccessOverlay = modalSuccess.querySelector('.modal__overlay');
   const modalSuccessButton = modalSuccess.querySelector('.modal-success__button');
-  const form = document.querySelector('.form');
   const wrapper = document.querySelector('.wrapper');
   const video = document.getElementById('video');
 
@@ -50,31 +49,24 @@ const modal = () => {
       enableScrolling();
       stopVideo(video);
     }
-  })
-
-  form.addEventListener('submit', function (evt) {
-    evt.preventDefault();
-    modalSuccess.classList.add('modal--active');
-    wrapper.classList.add('wrapper--blur');
-    disableScrolling();
   });
 
-  buttonSuccessClose.addEventListener('click', function () {
+  const closeModalSuccess = () => {
     modalSuccess.classList.remove('modal--active');
     wrapper.classList.remove('wrapper--blur');
     enableScrolling();
+  };
+
+  buttonSuccessClose.addEventListener('click', function () {
+    closeModalSuccess();
   });
 
   modalSuccessOverlay.addEventListener('click', function () {
-    modalSuccess.classList.remove('modal--active');
-    wrapper.classList.remove('wrapper--blur');
-    enableScrolling();
+    closeModalSuccess();
   });
 
   modalSuccessButton.addEventListener('click', function () {
-    modalSuccess.classList.remove('modal--active');
-    wrapper.classList.remove('wrapper--blur');
-    enableScrolling();
+    closeModalSuccess();
   });
 
 };

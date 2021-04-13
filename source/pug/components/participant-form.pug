@@ -1,8 +1,8 @@
 mixin participant-form
   div.participant-form__wrapper
-    form(class="form", action="mock/response.json", method="post")
+    form(class="form", action="mock/response.json", method="post" data-noConnect="Ошибка соединения, попробуйте позже")
       label.visually-hidden(for="name-field") Имя и фамилия
-      input#name-field(type="text", name="name-field", placeholder="Имя и фамилия", title="Только латинские символы", required, pattern="[a-zA-Z ]{3,30}")
+      input#name-field(type="text", name="name-field", placeholder="Имя и фамилия", title="Только латинские символы", required, pattern="[a-zA-Z ]{1,30}")
       label.visually-hidden(for="email-field") E-mail
       input#email-field(type="email", name="email-field", placeholder="E-mail", required)
       label.visually-hidden(for="phone-field") Телефон
