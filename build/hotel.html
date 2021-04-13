@@ -362,15 +362,15 @@
               <div class="participant-form__wrapper">
                 <form class="form" action="mock/response.json" method="POST">
                   <label class="visually-hidden" for="name-field">Имя и фамилия</label>
-                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" title="Только латинские символы" required="required"/>
+                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" data-error="Поле обязательно для заполнения и должно содержать не менее 3-х символов"/>
                   <label class="visually-hidden" for="email-field">E-mail</label>
-                  <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required"/>
+                  <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required" data-error="Адрес электронной почты должен содержать буквы или цифры до символа @, после него, затем точку и домен первого уровня."/>
                   <label class="visually-hidden" for="phone-field">Телефон</label>
-                  <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required" pattern="[0-9-+() ]{7,20}"/>
+                  <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required" data-error="Недостаточное количество цифр в номере телефона"/>
                   <label class="visually-hidden" for="message-field">Введите текст сообщения</label>
-                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required"></textarea>
+                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required" data-error="Поле обязательно для заполнения и должно содержать не менее 3-х символов"></textarea>
                   <div>
-                    <input class="visually-hidden" id="accept" type="checkbox" name="accept" required="required"/>
+                    <input class="visually-hidden" id="accept" type="checkbox" name="accept" required="required" data-error="Подтвердите свое согласие на обработку данных"/>
                     <label for="accept">Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ</label>
                   </div>
                   <input class="button form__button" type="submit" value="Отправить"/>
