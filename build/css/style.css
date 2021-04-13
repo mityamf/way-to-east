@@ -2260,6 +2260,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   max-width: 222px;
+  height: auto;
   padding-bottom: 54px;
   margin-right: 28px;
   margin-bottom: 10px;
