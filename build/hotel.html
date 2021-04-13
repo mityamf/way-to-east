@@ -360,9 +360,9 @@
               <h2 class="page-content__title">Написать участнику:</h2>
               <!-- Модальное окно успешной отправки формы - "modal-success" Открывается при добавлении класса "modal--active"-->
               <div class="participant-form__wrapper">
-                <form class="form" action="mock/response.json" method="post" data-noConnect="Ошибка соединения, попробуйте позже">
+                <form class="form" action="mock/response.json" method="POST">
                   <label class="visually-hidden" for="name-field">Имя и фамилия</label>
-                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" title="Только латинские символы" required="required" pattern="[a-zA-Z ]{1,30}"/>
+                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" title="Только латинские символы" required="required"/>
                   <label class="visually-hidden" for="email-field">E-mail</label>
                   <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required"/>
                   <label class="visually-hidden" for="phone-field">Телефон</label>

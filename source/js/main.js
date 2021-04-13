@@ -10,6 +10,7 @@ import {lightBox} from './modules/lightbox';
 import {modal} from './modules/modal';
 import {hotelCardSlider} from './modules/hotel-card-slider';
 import {loadForm} from './modules/load-form';
+import setInputMask from './modules/tel-mask';
 
 
 // Utils
@@ -30,3 +31,4 @@ lightBox();
 modal();
 hotelCardSlider();
 loadForm();
+setInputMask();

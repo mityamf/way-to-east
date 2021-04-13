@@ -38,6 +38,10 @@
   background-color: $color-whisper;
   border: none;
   border-radius: 10px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .form label {
@@ -99,7 +103,7 @@
       top: 0;
       left: 7px;
     }
-    }
+  }
 }
 
 .form input:checked + label::after {
@@ -131,11 +135,25 @@
   line-height: 19px;
   font-weight: 500;
   font-family: $font-family-inter;
-  color: $color-dim-gray;
-  text-align: left;
+  color: $color-cinnabar;
+  text-align: center;
 }
 
 .form__error-message.hidden {
   display: none;
+}
+
+.form input.invalid,
+.form textarea.invalid {
+  box-shadow: inset 0 0 5px $color-cinnabar;
+}
+
+.form input.invalid + label[for="accept"]::before {
+  border: 1px solid $color-cinnabar;
+}
+
+.form input.valid,
+.form textarea.valid {
+  box-shadow: inset 0 0 5px $color-cerulean-blue;
 }
 

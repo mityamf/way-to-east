@@ -3130,6 +3130,9 @@ main {
   background-color: #ebebeb;
   border: none;
   border-radius: 10px; }
+  .form input:focus,
+  .form textarea:focus {
+    outline: none; }
 
 .form label {
   font-size: 15px;
@@ -3236,11 +3239,24 @@ main {
   line-height: 19px;
   font-weight: 500;
   font-family: "Inter", "Arial", sans-serif;
-  color: #6f6f6f;
-  text-align: left; }
+  color: #e23528;
+  text-align: center; }
 
 .form__error-message.hidden {
   display: none; }
+
+.form input.invalid,
+.form textarea.invalid {
+  -webkit-box-shadow: inset 0 0 5px #e23528;
+          box-shadow: inset 0 0 5px #e23528; }
+
+.form input.invalid + label[for="accept"]::before {
+  border: 1px solid #e23528; }
+
+.form input.valid,
+.form textarea.valid {
+  -webkit-box-shadow: inset 0 0 5px #1c54d1;
+          box-shadow: inset 0 0 5px #1c54d1; }
 
 .modal-success .modal__content {
   width: 646px;
