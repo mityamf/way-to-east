@@ -50,6 +50,7 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "7.0.1",
     "gulp-webp": "4.0.1",
+    "imask": "^6.0.7",
     "stylelint": "13.5.0",
     "stylelint-config-htmlacademy": "0.1.x",
     "webpack": "4.42.0",
@@ -58,7 +59,5 @@
   "engines": {
     "node": "8.15"
   },
-  "dependencies": {
-    "imask": "^6.0.7"
-  }
+  "dependencies": {}
 }

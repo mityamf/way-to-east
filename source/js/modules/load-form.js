@@ -1,3 +1,5 @@
+import {disableScrolling} from '../utils/scroll-lock';
+
 const REG = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const MIN_LENGTH = 3;
 const MIN_TEL_LENGTH = 11;
@@ -96,7 +98,7 @@ const loadForm = () => {
     xhr.addEventListener('load', () => {
       let result = xhr.response;
       if (xhr.status === 200 && result.status === true) {
-        onSuccess(xhr.response);
+        onSuccess(result.status);
       } else {
         onError(result.errors);
       }
@@ -118,7 +120,7 @@ const loadForm = () => {
   };
 
   const onSuccess = (responseSuccess) => {
-    if (responseSuccess.success) {
+    if (responseSuccess) {
       openModalSuccess();
     }
   };
@@ -131,7 +133,7 @@ const loadForm = () => {
   const openModalSuccess = () => {
     modalSuccess.classList.add('modal--active');
     wrapper.classList.add('wrapper--blur');
-    // disableScrolling();
+    disableScrolling();
   };
 };
 
