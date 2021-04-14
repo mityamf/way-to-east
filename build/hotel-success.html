@@ -359,9 +359,9 @@
               <div class="participant-form__wrapper">
                 <form class="form" action="mock/response.json" method="POST">
                   <label class="visually-hidden" for="name-field">Имя и фамилия</label>
-                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" data-error="Поле обязательно для заполнения и должно содержать не менее 3-х символов"/>
+                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" data-error="Поле обязательно для заполнения и должно содержать только латинские буквы в количестве не менее 3-х"/>
                   <label class="visually-hidden" for="email-field">E-mail</label>
-                  <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required" data-error="Адрес электронной почты должен содержать буквы или цифры до символа @, после него, затем точку и домен первого уровня."/>
+                  <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required" data-error="Адрес электронной почты должен содержать только цифры или латинские буквы до символа @, после него, затем точку и домен первого уровня."/>
                   <label class="visually-hidden" for="phone-field">Телефон</label>
                   <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required" data-error="Недостаточное количество цифр в номере телефона"/>
                   <label class="visually-hidden" for="message-field">Введите текст сообщения</label>

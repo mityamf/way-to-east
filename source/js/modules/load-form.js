@@ -1,6 +1,7 @@
 import {disableScrolling} from '../utils/scroll-lock';
 
-const REG = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const REG_NAME = /^[a-z]+$/i;
+const REG_EMAIL = /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
 const MIN_LENGTH = 3;
 const MIN_TEL_LENGTH = 11;
 
@@ -42,8 +43,8 @@ const loadForm = () => {
   };
 
   function validate() {
-    if (checkInput(nameField, nameField.value.length >= MIN_LENGTH) &&
-        checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG.test(String(emailField.value).toLowerCase())) &&
+    if (checkInput(nameField, nameField.value.length >= MIN_LENGTH && REG_NAME.test(String(nameField.value))) &&
+        checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG_EMAIL.test(String(emailField.value).toLowerCase())) &&
         checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH) &&
         checkInput(messageField, messageField.value.length >= MIN_LENGTH) &&
         checkInput(agreement, (agreement.checked))
@@ -65,9 +66,9 @@ const loadForm = () => {
   function iterateFields(evt) {
     if (evt.target.value.length !== 0) {
       switch (evt.target.id) {
-        case 'name-field': checkInput(nameField, nameField.value.length >= MIN_LENGTH);
+        case 'name-field': checkInput(nameField, nameField.value.length >= MIN_LENGTH && REG_NAME.test(String(nameField.value)));
           break;
-        case 'email-field': checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG.test(String(emailField.value).toLowerCase()));
+        case 'email-field': checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG_EMAIL.test(String(emailField.value).toLowerCase()));
           break;
         case 'phone-field': checkInput(phoneField, checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH));
           break;
