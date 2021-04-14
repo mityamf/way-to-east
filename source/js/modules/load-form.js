@@ -59,8 +59,8 @@ const loadForm = () => {
     if (!validate()) {
       return;
     }
-
-    load(address, onSuccess, onError);
+    let data = new FormData(form);
+    load(address, onSuccess, onError, data);
   }
 
   function iterateFields(evt) {
@@ -99,6 +99,7 @@ const loadForm = () => {
 
     xhr.addEventListener('load', () => {
       let result = xhr.response;
+      console.log(result);
       if (xhr.status === 200 && result.status === true) {
         onSuccess(result.status);
       } else {
@@ -116,14 +117,15 @@ const loadForm = () => {
     xhr.timeout = 5000;
 
     xhr.open(method, url, true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     xhr.send(sent);
   };
 
   const onSuccess = (responseSuccess) => {
     if (responseSuccess) {
       openModalSuccess();
+      form.reset();
     }
   };
 
