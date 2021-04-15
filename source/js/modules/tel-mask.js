@@ -25,6 +25,12 @@ const setInputMask = () => {
                   mask: '+7 (000) 000-00-00',
                   startsWith: '7',
                   lazy: true,
+                },
+                {
+                  min: '6',
+                  mask: '000000000000000',
+                  startsWith: '',
+                  lazy: true,
                 }
               ],
               dispatch: function (appended, dynamicMasked) {
