@@ -28,7 +28,7 @@ const setInputMask = () => {
                 }
               ],
               dispatch: function (appended, dynamicMasked) {
-                let number = (dynamicMasked.value + appended).replace(/\D/g,'');
+                let number = (dynamicMasked.value + appended).replace(/\D/g, '');
                 return dynamicMasked.compiledMasks.find(function (m) {
                   return number.indexOf(m.startsWith) === 0;
                 });
