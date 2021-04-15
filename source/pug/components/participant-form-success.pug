@@ -1,12 +1,12 @@
 mixin participant-form-success()
   div.participant-form__wrapper
-    form(class="form", action="mock/response.json", method="POST", autocomplete="on")
+    form(class="form", action="mock/response.json", method="POST")
       label.visually-hidden(for="name-field") Имя и фамилия
       input#name-field(type="text", name="name-field", placeholder="Имя и фамилия", required, data-error="Поле обязательно для заполнения, должно содержать не менее 3-х символов, используйте только латиницу.")
       label.visually-hidden(for="email-field") E-mail
       input#email-field(type="email", name="email-field", placeholder="E-mail", required, data-error="Адрес электронной почты должен содержать только цифры или латинские буквы до символа @, после него, затем точку и домен первого уровня.")
       label.visually-hidden(for="phone-field") Телефон
-      input#phone-field(type="tel", name="phone-field", placeholder="Телефон +7(000) 000 00 00", required, data-error="Недостаточное количество цифр в номере телефона.")
+      input#phone-field(type="tel", name="phone-field", placeholder="Телефон +7(000) 000 00 00", required, data-error="Слишком длинный номер.")
       label.visually-hidden(for="message-field") Введите текст сообщения
       textarea#message-field(name="message-field", cols="30", rows="7", placeholder="Введите текст сообщения", required, data-error="Поле обязательно для заполнения, должно содержать не менее 3-х символов, используйте только латиницу, цифры и спец.символы.")
       div

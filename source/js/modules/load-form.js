@@ -4,7 +4,7 @@ const REG_NAME = /^[a-z ]+$/i;
 const REG_EMAIL = /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
 const REG_MESSAGE = /^[^\u0400-\u04FF]+$/;
 const MIN_LENGTH = 3;
-const MIN_TEL_LENGTH = 11;
+const MAX_TEL_LENGTH = 16;
 
 const loadForm = () => {
 
@@ -49,7 +49,7 @@ const loadForm = () => {
   function validate() {
     if (checkInput(nameField, nameField.value.length >= MIN_LENGTH && REG_NAME.test(String(nameField.value))) &&
         checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG_EMAIL.test(String(emailField.value).toLowerCase())) &&
-        checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH) &&
+        checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length < MAX_TEL_LENGTH) &&
         checkInput(messageField, messageField.value.length >= MIN_LENGTH && REG_MESSAGE.test(String(messageField.value))) &&
         checkInput(agreement, (agreement.checked))
     ) {
@@ -74,7 +74,7 @@ const loadForm = () => {
           break;
         case 'email-field': checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG_EMAIL.test(String(emailField.value).toLowerCase()));
           break;
-        case 'phone-field': checkInput(phoneField, checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH));
+        case 'phone-field': checkInput(phoneField, checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length < MAX_TEL_LENGTH));
           break;
         case 'message-field': checkInput(messageField, messageField.value.length >= MIN_LENGTH && REG_MESSAGE.test(String(messageField.value)));
           break;
