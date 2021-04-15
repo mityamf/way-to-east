@@ -357,15 +357,15 @@
               <h2 class="page-content__title">Написать участнику:</h2>
               <!-- Модальное окно успешной отправки формы - "modal-success" Открывается при добавлении класса "modal--active"-->
               <div class="participant-form__wrapper">
-                <form class="form" action="mock/response.json" method="POST">
+                <form class="form" action="mock/response.json" method="POST" autocomplete="on">
                   <label class="visually-hidden" for="name-field">Имя и фамилия</label>
-                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" data-error="Поле обязательно для заполнения и должно содержать только латинские буквы в количестве не менее 3-х"/>
+                  <input id="name-field" type="text" name="name-field" placeholder="Имя и фамилия" required="required" data-error="Поле обязательно для заполнения, должно содержать не менее 3-х символов, используйте только латиницу."/>
                   <label class="visually-hidden" for="email-field">E-mail</label>
                   <input id="email-field" type="email" name="email-field" placeholder="E-mail" required="required" data-error="Адрес электронной почты должен содержать только цифры или латинские буквы до символа @, после него, затем точку и домен первого уровня."/>
                   <label class="visually-hidden" for="phone-field">Телефон</label>
-                  <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required" data-error="Недостаточное количество цифр в номере телефона"/>
+                  <input id="phone-field" type="tel" name="phone-field" placeholder="Телефон +7(000) 000 00 00" required="required" data-error="Недостаточное количество цифр в номере телефона."/>
                   <label class="visually-hidden" for="message-field">Введите текст сообщения</label>
-                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required" data-error="Поле обязательно для заполнения и должно содержать не менее 3-х символов. Не используйте кириллические символы."></textarea>
+                  <textarea id="message-field" name="message-field" cols="30" rows="7" placeholder="Введите текст сообщения" required="required" data-error="Поле обязательно для заполнения, должно содержать не менее 3-х символов, используйте только латиницу, цифры и спец.символы."></textarea>
                   <div>
                     <input class="visually-hidden" id="accept" type="checkbox" name="accept" required="required" data-error="Подтвердите свое согласие на обработку данных"/>
                     <label for="accept">Подтверждаю своё согласие на&nbsp;сбор, хранение и&nbsp;обработку вышеуказанных данных в&nbsp;соответствии с&nbsp;ФЗ&nbsp;РФ&nbsp;&laquo;О&nbsp;персональных данных&raquo; от&nbsp;27.07.2006, &#8470;&nbsp;152-ФЗ</label>
