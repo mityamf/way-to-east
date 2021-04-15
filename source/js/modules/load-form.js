@@ -1,7 +1,8 @@
 import {disableScrolling} from '../utils/scroll-lock';
 
-const REG_NAME = /^[a-z]+$/i;
+const REG_NAME = /^[a-z ]+$/i;
 const REG_EMAIL = /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
+const REG_MESSAGE = /^[^\u0400-\u04FF]+$/;
 const MIN_LENGTH = 3;
 const MIN_TEL_LENGTH = 11;
 
@@ -28,6 +29,9 @@ const loadForm = () => {
   const agreement = document.getElementById('accept');
 
   const checkInput = function (field, condition) {
+    if (field === nameField) {
+      field.value = field.value.replace(/\d/, '');
+    }
     if (!condition) {
       field.classList.add('invalid');
       field.classList.remove('valid');
@@ -46,7 +50,7 @@ const loadForm = () => {
     if (checkInput(nameField, nameField.value.length >= MIN_LENGTH && REG_NAME.test(String(nameField.value))) &&
         checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG_EMAIL.test(String(emailField.value).toLowerCase())) &&
         checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH) &&
-        checkInput(messageField, messageField.value.length >= MIN_LENGTH) &&
+        checkInput(messageField, messageField.value.length >= MIN_LENGTH && REG_MESSAGE.test(String(messageField.value))) &&
         checkInput(agreement, (agreement.checked))
     ) {
       return true;
@@ -66,13 +70,13 @@ const loadForm = () => {
   function iterateFields(evt) {
     if (evt.target.value.length !== 0) {
       switch (evt.target.id) {
-        case 'name-field': checkInput(nameField, nameField.value.length >= MIN_LENGTH && REG_NAME.test(String(nameField.value)));
+        case 'name-field': checkInput(nameField, nameField.value.length >= MIN_LENGTH && REG_NAME.test(String(nameField.value.replace(/\d/, ''))));
           break;
         case 'email-field': checkInput(emailField, (emailField.value.length >= MIN_LENGTH) && REG_EMAIL.test(String(emailField.value).toLowerCase()));
           break;
         case 'phone-field': checkInput(phoneField, checkInput(phoneField, phoneField.value.replace(/\D+/g, '').length >= MIN_TEL_LENGTH));
           break;
-        case 'message-field': checkInput(messageField, messageField.value.length >= MIN_LENGTH);
+        case 'message-field': checkInput(messageField, messageField.value.length >= MIN_LENGTH && REG_MESSAGE.test(String(messageField.value)));
           break;
       }
     }
@@ -99,7 +103,6 @@ const loadForm = () => {
 
     xhr.addEventListener('load', () => {
       let result = xhr.response;
-      console.log(result);
       if (xhr.status === 200 && result.status === true) {
         onSuccess(result.status);
       } else {
