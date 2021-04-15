@@ -6,22 +6,39 @@ const setInputMask = () => {
   const setTelMask = () => {
     if (inputsTel.length > 0) {
       inputsTel.forEach((input) => {
-        let mask = {};
 
-        const chooseMask = (maskPattern) => {
+        const chooseMask = () => {
+
+          let dispatchMask = {};
 
           const setMask = () => {
-            let maskOptions = {
-              min: 11,
-              mask: maskPattern,
-              lazy: false,
-            };
-            mask = new IMask(input, maskOptions);
+            dispatchMask = new IMask(input, {
+              mask: [
+                {
+                  min: 11,
+                  mask: '8 (000) 000-00-00',
+                  startsWith: '8',
+                  lazy: true,
+                },
+                {
+                  min: 11,
+                  mask: '+7 (000) 000-00-00',
+                  startsWith: '7',
+                  lazy: true,
+                }
+              ],
+              dispatch: function (appended, dynamicMasked) {
+                let number = (dynamicMasked.value + appended).replace(/\D/g,'');
+                return dynamicMasked.compiledMasks.find(function (m) {
+                  return number.indexOf(m.startsWith) === 0;
+                });
+              },
+            });
           };
 
           const destroyMask = () => {
-            mask.destroy();
-            if (mask.unmaskedValue === '') {
+            dispatchMask.destroy();
+            if (dispatchMask.unmaskedValue === '*') {
               input.value = '';
               input.parentElement.querySelector('label').classList.remove('label-active');
             }
@@ -45,17 +62,7 @@ const setInputMask = () => {
 
         };
 
-        chooseMask('+7 (000) 000-00-00');
-
-        input.addEventListener('input', function () {
-          let isChanged = false;
-          if (input.value[4] === '8' && !isChanged) {
-            input.value = '';
-            isChanged = true;
-            chooseMask('8 (000) 000-00-00');
-            mask.updateValue();
-          }
-        });
+        chooseMask();
       });
     }
   };
