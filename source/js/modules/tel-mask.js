@@ -27,7 +27,7 @@ const setInputMask = () => {
                   lazy: true,
                 },
                 {
-                  min: '6',
+                  min: '1',
                   mask: '000000000000000',
                   startsWith: '',
                   lazy: true,
