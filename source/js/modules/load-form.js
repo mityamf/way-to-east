@@ -1,7 +1,7 @@
 import {disableScrolling} from '../utils/scroll-lock';
 
 const REG_NAME = /^[a-z ]+$/i;
-const REG_EMAIL = /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)*(?:aero|arpa|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel|[a-z][a-z])$/;
+const REG_EMAIL = /^[-a-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)+(?:[a-z]{2,})$/;
 const REG_MESSAGE = /^[^\u0400-\u04FF]+$/;
 const MIN_LENGTH = 0;
 const MAX_TEL_LENGTH = 16;
