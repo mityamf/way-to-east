@@ -64,3 +64,9 @@
     margin: 0 auto;
   }
 }
+
+.footer__countries .countries-logo {
+  @include viewport--sm {
+    flex-direction: row;
+  }
+}

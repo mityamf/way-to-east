@@ -1357,6 +1357,13 @@ button,
   .footer__countries-copyright {
     margin: 0 auto; } }
 
+@media (max-width: 767px) {
+  .footer__countries .countries-logo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+
 .modal {
   position: fixed;
   top: 0;
@@ -3381,14 +3388,11 @@ main {
   margin-left: 71px; }
   @media (max-width: 767px) {
     .countries-logo__image--japan {
-      margin-left: 0;
-      margin-top: 15px; } }
+      margin-left: 0; } }
 
-.countries-logo__image--korea {
-  width: 300px; }
-  @media (max-width: 767px) {
-    .countries-logo__image--korea {
-      text-align: center; } }
+@media (max-width: 767px) {
+  .countries-logo__image--korea {
+    text-align: center; } }
 
 .modal-video .modal__content {
   padding: 0;
