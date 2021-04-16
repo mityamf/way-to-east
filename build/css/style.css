@@ -3315,6 +3315,10 @@ main {
   margin-bottom: 56px; }
   @media (max-width: 767px) {
     .modal-success .countries-logo {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
       width: auto;
       margin-bottom: 76px;
       -webkit-box-pack: justify;
@@ -3327,7 +3331,11 @@ main {
     margin-left: 63px; }
     @media (max-width: 767px) {
       .modal-success .countries-logo__image--japan {
-        margin-left: 0; } }
+        margin-left: 0;
+        margin-top: 0; } }
+
+.modal-success .countries-logo__image--korea {
+  width: auto; }
 
 .modal-success .modal__close-btn {
   top: 0;

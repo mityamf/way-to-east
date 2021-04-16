@@ -48,6 +48,7 @@
   margin-bottom: 56px;
 
   @include viewport--sm {
+    flex-direction: row;
     width: auto;
     margin-bottom: 76px;
     justify-content: space-between;
@@ -62,8 +63,13 @@
 
     @include viewport--sm {
       margin-left: 0;
+      margin-top: 0;
     }
   }
+}
+
+.modal-success .countries-logo__image--korea {
+  width: auto;
 }
 
 .modal-success .modal__close-btn {
